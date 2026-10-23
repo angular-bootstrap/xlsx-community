@@ -9,9 +9,15 @@ The review covered GitHub contributor/release permissions and contribution guida
 | CS-01 | High | `main` was unprotected. Contributor changes now require one code-owner review, stale-approval dismissal, approval after the latest push, all nine GitHub Actions native checks against an up-to-date base, and resolved conversations. Force pushes and branch deletion are blocked. |
 | CS-02 | High | Release tags had no rules and the environment allowed any ref/admin bypass. Version-tag creation/update/deletion is restricted with an active ruleset and administrator-only bypass. `npm-production` accepts only `v*` tags, requires the owner reviewer and disallows environment administrator bypass. |
 | CS-03 | Medium | Fork workflow approval covered only first-time contributors, and any Action was allowed. All external fork contributors now require workflow approval; only GitHub-owned Actions are allowed, with full commit-SHA pinning enforced. Default tokens remain read-only and cannot approve PRs. |
-| CS-04 | Medium | Dependabot security updates were disabled. Dependency alerts/security updates are enabled, with weekly update configuration for Actions and the two isolated npm tool manifests. Secret scanning and push protection remain enabled. |
+| CS-04 | Medium | Dependabot security updates were disabled. Dependency alerts/security updates are enabled, with weekly update configuration for Actions, isolated npm tools, retained upstream tool manifests and the affected Angular fixture. Secret scanning and push protection remain enabled. |
 | CS-05 | Medium | Inherited contribution/security documents described upstream contacts and unpublished status. The independent fork now has current private-reporting guidance, safe synthetic-fixture requirements, provenance/license expectations and contributor/release boundaries. The original upstream contribution guide is retained as historical reference. |
 | CS-06 | Release requirement | The first release lacked GitHub OIDC provenance. The next-release checklist explicitly requires OIDC publication, checking publisher expiry and verifying the actual registry attestation's source/artifact identity. No replacement attestation is claimed for the bootstrap release. |
+
+## Open dependency findings
+
+**CS-07 — High/Medium/Low, unresolved:** enabling alerts surfaced ten findings: two high, seven medium and one low. Two `serialize-javascript` alerts affect `.ci/test-tools/package-lock.json`; six Vite/launch-editor alerts affect the Angular fixture lock; two esbuild alerts affect retained upstream tool manifests. Patched versions are identified in the [alert snapshot](public-evidence/contributor-dependency-alerts.json). Locks were not modified and alerts were not dismissed. Updates require compatibility verification before merging.
+
+The exact published archive was checked: these manifests/directories and their dependencies are excluded, and its runtime/dev dependency maps are empty. GitHub may label some fixture dependencies “runtime” within those separate projects; they are development fixtures relative to this npm library. This does not establish that every vendored parser component is vulnerability-free.
 
 ## Remaining trust boundaries
 

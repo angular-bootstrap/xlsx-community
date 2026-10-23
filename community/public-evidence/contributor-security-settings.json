@@ -127,5 +127,14 @@
     "Single maintainer: administrator branch/tag bypass and release self-review remain possible; no independent two-person control claimed.",
     "First OIDC publish and attestation verification remain a next-release requirement."
   ],
-  "newNpmReleasePublished": false
+  "newNpmReleasePublished": false,
+  "openRepositoryDependencyAlerts": {
+    "total": 10,
+    "high": 2,
+    "medium": 7,
+    "low": 1,
+    "fixed": false,
+    "affectedDependenciesShippedInPublishedArchive": false,
+    "evidence": "contributor-dependency-alerts.json"
+  }
 }
