@@ -4,6 +4,12 @@ Independent npm distribution based on official SheetJS CE **0.20.3**, retaining 
 
 Proposed version: **0.1.0-rc.1**. The npm package is **unpublished**. Publishing remains disabled through `private: true` and a rejecting `prepublishOnly` hook. `XLSX.version` retains the upstream runtime version `0.20.3`.
 
+## Why this package exists
+
+Many projects still depend on SheetJS through npm. With maintained upstream Community Edition releases distributed through the official CDN, those projects need a practical npm upgrade path away from older releases affected by known vulnerabilities. This community effort aims to provide that path: an independently maintained npm distribution, tested compatibility, transparent security regression evidence and preserved upstream credit.
+
+Our goal is to help developers upgrade safely and support the wider spreadsheet ecosystem. SheetJS remains the upstream project; this package builds on its work and documents every additional change.
+
 ## What this candidate changes
 
 | Change beyond CDN 0.20.3 | What users gain |

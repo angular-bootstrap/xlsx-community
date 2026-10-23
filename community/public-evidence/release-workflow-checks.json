@@ -1,6 +1,4 @@
 {
-  "reference": "https://github.com/angular-bootstrap/ngbootstrap/blob/main/.github/workflows/release.yml",
-  "referenceBlob": "70c85adae5c1bab3abd3a8bb7dade5ee986272dd",
   "node": "24.22.1",
   "npm": "12.2.1",
   "environment": "npm-production",
@@ -20,5 +18,28 @@
     "fresh build-tool lock clean install",
     "two clean reproductions of all 12 outputs"
   ],
-  "githubValidationRun": "pending"
+  "githubValidationRun": "https://github.com/angular-bootstrap/xlsx-community/actions/runs/40013188879",
+  "githubValidationStatus": "failure",
+  "firstGithubValidation": {
+    "url": "https://github.com/angular-bootstrap/xlsx-community/actions/runs/40012190333",
+    "status": "failure",
+    "stage": "distribution reproduction",
+    "cause": "Required pinned mazovia-pom.xml source snapshot was excluded by inherited ignore rules",
+    "fixCommit": "5f5a4078f339574aad178780afe42ad249f2e01b",
+    "runtimeChanged": false
+  },
+  "freshCloneLinuxReproduction": {
+    "runs": 2,
+    "outputsPerRun": 12,
+    "allEqual": true,
+    "commit": "5f5a4078f339574aad178780afe42ad249f2e01b"
+  },
+  "secondGithubValidation": {
+    "url": "https://github.com/angular-bootstrap/xlsx-community/actions/runs/40013188879",
+    "status": "failure",
+    "stage": "archive inspection",
+    "cause": "npm 12 pack JSON is an object rather than the older array; archive parser required array index 0",
+    "runtimeChanged": false
+  },
+  "publicationApproved": true
 }

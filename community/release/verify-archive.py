@@ -2,10 +2,18 @@
 from pathlib import Path
 import json,tarfile,hashlib,os,sys,re
 root=Path(__file__).resolve().parents[2]
-manifest=json.loads((root/'.release-artifacts/pack.json').read_text())[0]
+pkg=json.loads((root/'package.json').read_text())
+pack=json.loads((root/'.release-artifacts/pack.json').read_text())
+# npm 12 keys pack output by package name; npm 11 used a single-item array.
+if isinstance(pack,list):
+ assert len(pack)==1,'Expected exactly one packed package'
+ manifest=pack[0]
+else:
+ assert isinstance(pack,dict) and list(pack)==[pkg['name']],'Unexpected pack output'
+ manifest=pack[pkg['name']]
+assert manifest['name']==pkg['name'] and manifest['version']==pkg['version']
 archive=root/'.release-artifacts'/manifest['filename']
 assert archive.parent==root/'.release-artifacts' and archive.name.startswith('angular-bootstrap-xlsx-')
-pkg=json.loads((root/'package.json').read_text())
 with tarfile.open(archive) as tar:
  entries={m.name:m for m in tar.getmembers()}
  assert all(n.startswith('package/') and '..' not in Path(n).parts for n in entries)

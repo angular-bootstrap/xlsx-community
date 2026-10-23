@@ -1,4 +1,5 @@
 name: Release @angular-bootstrap/xlsx
+run-name: Validate and release @angular-bootstrap/xlsx (${{ github.ref_name }})
 
 on:
   push:
