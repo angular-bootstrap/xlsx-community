@@ -25,13 +25,20 @@ for(const [label,lib,expected] of [['affected-0.19.2','./community/controls/v0.1
 }
 const redos=`const X=require(process.argv[1]),n=+process.argv[2];const s='<table><tr><td>x'+' '.repeat(n)+'y</td></tr></table>';const t=performance.now();const w=X.read(s,{type:'string'});console.log(JSON.stringify({version:X.version,n,ms:performance.now()-t,hasSheet:!!w.SheetNames.length}));`;
 for(const [label,lib] of [['affected-0.20.1','./community/controls/v0.20.1/xlsx.js'],['candidate-CJS','./xlsx.js'],['candidate-full','./dist/xlsx.full.min.js'],['candidate-core','./dist/xlsx.core.min.js']]) {
-  for(const n of (label.startsWith('affected')?[10000,30000]:[10000,30000,60000])) {
+  const affected=label.startsWith('affected');let observedBudgetExceeded=false;
+  for(const n of [10000,30000,60000,120000]) {
     const r=child(redos,[lib,''+n],2500);
     let evidence;try{evidence=JSON.parse(r.stdout)}catch{evidence={timeout:r.error?.code==='ETIMEDOUT',error:r.stderr||undefined}};
-    const pass=label.startsWith('affected')?(n===30000?evidence.timeout:r.status===0):r.status===0&&evidence.hasSheet;
+    observedBudgetExceeded ||= !!evidence.timeout;
+    const pass=affected?(r.status===0&&evidence.hasSheet||!!evidence.timeout):r.status===0&&evidence.hasSheet;
     record('CVE-2024-22363 HTML whitespace '+label+' '+n,pass,evidence);
+    // Fixed input lengths are not a portable timing threshold. Keep the positive
+    // control mandatory, increase bounded inputs, and stop once it is observed.
+    if(affected&&observedBudgetExceeded)break;
   }
+  if(affected)record('CVE-2024-22363 affected positive control exceeds processing budget',observedBudgetExceeded,{budgetMs:2500,maxInputSpaces:120000,observedBudgetExceeded});
 }
+
 const compat = `const assert=require('assert'),fs=require('fs');(async()=>{
 const X=process.argv[1]==='esm'?await import(require('url').pathToFileURL(process.cwd()+'/xlsx.mjs')):require(process.argv[1]);
 if(X.set_fs)X.set_fs(fs);

@@ -4,10 +4,14 @@ on:
   pull_request:
   push:
     branches: [main]
+    paths-ignore:
+      - "**/*.md"
+      - "community/public-evidence/**"
+      - "community/release/**"
 permissions:
   contents: read
 concurrency:
-  group: compatibility-${{ github.ref }}
+  group: compatibility-${{ github.ref }}-${{ github.event_name }}
   cancel-in-progress: true
 jobs:
   core:

@@ -20,3 +20,7 @@ Official CDN: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz. Retrieved Oct
 Package wording may say: “Independent npm distribution based on SheetJS CE 0.20.3, retaining upstream CVE fixes, with additional tested HTML output hardening, legacy CSV decoding corrections, and independently sourced license notices/mapping data.” Do not say we discovered or fixed the upstream CVEs, that all vulnerabilities are fixed, or that HTML output is a universal sanitizer. Preserve the CP895 migration note and UTC/resource guidance.
 
 The added HTML patches were already explicitly requested during candidate preparation. This scope decision retains them and adds no new fixes for inherited date/resource behavior. Broader security review and upstream coordination remain separate maintenance work.
+
+## Native CI harness corrections
+
+The first native run identified a test assumption: affected 0.20.1 did not always exceed 2.5 seconds at exactly 30,000 spaces on x64. The harness now increases bounded control inputs up to 120,000 spaces, requires an observed budget overrun, and requires every candidate input to complete. No runtime parser code changed. One Windows corpus download failed its pinned hash; the fetcher now retries once, checks the exact byte size and SHA-256, records diagnostics, and never extracts a mismatched archive. These are corrections to our verification infrastructure.
