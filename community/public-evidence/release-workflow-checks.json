@@ -3,9 +3,9 @@
   "npm": "12.2.1",
   "environment": "npm-production",
   "reviewer": "angular-bootstrap",
-  "publishJobHardDisabled": true,
-  "privateManifest": true,
-  "rejectingPrepublishHook": true,
+  "publishJobHardDisabled": false,
+  "privateManifest": false,
+  "rejectingPrepublishHook": false,
   "checksPassed": [
     "release metadata and native-tested runtime/type bytes",
     "wrong tag rejected",
@@ -54,5 +54,7 @@
     "reproducibilityPassed": true,
     "archiveInspectionPassed": true,
     "runtimeChanged": false
-  }
+  },
+  "releasePublished": false,
+  "bootstrapRequiresAuthenticatedIdentity": true
 }

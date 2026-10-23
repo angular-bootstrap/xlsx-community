@@ -1,6 +1,6 @@
 # angular-bootstrap local release review
 
-Planned identity: `@angular-bootstrap/xlsx@0.1.0-rc.1`, repository `angular-bootstrap/xlsx-community`, prerelease tag `next`. The public repository is created; the npm package remains unpublished. Publishing is disabled in both local manifests and by rejecting prepublish hooks. The active release workflow validates the candidate; its publish job remains hard-disabled pending passing checks and npm setup.
+Planned identity: `@angular-bootstrap/xlsx@0.1.0-rc.1`, repository `angular-bootstrap/xlsx-community`, prerelease tag `next`. The public repository is created; the npm package remains unpublished. Publication is approved subject to passing checks. The manifest is prepared for public prerelease publication; the workflow publishes only on matching version tags after validation and protected-environment review. No release tag has been pushed.
 
 ## Executed checks against the final rich-text/CRLF build
 
@@ -24,7 +24,7 @@ See `public-evidence/current-candidate.json` for current runtime hashes and comp
 ## Remaining gates
 
 1. Native Windows x64, Linux x64 and macOS Intel execution is complete. All nine jobs passed. Each full CJS and ESM suite passed 37,313 tests, with one inherited pending test and zero failures. Each job passed 29 security/compatibility groups and 32 rich-text groups. Native-tested runtime hashes match the candidate. Linux x64 local consumer checks use emulation and do not establish native hardware coverage.
-2. Restore npm authentication and verify angular-bootstrap scope access. Existing authentication returned 401; GitHub identity does not establish npm ownership. The repository and private reporting channel are created. Configure reviewed protections and the trusted publisher before any npm release.
+2. Restore npm authentication and verify angular-bootstrap scope access. Authentication is restored: npm identity angular-bootstrap and organization owner access were verified. The repository and private reporting channel are created. Configure reviewed protections and the trusted publisher before any npm release.
 3. The focused security regressions pass. Independent review remains useful follow-up work; this is not an exhaustive security audit or a guarantee of absence of vulnerabilities. Public documentation credits upstream CVE fixes and describes additional HTML changes without an assigned CVE.
 4. Inherited date/resource behavior matches the official CDN and is excluded from this fixing scope. Preserve the tested UTC/serial/string guidance and disclosure. Retain resource-limit guidance for untrusted files.
 5. Complete final workflow and archive validation. Publication was approved on October 23, 2026, conditional on passing checks. No release tag or npm publication has occurred.

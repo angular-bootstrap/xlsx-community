@@ -2,7 +2,7 @@
   "name": "@angular-bootstrap/xlsx",
   "version": "0.1.0-rc.1",
   "author": "sheetjs",
-  "description": "Independent local SheetJS CE review candidate; not an official SheetJS release",
+  "description": "Community-maintained npm distribution of SheetJS CE with security regression tests and documented compatibility",
   "keywords": [
     "excel",
     "xls",
@@ -116,8 +116,7 @@
     "build": "make",
     "lint": "make fullint",
     "dtslint": "dtslint types",
-    "test:community": "node community/verify.cjs",
-    "prepublishOnly": "node community/block-publish.cjs"
+    "test:community": "node community/verify.cjs"
   },
   "config": {
     "blanket": {
@@ -177,12 +176,17 @@
   "engines": {
     "node": "^22.23.4 || ^24.22.1 || ^26.12.1"
   },
-  "private": true,
+  "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/angular-bootstrap/xlsx-community.git"
   },
   "bugs": {
     "url": "https://github.com/angular-bootstrap/xlsx-community/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "next",
+    "registry": "https://registry.npmjs.org/"
   }
 }

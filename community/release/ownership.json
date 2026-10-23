@@ -6,15 +6,17 @@
   "npmPackage": "@angular-bootstrap/xlsx",
   "npmVersion": "0.1.0-rc.1",
   "npmTag": "next",
-  "npmIdentityVerified": false,
-  "npmAuthentication": "existing user configuration returned 401 Unauthorized",
+  "npmIdentityVerified": true,
+  "npmAuthentication": "Verified angular-bootstrap; npm org reports owner access",
   "npmPackageLookup": "404; not a reservation or proof of scope access",
   "securityChannel": "GitHub private vulnerability reporting enabled",
   "backupMaintainer": null,
-  "publishingEnabled": false,
+  "publishingEnabled": true,
   "environment": "npm-production",
   "environmentReviewer": "angular-bootstrap",
   "trustedPublisherConfigured": false,
   "workflow": "publish.yml",
-  "publishJobHardDisabled": true
+  "publishJobHardDisabled": false,
+  "publicationApproved": true,
+  "releasePublished": false
 }
