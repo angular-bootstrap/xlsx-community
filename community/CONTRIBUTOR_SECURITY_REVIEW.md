@@ -13,9 +13,9 @@ The review covered GitHub contributor/release permissions and contribution guida
 | CS-05 | Medium | Inherited contribution/security documents described upstream contacts and unpublished status. The independent fork now has current private-reporting guidance, safe synthetic-fixture requirements, provenance/license expectations and contributor/release boundaries. The original upstream contribution guide is retained as historical reference. |
 | CS-06 | Release requirement | The first release lacked GitHub OIDC provenance. The next-release checklist explicitly requires OIDC publication, checking publisher expiry and verifying the actual registry attestation's source/artifact identity. No replacement attestation is claimed for the bootstrap release. |
 
-## Open dependency findings
+## Dependency findings resolved
 
-**CS-07 — remediation prepared:** the original ten alerts are addressed by serialize-javascript 7.1.4, Vite 8.3.5 and esbuild 0.28.2. All seven final lockfile audits report zero known vulnerabilities. Inert security regressions and compatibility checks are recorded in the [cleanup report](DEPENDENCY_CLEANUP_RESULTS.md). GitHub alert closure and final hosted native checks must be read back after pushing; no alerts are dismissed. The [original alert snapshot](public-evidence/contributor-dependency-alerts.json) is retained as history.
+**CS-07 — resolved:** the original ten alerts are addressed by serialize-javascript 7.1.4, Vite 8.3.5 and esbuild 0.28.2. All seven final lockfile audits report zero known vulnerabilities. Inert security regressions and compatibility checks are recorded in the [cleanup report](DEPENDENCY_CLEANUP_RESULTS.md). GitHub readback after the cleanup push confirms all ten original alerts fixed and zero open; no alerts were dismissed. Final hosted native checks are running separately. The [original alert snapshot](public-evidence/contributor-dependency-alerts.json) is retained as history.
 
 The exact published archive was checked: these manifests/directories and their dependencies are excluded, and its runtime/dev dependency maps are empty. GitHub may label some fixture dependencies “runtime” within those separate projects; they are development fixtures relative to this npm library. This does not establish that every vendored parser component is vulnerability-free.
 

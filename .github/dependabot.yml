@@ -7,20 +7,15 @@ updates:
     open-pull-requests-limit: 3
   - package-ecosystem: npm
     directory: /.ci/test-tools
-    # Major upgrades require coordinated fixture compatibility tests.
-    ignore:
-      - dependency-name: commander
-        update-types: ["version-update:semver-major"]
-      - dependency-name: jsdom
-        update-types: ["version-update:semver-major"]
+    # Pinned compatibility tools: automatic security fixes only.
     schedule:
       interval: weekly
-    open-pull-requests-limit: 3
+    open-pull-requests-limit: 0
   - package-ecosystem: npm
     directory: /.ci/build-tools
     schedule:
       interval: weekly
-    open-pull-requests-limit: 3
+    open-pull-requests-limit: 0
   - package-ecosystem: npm
     directory: /modules
     schedule:

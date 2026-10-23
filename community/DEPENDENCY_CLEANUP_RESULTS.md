@@ -14,14 +14,20 @@ The ten original repository alerts concern development tools and private framewo
 | Build reproducibility | Uglify 2.7.4 and source-map 0.8.0 reproduce all 12 generated outputs identically in two clean builds. |
 | Retained developer builds | Eight standalone module outputs and both otorp Node outputs build with esbuild 0.28.2. |
 
-Three merged routine updates needed compatibility corrections: Commander 15 breaks the legacy CLI typing fixture (2.20.3 passes); Angular requires TypeScript >=6.0 <6.1 and rejects 7.0.2 (6.0.3 passes); jsdom 30 fails the upstream HTML hidden-row check (26.1.0 passes). These compatible versions have no findings in the current lockfile audits. Dependabot major-version rules document the coordinated-upgrade requirement.
+Three merged routine updates needed compatibility corrections: Commander 15 breaks the legacy CLI typing fixture (2.20.3 passes); Angular requires TypeScript >=6.0 <6.1 and rejects 7.0.2 (6.0.3 passes); jsdom 30 fails the upstream HTML hidden-row check (26.1.0 passes). These compatible versions have no findings in the current lockfile audits. Pinned test/build tools now receive automatic security updates only; optional version upgrades are coordinated manually. Angular TypeScript remains constrained to its declared peer range. Optional PRs #11 and #12 were deferred and their redundant CI runs cancelled.
 
-The full upstream CommonJS/ESM suite is being rerun with the final compatible tool lock; hosted Linux/Windows/macOS x64 results must be checked on the cleanup commit. See the [machine-readable evidence](public-evidence/development-dependency-cleanup.json) for current status. Alert closure is verified through GitHub, never by dismissing findings.
+The full upstream CommonJS and ESM suites each passed 37,313 tests, with one pending and zero failures, using the final compatible tool lock. Runtime security and rich-text regression groups passed; strict TypeScript compilation also passed. All six Linux/Windows native jobs and the hosted developer-security job passed. Three macOS jobs remain in progress on [cleanup commit 24def9f](https://github.com/angular-bootstrap/xlsx-community/actions/runs/40022900280); final macOS results are not yet claimed. See the [machine-readable evidence](public-evidence/development-dependency-cleanup.json) for current status. GitHub readback confirms all ten original alerts fixed and zero open; no findings were dismissed.
+
+The cleanup push used the repository's configured single-owner administrator bypass. Test results are verified separately; this is not a claim of independent code-owner review.
 
 ## Remaining limits
 
-Optional inherited whole-build targets for the Numbers CLI and otorp ES5/Deno output fail with both old and patched esbuild. The selected supported outputs above pass. These are retained developer build gaps, not failures in the shipped library artifact.
+Complete retained-tool builds remain unverified. The isolated Numbers CLI fixture lacks root-package and `cfb` resolution prerequisites; both esbuild versions report the same dependency-resolution failures. The optional otorp ES5/Deno target reports unsupported syntax with both versions. The eight standalone module outputs and two Node otorp outputs above pass. These are development-tool validation gaps; do not treat the isolated-fixture failures as proven parser defects.
 
 Existing timezone/resource limits remain documented. No independent comprehensive parser audit or unlimited-resource safety guarantee is claimed. The published artifact includes regression-tested upstream fixes for CVE-2023-30533 and CVE-2024-22363; renaming a package does not itself fix vulnerabilities.
 
 Publishing remains disabled for this task. Future approved releases must use the guarded GitHub workflow and verify the actual npm OIDC provenance attestation; the bootstrap release has no GitHub OIDC provenance. Draft notes are prepared locally in `community/release/RELEASE_NOTES_DRAFT.md`.
+
+The subsequent documentation/Dependabot-policy commit uses `[skip ci]` because it changes no executable code, dependency lock or workflow. The tested code remains commit `24def9f`; the existing final matrix continues. A future release must still satisfy its exact-commit release gates.
+
+GitHub documents that `open-pull-requests-limit: 0` disables routine version-update PRs while retaining security updates: https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/customizing-dependabot-security-prs.

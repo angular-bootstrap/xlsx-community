@@ -1,6 +1,6 @@
 {
   "reviewedAt": "2026-10-23",
-  "status": "open; not fixed or dismissed",
+  "status": "historical original findings; all ten fixed and zero open alerts verified after cleanup push",
   "scope": "Repository development/test/fixture tooling; affected manifests and dependencies excluded from the verified published archive",
   "publishedArchiveSha256": "81ae0350faf7423fec571e474818464ba47550f43d5649b3d57f8fb3fde1916f",
   "total": 10,
@@ -128,5 +128,6 @@
       "summary": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
       "url": "https://github.com/angular-bootstrap/xlsx-community/security/dependabot/1"
     }
-  ]
+  ],
+  "remediationEvidence": "development-dependency-cleanup.json"
 }
