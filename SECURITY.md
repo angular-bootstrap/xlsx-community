@@ -1,8 +1,8 @@
-# Security policy — proposed angular-bootstrap/xlsx-community
+# Security policy — angular-bootstrap/xlsx-community
 
-This is an independent SheetJS CE fork. The repository is https://github.com/angular-bootstrap/xlsx-community. The npm package is not published. @angular-bootstrap is the release owner. No response-time SLA or independent security audit is claimed.
+This is an independent SheetJS CE fork. The repository is https://github.com/angular-bootstrap/xlsx-community. The npm package is `@angular-bootstrap/xlsx`; the currently supported prerelease is `0.1.0-rc.1`. @angular-bootstrap is the release owner. No response-time SLA or independent security audit is claimed.
 
-GitHub private vulnerability reporting is enabled in angular-bootstrap/xlsx-community. The reporting channel is https://github.com/angular-bootstrap/xlsx-community/security/advisories/new. Do not file public exploit details while a private channel is being established. Reports should include affected versions, a minimal inert fixture where possible, impact and reproduction steps.
+GitHub private vulnerability reporting is enabled in angular-bootstrap/xlsx-community. The reporting channel is https://github.com/angular-bootstrap/xlsx-community/security/advisories/new. Do not publish working exploit details in public issues or pull requests. Reports should include affected versions, a minimal inert fixture where possible, impact and reproduction steps.
 
 Initial support scope is prerelease 0.1.0-rc.1 only, with no stable support promise. Future supported versions and response commitments must be adopted by the maintainer. Upstream findings should be coordinated with SheetJS through its published security contact; this policy does not authorize sending reports on anyone's behalf.
 
@@ -16,6 +16,10 @@ Explicit UTC roundtrips passed the timezone/DST matrix. Default local-time Date 
 
 ## Current prerelease review
 
-Two inherited CVE regression controls pass. The independent rich-text fix escapes decoded text, restricts alignment tags and emits numeric font sizes; inert workbook fixtures reproduce the old behavior and verify the fix. This new finding still needs maintainer review and a coordinated disclosure decision before public security claims. No new CVE or full vulnerability-free certification is asserted.
+Two inherited CVE regression controls pass. The independent rich-text fix escapes decoded text, restricts alignment tags and emits numeric font sizes; inert workbook fixtures reproduce the old behavior and verify the fix. Additional HTML-output hardening is documented in community/UPSTREAM_DIFFERENCES.md; reports of further vulnerabilities should use the private channel. No new CVE or full vulnerability-free certification is asserted.
 
-Publishing remains disabled by private:true and a rejecting prepublishOnly hook. No token belongs in source, fixtures or CI logs. Release workflow activation and ownership verification are separate reviewed steps.
+No token belongs in source, fixtures or CI logs. Future releases use the protected GitHub workflow and npm OIDC; verify the resulting provenance attestation under community/release/NEXT_RELEASE.md. The interactive bootstrap release has no GitHub OIDC provenance attestation. Contributor access does not grant npm publishing access.
+
+## Contributor and maintainer access
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for review, CI and fixture-handling requirements. Maintainers must inspect untrusted workflow/test changes before approving fork CI. Grant the minimum repository access required; npm publishing remains restricted to the release owner and approved trusted workflow. Add a second trusted reviewer before requiring independent release approval; no backup maintainer or response SLA is currently promised.
