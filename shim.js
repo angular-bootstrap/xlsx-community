@@ -1,34 +1,22 @@
 /*! shim.js (C) 2013-present SheetJS -- http://sheetjs.com */
 /* ES3/5 Compatibility shims and other utilities for older browsers. */
 
-// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
-if(!Object.keys) Object.keys = (function() {
-  var hasOwnProperty = Object.prototype.hasOwnProperty,
-      hasDontEnumBug = !({toString: null}).propertyIsEnumerable('toString'),
-      dontEnums = [
-        'toString',
-        'toLocaleString',
-        'valueOf',
-        'hasOwnProperty',
-        'isPrototypeOf',
-        'propertyIsEnumerable',
-        'constructor'
-      ],
-      dontEnumsLength = dontEnums.length;
-
-  return function(obj) {
-    if(typeof obj !== 'object' && typeof obj !== 'function' || obj === null) throw new TypeError('Object.keys called on non-object');
-
-    var result = [];
-
-    for(var prop in obj) if(hasOwnProperty.call(obj, prop)) result.push(prop);
-
-    if(hasDontEnumBug)
-      for(var i=0; i < dontEnumsLength; ++i)
-        if(hasOwnProperty.call(obj, dontEnums[i])) result.push(dontEnums[i]);
-    return result;
-  };
-})();
+/* Independent fork replacement, 2026-10-23, Apache-2.0.
+ * Enumerate own properties, including legacy engines' skipped shadow names. */
+if(!Object.keys) Object.keys = function(value) {
+  if(value === null || (typeof value !== 'object' && typeof value !== 'function')) throw new TypeError('Object required');
+  var names = [], key, k, found, i;
+  for(key in value) if(Object.prototype.hasOwnProperty.call(value, key)) names.push(key);
+  if(!Object.prototype.propertyIsEnumerable.call({toString: 1}, 'toString')) {
+    var shadows = 'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'.split(',');
+    for(k = 0; k < shadows.length; ++k) {
+      key = shadows[k]; found = false;
+      for(i = 0; i < names.length; ++i) if(names[i] === key) found = true;
+      if(!found && Object.prototype.hasOwnProperty.call(value, key)) names.push(key);
+    }
+  }
+  return names;
+};
 
 if(!String.prototype.trim) String.prototype.trim = function() {
   var s = this.replace(/^\s+/, '');
@@ -148,7 +136,18 @@ var IE_LoadFile = (function() { try {
   return function(filename) { return fix_data(IE_LoadFile_Impl(filename)); };
 } catch(e) { return void 0; }})();
 
-// getComputedStyle polyfill from https://gist.github.com/8HNHoFtE/5891086
+/* Independent fork replacement, 2026-10-23, Apache-2.0.
+ * Minimal currentStyle adapter; this is not a full CSS computed-style engine. */
 if(typeof window !== 'undefined' && typeof window.getComputedStyle !== 'function') {
-  window.getComputedStyle = function(e,t){return this.el=e,this.getPropertyValue=function(t){var n=/(\-([a-z]){1})/g;return t=="float"&&(t="styleFloat"),n.test(t)&&(t=t.replace(n,function(){return arguments[2].toUpperCase()})),e.currentStyle[t]?e.currentStyle[t]:null},this}
+  window.getComputedStyle = function(element, pseudo) {
+    if(!element) throw new TypeError('Element required');
+    if(pseudo) throw new Error('Legacy computed style does not support pseudo-elements');
+    return {getPropertyValue: function(property) {
+      var name = String(property);
+      if(name === 'float') name = 'styleFloat';
+      else name = name.replace(/^-ms-/, 'ms-').replace(/-([a-z])/g, function(match, letter) { return letter.toUpperCase(); });
+      var result = (element.currentStyle || {})[name];
+      return result == null ? '' : String(result);
+    }};
+  };
 }

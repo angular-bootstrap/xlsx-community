@@ -1,0 +1,21 @@
+{
+  "fixtureBytes": 15839,
+  "dimension": "A1:XFD1048576",
+  "results": [
+    {
+      "mode": "unbounded",
+      "status": "deadline-exceeded",
+      "signal": "SIGTERM",
+      "output": "",
+      "error": "spawnSync /private[temporary]/sheetjs-node-matrix/node-v24.22.1-darwin-arm64/bin/node ETIMEDOUT"
+    },
+    {
+      "mode": "bounded",
+      "status": "completed",
+      "signal": null,
+      "output": "{\"rows\":1,\"ref\":\"A1\"}",
+      "error": ""
+    }
+  ],
+  "interpretation": "Very large worksheet ranges can exceed a conversion budget. sheetRows is not an archive, column, decompression or CPU limit. Enforce input/range limits and process untrusted files in disposable resource-limited workers; no new CVE claimed."
+}

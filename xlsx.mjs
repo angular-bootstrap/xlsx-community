@@ -9094,6 +9094,8 @@ var PRN = /*#__PURE__*/(function() {
 		}
 		if(bytes[0] == 0xEF && bytes[1] == 0xBB && bytes[2] == 0xBF) str = utf8read(str.slice(3));
 		else if(opts.type != 'string' && opts.type != 'buffer' && opts.codepage == 65001) str = utf8read(str);
+		/* Independent fork: decode legacy CSV array bytes with the requested codepage. */
+		else if(opts.type == 'array' && typeof $cptable !== 'undefined' && opts.codepage) str = $cptable.utils.decode(opts.codepage, d);
 		else if((opts.type == 'binary') && typeof $cptable !== 'undefined' && opts.codepage)  str = $cptable.utils.decode(opts.codepage, $cptable.utils.encode(28591,str));
 		if(str.slice(0,19) == "socialcalc:version:") return ETH.to_sheet(opts.type == 'string' ? str : utf8read(str), opts);
 		return prn_to_sheet_str(str, opts);
@@ -10453,13 +10455,14 @@ var parse_rs = /*#__PURE__*/(function() {
 
 /* Parse a list of <r> tags */
 var rs_to_html = /*#__PURE__*/(function parse_rs_factory() {
-	var nlregex = /(\r\n|\n)/g;
+	var nlregex = /\r\n|\n/g;
 	function parse_rpr2(font, intro, outro) {
 		var style/*:Array<string>*/ = [];
 
 		if(font.u) style.push("text-decoration: underline;");
 		if(font.uval) style.push("text-underline-style:" + font.uval + ";");
-		if(font.sz) style.push("font-size:" + font.sz + "pt;");
+		/* Independent fork, 2026-10-23: emit only numeric CSS sizes from workbook data. */
+		if(font.sz && isFinite(+font.sz) && +font.sz >= 0) style.push("font-size:" + (+font.sz) + "pt;");
 		if(font.outline) style.push("text-effect: outline;");
 		if(font.shadow) style.push("text-shadow: auto;");
 		intro.push('<span style="' + style.join("") + '">');
@@ -10470,7 +10473,8 @@ var rs_to_html = /*#__PURE__*/(function parse_rs_factory() {
 
 		var align = font.valign || "";
 		if(align == "superscript" || align == "super") align = "sup";
-		else if(align == "subscript") align = "sub";
+		else if(align == "subscript" || align == "sub") align = "sub";
+		else align = "";
 		if(align != "") { intro.push("<" + align + ">"); outro.push("</" + align + ">"); }
 
 		outro.push("</span>");
@@ -10484,7 +10488,7 @@ var rs_to_html = /*#__PURE__*/(function parse_rs_factory() {
 
 		if(r.s) parse_rpr2(r.s, terms[0], terms[2]);
 
-		return terms[0].join("") + terms[1].replace(nlregex,'<br/>') + terms[2].join("");
+		return terms[0].join("") + terms[1].split(nlregex).map(escapehtml).join('<br/>') + terms[2].join("");
 	}
 
 	return function parse_rs(rs) {
@@ -22669,6 +22673,16 @@ function html_to_sheet(str/*:string*/, _opts)/*:Workbook*/ {
 	if(merges.length) ws["!merges"] = merges;
 	return ws;
 }
+/* Independent fork modification, 2026-10-23: allowlist HTML link targets.
+ * Attribute escaping alone does not prevent navigation to active URL schemes. */
+function html_safe_link(target) {
+	if(typeof target != 'string' || !target || /[\x00-\x20\x7f-\x9f\\]/.test(target)) return false;
+	if(target.slice(0,2) == '//') return false;
+	var first = target.split(/[\/?#]/, 1)[0];
+	if(first.indexOf(':') == -1) return true;
+	return /^(https?:|mailto:)/i.test(target);
+}
+
 function make_html_row(ws/*:Worksheet*/, r/*:Range*/, R/*:number*/, o/*:Sheet2HTMLOpts*/)/*:string*/ {
 	var M/*:Array<Range>*/ = (ws['!merges'] ||[]);
 	var oo/*:Array<string>*/ = [];
@@ -22700,7 +22714,7 @@ function make_html_row(ws/*:Worksheet*/, r/*:Range*/, R/*:number*/, o/*:Sheet2HT
 			// note: data-v is unaffected by the timezone interpretation
 			if(cell.v != null) sp["data-v"] = escapehtml(cell.v instanceof Date ? cell.v.toISOString() : cell.v);
 			if(cell.z != null) sp["data-z"] = cell.z;
-			if(cell.l && (cell.l.Target || "#").charAt(0) != "#") w = '<a href="' + escapehtml(cell.l.Target) +'">' + w + '</a>';
+			if(cell.l && html_safe_link(cell.l.Target) && cell.l.Target.charAt(0) != "#") w = '<a href="' + escapehtml(cell.l.Target) +'">' + w + '</a>';
 		}
 		sp.id = (o.id || "sjs") + "-" + coord;
 		oo.push(writextag('td', w, sp));

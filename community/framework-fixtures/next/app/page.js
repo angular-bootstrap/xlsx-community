@@ -1,0 +1,1 @@
+import*as X from'@angular-bootstrap/xlsx';import*as cp from'@angular-bootstrap/xlsx/dist/cpexcel.full.mjs';import check from'../checks.cjs';import Client from'./client';export const dynamic='force-dynamic';export default function Page(){const result=check(X,cp);return <main><h1>Next scoped integration</h1><pre id="server-result">{JSON.stringify(result)}</pre><Client/></main>}

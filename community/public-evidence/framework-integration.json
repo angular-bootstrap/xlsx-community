@@ -1,0 +1,128 @@
+{
+  "frameworks": [
+    {
+      "name": "angular",
+      "url": "http://127.0.0.1:53986"
+    },
+    {
+      "name": "react",
+      "url": "http://127.0.0.1:53987"
+    },
+    {
+      "name": "next",
+      "url": "http://127.0.0.1:53988"
+    }
+  ],
+  "browsers": [
+    {
+      "browser": "Chrome",
+      "version": "155.0.8059.85",
+      "framework": "angular",
+      "status": "pass",
+      "checks": 17,
+      "errors": []
+    },
+    {
+      "browser": "Chrome",
+      "version": "155.0.8059.85",
+      "framework": "react",
+      "status": "pass",
+      "checks": 17,
+      "errors": []
+    },
+    {
+      "browser": "Chrome",
+      "version": "155.0.8059.85",
+      "framework": "next",
+      "status": "pass",
+      "checks": 17,
+      "ssrChecks": 17,
+      "errors": []
+    },
+    {
+      "browser": "Firefox",
+      "version": "142.0.1",
+      "framework": "angular",
+      "status": "pass",
+      "checks": 17,
+      "errors": []
+    },
+    {
+      "browser": "Firefox",
+      "version": "142.0.1",
+      "framework": "react",
+      "status": "pass",
+      "checks": 17,
+      "errors": []
+    },
+    {
+      "browser": "Firefox",
+      "version": "142.0.1",
+      "framework": "next",
+      "status": "pass",
+      "checks": 17,
+      "ssrChecks": 17,
+      "errors": []
+    },
+    {
+      "browser": "WebKit",
+      "version": "26.0",
+      "framework": "angular",
+      "status": "pass",
+      "checks": 17,
+      "errors": []
+    },
+    {
+      "browser": "WebKit",
+      "version": "26.0",
+      "framework": "react",
+      "status": "pass",
+      "checks": 17,
+      "errors": []
+    },
+    {
+      "browser": "WebKit",
+      "version": "26.0",
+      "framework": "next",
+      "status": "pass",
+      "checks": 17,
+      "ssrChecks": 17,
+      "errors": []
+    }
+  ],
+  "fileDownload": [
+    {
+      "browser": "Chrome",
+      "status": "pass",
+      "filename": "scoped-workbook.xlsx",
+      "uploadPassed": true,
+      "downloadPassed": true
+    },
+    {
+      "browser": "Firefox",
+      "status": "pass",
+      "filename": "scoped-workbook.xlsx",
+      "uploadPassed": true,
+      "downloadPassed": true
+    },
+    {
+      "browser": "WebKit",
+      "status": "pass",
+      "filename": "scoped-workbook.xlsx",
+      "uploadPassed": true,
+      "downloadPassed": true
+    }
+  ],
+  "nextApi": {
+    "status": "pass",
+    "rows": [
+      [
+        "server",
+        "भारत",
+        42
+      ]
+    ],
+    "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "disposition": "attachment; filename=\"server-workbook.xlsx\""
+  }
+}

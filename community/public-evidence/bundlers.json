@@ -1,0 +1,175 @@
+{
+  "checkedAt": "2026-10-23T18:22:17.788Z",
+  "buildNode": "v24.22.1",
+  "tools": {
+    "esbuild": "0.28.2",
+    "webpack": "5.112.2",
+    "webpack-cli": "7.2.3",
+    "rollup": "4.65.0",
+    "vite": "8.3.5",
+    "@rollup/plugin-node-resolve": "16.0.3",
+    "@rollup/plugin-commonjs": "29.0.3"
+  },
+  "builds": [
+    {
+      "id": "webpack-esm-browser",
+      "name": "webpack",
+      "variant": "esm",
+      "platform": "browser",
+      "file": "<TEMP>/sheetjs-bundler-consumer/out/webpack-esm-browser.js",
+      "warnings": [],
+      "status": "pass",
+      "bytes": 934347
+    },
+    {
+      "id": "webpack-esm-node",
+      "name": "webpack",
+      "variant": "esm",
+      "platform": "node",
+      "file": "<TEMP>/sheetjs-bundler-consumer/out/webpack-esm-node.js",
+      "warnings": [],
+      "status": "pass",
+      "bytes": 934321
+    },
+    {
+      "id": "webpack-cjs-browser",
+      "name": "webpack",
+      "variant": "cjs",
+      "platform": "browser",
+      "file": "<TEMP>/sheetjs-bundler-consumer/out/webpack-cjs-browser.js",
+      "warnings": [],
+      "status": "pass",
+      "bytes": 932936
+    },
+    {
+      "id": "webpack-cjs-node",
+      "name": "webpack",
+      "variant": "cjs",
+      "platform": "node",
+      "file": "<TEMP>/sheetjs-bundler-consumer/out/webpack-cjs-node.js",
+      "warnings": [],
+      "status": "pass",
+      "bytes": 933013
+    },
+    {
+      "id": "rollup-esm-browser",
+      "name": "rollup",
+      "variant": "esm",
+      "platform": "browser",
+      "file": "<TEMP>/sheetjs-bundler-consumer/out/rollup-esm-browser.js",
+      "warnings": [],
+      "status": "pass",
+      "bytes": 1506001
+    },
+    {
+      "id": "rollup-esm-node",
+      "name": "rollup",
+      "variant": "esm",
+      "platform": "node",
+      "file": "<TEMP>/sheetjs-bundler-consumer/out/rollup-esm-node.js",
+      "warnings": [],
+      "status": "pass",
+      "bytes": 1478184
+    },
+    {
+      "id": "rollup-cjs-browser",
+      "name": "rollup",
+      "variant": "cjs",
+      "platform": "browser",
+      "file": "<TEMP>/sheetjs-bundler-consumer/out/rollup-cjs-browser.js",
+      "warnings": [],
+      "status": "pass",
+      "bytes": 1528664
+    },
+    {
+      "id": "rollup-cjs-node",
+      "name": "rollup",
+      "variant": "cjs",
+      "platform": "node",
+      "file": "<TEMP>/sheetjs-bundler-consumer/out/rollup-cjs-node.js",
+      "warnings": [],
+      "status": "pass",
+      "bytes": 1499989
+    },
+    {
+      "id": "esbuild-esm-browser",
+      "name": "esbuild",
+      "variant": "esm",
+      "platform": "browser",
+      "file": "<TEMP>/sheetjs-bundler-consumer/out/esbuild-esm-browser.js",
+      "warnings": [],
+      "status": "pass",
+      "bytes": 1317104
+    },
+    {
+      "id": "esbuild-esm-node",
+      "name": "esbuild",
+      "variant": "esm",
+      "platform": "node",
+      "file": "<TEMP>/sheetjs-bundler-consumer/out/esbuild-esm-node.js",
+      "warnings": [],
+      "status": "pass",
+      "bytes": 1317093
+    },
+    {
+      "id": "esbuild-cjs-browser",
+      "name": "esbuild",
+      "variant": "cjs",
+      "platform": "browser",
+      "file": "<TEMP>/sheetjs-bundler-consumer/out/esbuild-cjs-browser.js",
+      "warnings": [],
+      "status": "pass",
+      "bytes": 1319259
+    },
+    {
+      "id": "esbuild-cjs-node",
+      "name": "esbuild",
+      "variant": "cjs",
+      "platform": "node",
+      "file": "<TEMP>/sheetjs-bundler-consumer/out/esbuild-cjs-node.js",
+      "warnings": [],
+      "status": "pass",
+      "bytes": 1318976
+    },
+    {
+      "id": "vite-esm-browser",
+      "name": "vite",
+      "variant": "esm",
+      "platform": "browser",
+      "file": "<TEMP>/sheetjs-bundler-consumer/out/vite-esm-browser.js",
+      "warnings": [],
+      "status": "pass",
+      "bytes": 937897
+    },
+    {
+      "id": "vite-esm-node",
+      "name": "vite",
+      "variant": "esm",
+      "platform": "node",
+      "file": "<TEMP>/sheetjs-bundler-consumer/out/vite-esm-node.js",
+      "warnings": [],
+      "status": "pass",
+      "bytes": 1315647
+    },
+    {
+      "id": "vite-cjs-browser",
+      "name": "vite",
+      "variant": "cjs",
+      "platform": "browser",
+      "file": "<TEMP>/sheetjs-bundler-consumer/out/vite-cjs-browser.js",
+      "warnings": [],
+      "status": "pass",
+      "bytes": 937485
+    },
+    {
+      "id": "vite-cjs-node",
+      "name": "vite",
+      "variant": "cjs",
+      "platform": "node",
+      "file": "<TEMP>/sheetjs-bundler-consumer/out/vite-cjs-node.js",
+      "warnings": [],
+      "status": "pass",
+      "bytes": 1379778
+    }
+  ]
+}

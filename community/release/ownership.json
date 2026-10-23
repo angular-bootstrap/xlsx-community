@@ -1,0 +1,15 @@
+{
+  "githubOwner": "angular-bootstrap",
+  "githubIdentityVerified": true,
+  "repository": "angular-bootstrap/xlsx-community",
+  "repositoryState": "created public repository at https://github.com/angular-bootstrap/xlsx-community",
+  "npmPackage": "@angular-bootstrap/xlsx",
+  "npmVersion": "0.1.0-rc.1",
+  "npmTag": "next",
+  "npmIdentityVerified": false,
+  "npmAuthentication": "existing user configuration returned 401 Unauthorized",
+  "npmPackageLookup": "404; not a reservation or proof of scope access",
+  "securityChannel": "GitHub private vulnerability reporting enabled",
+  "backupMaintainer": null,
+  "publishingEnabled": false
+}

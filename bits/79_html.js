@@ -61,6 +61,16 @@ function html_to_sheet(str/*:string*/, _opts)/*:Workbook*/ {
 	if(merges.length) ws["!merges"] = merges;
 	return ws;
 }
+/* Independent fork modification, 2026-10-23: allowlist HTML link targets.
+ * Attribute escaping alone does not prevent navigation to active URL schemes. */
+function html_safe_link(target) {
+	if(typeof target != 'string' || !target || /[\x00-\x20\x7f-\x9f\\]/.test(target)) return false;
+	if(target.slice(0,2) == '//') return false;
+	var first = target.split(/[\/?#]/, 1)[0];
+	if(first.indexOf(':') == -1) return true;
+	return /^(https?:|mailto:)/i.test(target);
+}
+
 function make_html_row(ws/*:Worksheet*/, r/*:Range*/, R/*:number*/, o/*:Sheet2HTMLOpts*/)/*:string*/ {
 	var M/*:Array<Range>*/ = (ws['!merges'] ||[]);
 	var oo/*:Array<string>*/ = [];
@@ -92,7 +102,7 @@ function make_html_row(ws/*:Worksheet*/, r/*:Range*/, R/*:number*/, o/*:Sheet2HT
 			// note: data-v is unaffected by the timezone interpretation
 			if(cell.v != null) sp["data-v"] = escapehtml(cell.v instanceof Date ? cell.v.toISOString() : cell.v);
 			if(cell.z != null) sp["data-z"] = cell.z;
-			if(cell.l && (cell.l.Target || "#").charAt(0) != "#") w = '<a href="' + escapehtml(cell.l.Target) +'">' + w + '</a>';
+			if(cell.l && html_safe_link(cell.l.Target) && cell.l.Target.charAt(0) != "#") w = '<a href="' + escapehtml(cell.l.Target) +'">' + w + '</a>';
 		}
 		sp.id = (o.id || "sjs") + "-" + coord;
 		oo.push(writextag('td', w, sp));

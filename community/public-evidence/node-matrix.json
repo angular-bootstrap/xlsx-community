@@ -1,0 +1,149 @@
+{
+  "checkedAt": "2026-10-23T18:21:53.929979+00:00",
+  "platform": "macOS ARM64",
+  "policy": "Node 22/24 LTS proposed production targets; Node 26 Current forward compatibility. No >=0.8 or cross-platform certification.",
+  "runtimes": [
+    {
+      "version": "v22.23.4",
+      "artifact": {
+        "version": "v22.23.4",
+        "url": "https://nodejs.org/dist/v22.23.4/node-v22.23.4-darwin-arm64.tar.gz",
+        "sha256": "c9e1dbc748b33ed2d14f42445191ecaf14c56259c7a9a26d0042c49ec2b66428",
+        "node": "<TEMP>/sheetjs-node-matrix/node-v22.23.4-darwin-arm64/bin/node"
+      },
+      "checks": [
+        {
+          "name": "full upstream cjs",
+          "exitCode": 0,
+          "stats": {
+            "suites": 12563,
+            "tests": 37314,
+            "passes": 37313,
+            "pending": 1,
+            "failures": 0,
+            "start": "2026-10-23T18:14:35.636Z",
+            "end": "2026-10-23T18:18:32.915Z",
+            "duration": 237279
+          },
+          "pending": [
+            "corner cases should parse CSV date values with preceding space"
+          ],
+          "failures": []
+        },
+        {
+          "name": "full upstream esm",
+          "exitCode": 0,
+          "stats": {
+            "suites": 12563,
+            "tests": 37314,
+            "passes": 37313,
+            "pending": 1,
+            "failures": 0,
+            "start": "2026-10-23T18:18:35.351Z",
+            "end": "2026-10-23T18:21:53.314Z",
+            "duration": 197963
+          },
+          "pending": [
+            "corner cases should parse CSV date values with preceding space"
+          ],
+          "failures": []
+        }
+      ]
+    },
+    {
+      "version": "v24.22.1",
+      "artifact": {
+        "version": "v24.22.1",
+        "url": "https://nodejs.org/dist/v24.22.1/node-v24.22.1-darwin-arm64.tar.gz",
+        "sha256": "89c682593d76cd44233fa53b1563264e7de9cbb189cad169135c5b4fadfbc0a7",
+        "node": "<TEMP>/sheetjs-node-matrix/node-v24.22.1-darwin-arm64/bin/node"
+      },
+      "checks": [
+        {
+          "name": "full upstream cjs",
+          "exitCode": 0,
+          "stats": {
+            "suites": 12563,
+            "tests": 37314,
+            "passes": 37313,
+            "pending": 1,
+            "failures": 0,
+            "start": "2026-10-23T18:14:37.635Z",
+            "end": "2026-10-23T18:18:27.214Z",
+            "duration": 229579
+          },
+          "pending": [
+            "corner cases should parse CSV date values with preceding space"
+          ],
+          "failures": []
+        },
+        {
+          "name": "full upstream esm",
+          "exitCode": 0,
+          "stats": {
+            "suites": 12563,
+            "tests": 37314,
+            "passes": 37313,
+            "pending": 1,
+            "failures": 0,
+            "start": "2026-10-23T18:18:28.313Z",
+            "end": "2026-10-23T18:21:45.031Z",
+            "duration": 196718
+          },
+          "pending": [
+            "corner cases should parse CSV date values with preceding space"
+          ],
+          "failures": []
+        }
+      ]
+    },
+    {
+      "version": "v26.12.1",
+      "artifact": {
+        "version": "v26.12.1",
+        "url": "https://nodejs.org/dist/v26.12.1/node-v26.12.1-darwin-arm64.tar.gz",
+        "sha256": "1901d539912c02afa10d1cc126943a8855a7eedebe830119463470db5e6c59e8",
+        "node": "<TEMP>/sheetjs-node-matrix/node-v26.12.1-darwin-arm64/bin/node"
+      },
+      "checks": [
+        {
+          "name": "full upstream cjs",
+          "exitCode": 0,
+          "stats": {
+            "suites": 12563,
+            "tests": 37314,
+            "passes": 37313,
+            "pending": 1,
+            "failures": 0,
+            "start": "2026-10-23T18:14:39.080Z",
+            "end": "2026-10-23T18:18:15.524Z",
+            "duration": 216444
+          },
+          "pending": [
+            "corner cases should parse CSV date values with preceding space"
+          ],
+          "failures": []
+        },
+        {
+          "name": "full upstream esm",
+          "exitCode": 0,
+          "stats": {
+            "suites": 12563,
+            "tests": 37314,
+            "passes": 37313,
+            "pending": 1,
+            "failures": 0,
+            "start": "2026-10-23T18:18:16.576Z",
+            "end": "2026-10-23T18:21:25.702Z",
+            "duration": 189126
+          },
+          "pending": [
+            "corner cases should parse CSV date values with preceding space"
+          ],
+          "failures": []
+        }
+      ]
+    }
+  ],
+  "publishingEnabled": false
+}

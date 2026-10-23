@@ -39,3 +39,24 @@ tmp
 *.sheetjs
 *.exe
 *.img
+
+# Independent candidate: local generated controls and package artifacts
+community/controls/
+*.tgz
+
+# Retain independent bundled license notices and browser harness
+!LICENSES/*.txt
+!community/browser-check.html
+
+!community/mapping-inputs/*.TXT
+!community/mapping-inputs/*.txt
+!community/mapping-inputs/*.html
+
+# Independent CI and source locks are intentional source inputs.
+!.ci/test-tools/package-lock.json
+!community/framework-fixtures/*/package-lock.json
+# Raw local evidence may be large and contain machine paths. Curated public copies live separately.
+community/results/
+.release-artifacts/
+
+!community/framework-fixtures/**/index.html

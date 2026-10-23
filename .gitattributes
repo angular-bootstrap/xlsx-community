@@ -15,3 +15,10 @@ tests/core.js     linguist-generated=true binary
 tests/fixtures.js linguist-generated=true binary
 
 test.mjs    lingust-generated=false binary=false text eol=lf
+
+# Preserve pinned third-party source bytes and original notices.
+community/mapping-inputs/** -text -whitespace
+community/codepage-tools/* -whitespace
+LICENSES/*.txt -whitespace
+README.upstream.md -whitespace
+MAPPING_DATA_NOTICES.md -whitespace

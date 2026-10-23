@@ -1,0 +1,373 @@
+{
+  "retrievedAt": "2026-10-23T17:56:18.789271+00:00",
+  "entries": [
+    {
+      "codepage": 437,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/PC/CP437.TXT",
+      "sha256": "6bad4dabcdf5940227c7d81fab130dcb18a77850b5d79de28b5dc4e047b0aaac",
+      "bytes": 9794,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 620,
+      "status": "verified-derived-source",
+      "file": "CP620.TXT",
+      "sha256": "0b39a4b10164bf3bea9b9873e3bf8aa0b43435ff5662f8ad8f17b500ffeb953e",
+      "bytes": 2773,
+      "license": "Apache-2.0 AND Unicode-3.0",
+      "derivation": "community/restore-mapping-inputs.py",
+      "sources": [
+        {
+          "file": "mazovia-MazoviaCharset.java",
+          "sourceFile": "src/main/java/eu/vitaliy/pl/charset/MazoviaCharset.java",
+          "commit": "0603a6fad2abc568bd49fd9cce3636838a6a032a",
+          "repository": "https://github.com/VitaliyOliynyk/mazovia-charset",
+          "sha256": "290b78c13f8b04258080b6da03cf3eb18c8eb36f753ef8649c26326890283ee4"
+        },
+        {
+          "file": "mazovia-pom.xml",
+          "sourceFile": "pom.xml",
+          "commit": "0603a6fad2abc568bd49fd9cce3636838a6a032a",
+          "repository": "https://github.com/VitaliyOliynyk/mazovia-charset",
+          "sha256": "27f5f6ff9b1bd7eef2cadd2bb2dc176298d4cd7aa859a02917b1a3fb25074dff"
+        },
+        {
+          "file": "mazovia-README.md",
+          "sourceFile": "README.md",
+          "commit": "0603a6fad2abc568bd49fd9cce3636838a6a032a",
+          "repository": "https://github.com/VitaliyOliynyk/mazovia-charset",
+          "sha256": "4c452ddccd81c5587b4bcfce549a6028840bafb283475e0df2b1f2a3ccc7805b"
+        }
+      ]
+    },
+    {
+      "codepage": 737,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/PC/CP737.TXT",
+      "sha256": "9bf9ffe61e03bdeecd68e806e12af562fd638285a8f0fbabc8fc9cd137d65fbf",
+      "bytes": 9827,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 850,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/PC/CP850.TXT",
+      "sha256": "ffdcc3c1c72f1aef600a63547100ef3dc452a09ad84923d382085519751c7479",
+      "bytes": 9640,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 852,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/PC/CP852.TXT",
+      "sha256": "440d098e9f2b79eeacbe2bbc1814960b6554c885740615047f5b528c2947afb6",
+      "bytes": 9939,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 857,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/PC/CP857.TXT",
+      "sha256": "6396619b918ce2fe3c366630e5652b25153bbd4bb01c8109ba8f7ed8a261658d",
+      "bytes": 9617,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 861,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/PC/CP861.TXT",
+      "sha256": "51c7f3ef5a435e69637237be2a414aef8dfc4f891365b686ff8d56b681f32074",
+      "bytes": 9826,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 865,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/PC/CP865.TXT",
+      "sha256": "e31eeb03a39a5fbdd5e23de60a22af4219c9987de2088386855ab20f273f470a",
+      "bytes": 9812,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 866,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/PC/CP866.TXT",
+      "sha256": "abcc96dd4253321eb5e542c1ece3adab10df0cc20ec5d1124a0cec22d636c924",
+      "bytes": 9765,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 874,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/CP874.TXT",
+      "sha256": "f45277e205ff5aa8f0625c52b04614bbd9d8836c142e9b90235748b0a9921ec9",
+      "bytes": 8439,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 895,
+      "status": "verified-derived-source",
+      "file": "CP895.TXT",
+      "sha256": "06b75359a7b1c19ab00a919c69074cb68d67ed27218466207b2e04f2e29bd21f",
+      "bytes": 2778,
+      "license": "MIT AND Unicode-3.0",
+      "derivation": "community/restore-mapping-inputs.py",
+      "sources": [
+        {
+          "file": "kamenicky-CharMapping.cs",
+          "sourceFile": "src/KamenickyEncoding/CharMapping.cs",
+          "commit": "854abe0cd8bdc3f04dfdffe96fca7e752e56a964",
+          "repository": "https://github.com/jceska/KamenickyEncoding",
+          "sha256": "75d10caba60e1c2d09d177fac35602a3aa76fcc8c51bf23873eed2dde3211e9d"
+        },
+        {
+          "file": "kamenicky-LICENSE",
+          "sourceFile": "LICENSE",
+          "commit": "854abe0cd8bdc3f04dfdffe96fca7e752e56a964",
+          "repository": "https://github.com/jceska/KamenickyEncoding",
+          "sha256": "75a2f8b993ce1327ccba5a68a388b96e3f3774fc951dd980f47dbca1018bd58b"
+        },
+        {
+          "file": "kamenicky-README.md",
+          "sourceFile": "README.md",
+          "commit": "854abe0cd8bdc3f04dfdffe96fca7e752e56a964",
+          "repository": "https://github.com/jceska/KamenickyEncoding",
+          "sha256": "e9b5a3d382e20f491e82682a4e6f75ea8d7aac3073db6caa3dddb288202921db"
+        }
+      ]
+    },
+    {
+      "codepage": 932,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/CP932.TXT",
+      "sha256": "c9bc0b0cd42e0fbcb82a09635bb5abed86afbdd4abc9e76fa5716638217cb59f",
+      "bytes": 295324,
+      "status": "fresh-unicode-source",
+      "width": 2,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 936,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/CP936.TXT",
+      "sha256": "b86f601c575e9ab457380b6f7abef03c75499cc6075bdc8b4b27f3f2de74bf6a",
+      "bytes": 817310,
+      "status": "fresh-unicode-source",
+      "width": 2,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 949,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/CP949.TXT",
+      "sha256": "f57e6fef9d1ed44f445e319a8e1b879ce6b6064520ab571c341e47b892e32abc",
+      "bytes": 790736,
+      "status": "fresh-unicode-source",
+      "width": 2,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 950,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/CP950.TXT",
+      "sha256": "ed403857b05e07ecd5667c7eff6b25898cb1fefe2d06cfe718d82d631e6058b6",
+      "bytes": 508978,
+      "status": "fresh-unicode-source",
+      "width": 2,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 1250,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1250.TXT",
+      "sha256": "e6535e3c81f4aff1a4b369c46e588a2423d6a75da341e01a6cea108c7542c19a",
+      "bytes": 9530,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 1251,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1251.TXT",
+      "sha256": "d9d491808bd7956c26ef8ed07fa63015bfab32860720e07d5bf3a64a609927ee",
+      "bytes": 9205,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 1252,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1252.TXT",
+      "sha256": "f607ae328b4dff5e9bfef725f5fff0ae23f38797f8a5b95998a0d2735c0e8fad",
+      "bytes": 9355,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 1253,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1253.TXT",
+      "sha256": "85d917854926ef09b22abefd19c7b61494e229fa391b648dc332f1fac0879ce3",
+      "bytes": 8938,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 1254,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1254.TXT",
+      "sha256": "f93569399f81abce90441793c118d2524770b58d9c5774de3233c64d88c9fca0",
+      "bytes": 9346,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 1255,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1255.TXT",
+      "sha256": "67ab4e3e7c088be41e0f230fa9c2c5b9a803395bec8027a5ee77df74432290c7",
+      "bytes": 8304,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 1256,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1256.TXT",
+      "sha256": "fd5835c5e3be668d4fa3dc3d0d3a6491795646fc9629c0892f45dd08aa72f367",
+      "bytes": 8657,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 1257,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1257.TXT",
+      "sha256": "5ac72f382ea4f64fe61854e0dae7d311583bd1dd20797697d4dce32b175a268b",
+      "bytes": 9218,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 1258,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1258.TXT",
+      "sha256": "2457d5d0fbb1d444136c579edc488d0a34474d58a36b6eb2adacba88c068df2e",
+      "bytes": 9208,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 10000,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/MAC/ROMAN.TXT",
+      "sha256": "42eb6b483c35494d858faaf4993e80074f94d033c92029901a4913cabe0c8945",
+      "bytes": 9229,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 10006,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/MAC/GREEK.TXT",
+      "sha256": "c87f2238cc673360fb8d91bf608d7f6cb74b4aa2247565d9a1863e267abcf8f4",
+      "bytes": 9413,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 10007,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/MAC/CYRILLIC.TXT",
+      "sha256": "70df280c676f465e39f3e943e4d5f35633220f203db4c4fa59c453d1301b96df",
+      "bytes": 9177,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 10008,
+      "status": "verified-derived-source",
+      "file": "CP10008.TXT",
+      "sha256": "9f27a5646cfc702eebe9d344c57b9b74b9d93ca4a28205f22557bfc4146dc42a",
+      "bytes": 105880,
+      "license": "Unicode-3.0",
+      "derivation": "community/restore-mapping-inputs.py",
+      "sources": [
+        {
+          "file": "icu-windows-10008-2000.ucm",
+          "sourceFile": "charset/data/ucm/windows-10008-2000.ucm",
+          "commit": "bae5ca647fa41703393dbf00240ec1b807a9c353",
+          "repository": "https://github.com/unicode-org/icu-data",
+          "sha256": "9461f9bbc0791d278e3f8eb07dc62db10f28f4f6fb6059d9e22796a87ce2b3f6"
+        },
+        {
+          "file": "icu-LICENSE",
+          "sourceFile": "LICENSE",
+          "commit": "bae5ca647fa41703393dbf00240ec1b807a9c353",
+          "repository": "https://github.com/unicode-org/icu-data",
+          "sha256": "f72db45707e93c90c4bf400edfa5d38ce44fe692789e385548e627459c1bf6c9"
+        }
+      ]
+    },
+    {
+      "codepage": 10029,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/MAC/LATIN2.TXT",
+      "sha256": "2501534b546b56d2006ee6a5d907cb899aac1333035b0a44cbd89fd164ab4b37",
+      "bytes": 9862,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 10079,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/MAC/ICELAND.TXT",
+      "sha256": "31e76c8583e7a00a54a29961a0bb1fce53bcd43811d8b04117425ec898c00375",
+      "bytes": 9253,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 10081,
+      "url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/MAC/TURKISH.TXT",
+      "sha256": "da12a957d497a3d8fa8a6d2aa011cf4b46d4a56aa7a08720c56ae5d9b6dc10db",
+      "bytes": 9251,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    },
+    {
+      "codepage": 28591,
+      "url": "https://www.unicode.org/Public/MAPPINGS/ISO8859/8859-1.TXT",
+      "sha256": "2a06a462bf74ae65a77b700f235ac05156ac20f4aaefe39f09cc20d50628bb5e",
+      "bytes": 9995,
+      "status": "fresh-unicode-source",
+      "width": 1,
+      "license": "Unicode-3.0; preserve any source-specific notices"
+    }
+  ],
+  "terms": "https://www.unicode.org/copyright.html",
+  "policy": "Current Unicode terms identify Public computer data files as Unicode Data Files under Unicode License v3 unless otherwise indicated. Source-specific notices retained with raw inputs; no blanket historic rights claim.",
+  "restoration": {
+    "codepages": [
+      620,
+      895,
+      10008
+    ],
+    "cp895Policy": "CP437 baseline plus Czech substitutions 128-175 from pinned MIT implementation; correct its DD block-glyph typo to CP437; 8D uses U+013A, differs from old SheetJS U+01EA",
+    "cp10008Policy": "Only ICU |0 roundtrip rows; exclude fallback/substitution rows",
+    "excludedUcmRows": [
+      {
+        "code": 41388,
+        "unicode": 8741,
+        "flag": 3
+      }
+    ]
+  }
+}

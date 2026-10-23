@@ -2,34 +2,22 @@
 /*! shim.js (C) 2013-present SheetJS -- http://sheetjs.com */
 /* ES3/5 Compatibility shims and other utilities for older browsers. */
 
-// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
-if(!Object.keys) Object.keys = (function() {
-  var hasOwnProperty = Object.prototype.hasOwnProperty,
-      hasDontEnumBug = !({toString: null}).propertyIsEnumerable('toString'),
-      dontEnums = [
-        'toString',
-        'toLocaleString',
-        'valueOf',
-        'hasOwnProperty',
-        'isPrototypeOf',
-        'propertyIsEnumerable',
-        'constructor'
-      ],
-      dontEnumsLength = dontEnums.length;
-
-  return function(obj) {
-    if(typeof obj !== 'object' && typeof obj !== 'function' || obj === null) throw new TypeError('Object.keys called on non-object');
-
-    var result = [];
-
-    for(var prop in obj) if(hasOwnProperty.call(obj, prop)) result.push(prop);
-
-    if(hasDontEnumBug)
-      for(var i=0; i < dontEnumsLength; ++i)
-        if(hasOwnProperty.call(obj, dontEnums[i])) result.push(dontEnums[i]);
-    return result;
-  };
-})();
+/* Independent fork replacement, 2026-10-23, Apache-2.0.
+ * Enumerate own properties, including legacy engines' skipped shadow names. */
+if(!Object.keys) Object.keys = function(value) {
+  if(value === null || (typeof value !== 'object' && typeof value !== 'function')) throw new TypeError('Object required');
+  var names = [], key, k, found, i;
+  for(key in value) if(Object.prototype.hasOwnProperty.call(value, key)) names.push(key);
+  if(!Object.prototype.propertyIsEnumerable.call({toString: 1}, 'toString')) {
+    var shadows = 'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'.split(',');
+    for(k = 0; k < shadows.length; ++k) {
+      key = shadows[k]; found = false;
+      for(i = 0; i < names.length; ++i) if(names[i] === key) found = true;
+      if(!found && Object.prototype.hasOwnProperty.call(value, key)) names.push(key);
+    }
+  }
+  return names;
+};
 
 if(!String.prototype.trim) String.prototype.trim = function() {
   var s = this.replace(/^\s+/, '');
@@ -149,9 +137,20 @@ var IE_LoadFile = (function() { try {
   return function(filename) { return fix_data(IE_LoadFile_Impl(filename)); };
 } catch(e) { return void 0; }})();
 
-// getComputedStyle polyfill from https://gist.github.com/8HNHoFtE/5891086
+/* Independent fork replacement, 2026-10-23, Apache-2.0.
+ * Minimal currentStyle adapter; this is not a full CSS computed-style engine. */
 if(typeof window !== 'undefined' && typeof window.getComputedStyle !== 'function') {
-  window.getComputedStyle = function(e,t){return this.el=e,this.getPropertyValue=function(t){var n=/(\-([a-z]){1})/g;return t=="float"&&(t="styleFloat"),n.test(t)&&(t=t.replace(n,function(){return arguments[2].toUpperCase()})),e.currentStyle[t]?e.currentStyle[t]:null},this}
+  window.getComputedStyle = function(element, pseudo) {
+    if(!element) throw new TypeError('Element required');
+    if(pseudo) throw new Error('Legacy computed style does not support pseudo-elements');
+    return {getPropertyValue: function(property) {
+      var name = String(property);
+      if(name === 'float') name = 'styleFloat';
+      else name = name.replace(/^-ms-/, 'ms-').replace(/-([a-z])/g, function(match, letter) { return letter.toUpperCase(); });
+      var result = (element.currentStyle || {})[name];
+      return result == null ? '' : String(result);
+    }};
+  };
 }
 var DO_NOT_EXPORT_CODEPAGE = true;
 /*! xlsx.js (C) 2013-present SheetJS -- http://sheetjs.com */
@@ -9165,6 +9164,8 @@ var PRN = (function() {
 		}
 		if(bytes[0] == 0xEF && bytes[1] == 0xBB && bytes[2] == 0xBF) str = utf8read(str.slice(3));
 		else if(opts.type != 'string' && opts.type != 'buffer' && opts.codepage == 65001) str = utf8read(str);
+		/* Independent fork: decode legacy CSV array bytes with the requested codepage. */
+		else if(opts.type == 'array' && typeof $cptable !== 'undefined' && opts.codepage) str = $cptable.utils.decode(opts.codepage, d);
 		else if((opts.type == 'binary') && typeof $cptable !== 'undefined' && opts.codepage)  str = $cptable.utils.decode(opts.codepage, $cptable.utils.encode(28591,str));
 		if(str.slice(0,19) == "socialcalc:version:") return ETH.to_sheet(opts.type == 'string' ? str : utf8read(str), opts);
 		return prn_to_sheet_str(str, opts);
@@ -10524,13 +10525,14 @@ var parse_rs = (function() {
 
 /* Parse a list of <r> tags */
 var rs_to_html = (function parse_rs_factory() {
-	var nlregex = /(\r\n|\n)/g;
+	var nlregex = /\r\n|\n/g;
 	function parse_rpr2(font, intro, outro) {
 		var style = [];
 
 		if(font.u) style.push("text-decoration: underline;");
 		if(font.uval) style.push("text-underline-style:" + font.uval + ";");
-		if(font.sz) style.push("font-size:" + font.sz + "pt;");
+		/* Independent fork, 2026-10-23: emit only numeric CSS sizes from workbook data. */
+		if(font.sz && isFinite(+font.sz) && +font.sz >= 0) style.push("font-size:" + (+font.sz) + "pt;");
 		if(font.outline) style.push("text-effect: outline;");
 		if(font.shadow) style.push("text-shadow: auto;");
 		intro.push('<span style="' + style.join("") + '">');
@@ -10541,7 +10543,8 @@ var rs_to_html = (function parse_rs_factory() {
 
 		var align = font.valign || "";
 		if(align == "superscript" || align == "super") align = "sup";
-		else if(align == "subscript") align = "sub";
+		else if(align == "subscript" || align == "sub") align = "sub";
+		else align = "";
 		if(align != "") { intro.push("<" + align + ">"); outro.push("</" + align + ">"); }
 
 		outro.push("</span>");
@@ -10555,7 +10558,7 @@ var rs_to_html = (function parse_rs_factory() {
 
 		if(r.s) parse_rpr2(r.s, terms[0], terms[2]);
 
-		return terms[0].join("") + terms[1].replace(nlregex,'<br/>') + terms[2].join("");
+		return terms[0].join("") + terms[1].split(nlregex).map(escapehtml).join('<br/>') + terms[2].join("");
 	}
 
 	return function parse_rs(rs) {
@@ -22720,6 +22723,16 @@ function html_to_sheet(str, _opts) {
 	if(merges.length) ws["!merges"] = merges;
 	return ws;
 }
+/* Independent fork modification, 2026-10-23: allowlist HTML link targets.
+ * Attribute escaping alone does not prevent navigation to active URL schemes. */
+function html_safe_link(target) {
+	if(typeof target != 'string' || !target || /[\x00-\x20\x7f-\x9f\\]/.test(target)) return false;
+	if(target.slice(0,2) == '//') return false;
+	var first = target.split(/[\/?#]/, 1)[0];
+	if(first.indexOf(':') == -1) return true;
+	return /^(https?:|mailto:)/i.test(target);
+}
+
 function make_html_row(ws, r, R, o) {
 	var M = (ws['!merges'] ||[]);
 	var oo = [];
@@ -22751,7 +22764,7 @@ function make_html_row(ws, r, R, o) {
 			// note: data-v is unaffected by the timezone interpretation
 			if(cell.v != null) sp["data-v"] = escapehtml(cell.v instanceof Date ? cell.v.toISOString() : cell.v);
 			if(cell.z != null) sp["data-z"] = cell.z;
-			if(cell.l && (cell.l.Target || "#").charAt(0) != "#") w = '<a href="' + escapehtml(cell.l.Target) +'">' + w + '</a>';
+			if(cell.l && html_safe_link(cell.l.Target) && cell.l.Target.charAt(0) != "#") w = '<a href="' + escapehtml(cell.l.Target) +'">' + w + '</a>';
 		}
 		sp.id = (o.id || "sjs") + "-" + coord;
 		oo.push(writextag('td', w, sp));

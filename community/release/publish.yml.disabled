@@ -1,0 +1,17 @@
+# NON-EXECUTABLE REVIEW TEMPLATE. Not installed under .github/workflows.
+name: Reviewed prerelease publication
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  publish:
+    if: ${{ false }} # Hard disabled until a separate reviewed activation change.
+    runs-on: ubuntu-24.04
+    environment: npm-release
+    steps:
+      - run: echo "Publishing remains disabled. Verify ownership, artifact hash and CI before activation."
+# Planned trusted publisher: angular-bootstrap / xlsx-community / publish.yml / npm-release.
+# First-package bootstrap must follow npm's current supported ownership/trust setup.
+# Once configured, prefer staged publishing + owner approval; release tag next, never latest.
+# No token or publish command is included in this disabled template.

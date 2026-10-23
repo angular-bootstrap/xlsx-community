@@ -101,7 +101,7 @@ dist: dist-deps $(TARGET) bower.json ## Prepare JS files for distribution
 .PHONY: dist-deps
 dist-deps: ## Copy dependencies for distribution
 	mkdir -p dist
-	cp node_modules/codepage/dist/cpexcel.full.js dist/cpexcel.js
+	python3 community/build-codepages.py
 
 .PHONY: aux
 aux: $(AUXTARGETS)

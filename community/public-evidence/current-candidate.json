@@ -1,0 +1,130 @@
+{
+  "checkedAt": "2026-10-23T18:47:12.098352+00:00",
+  "runtimeHashes": {
+    "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
+    "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
+    "dist/xlsx.full.min.js": "2cb7d6a1fcd5dc569a9690c689fafbad09815848633f3819ed6937995141cfc3"
+  },
+  "publicationEnabled": false,
+  "proposedPackage": "@angular-bootstrap/xlsx@0.1.0-rc.1",
+  "proposedRepository": "angular-bootstrap/xlsx-community",
+  "finalMacOSNode24": {
+    "cjs": {
+      "suites": 12563,
+      "tests": 37314,
+      "passes": 37313,
+      "pending": 1,
+      "failures": 0,
+      "start": "2026-10-23T18:41:42.584Z",
+      "end": "2026-10-23T18:44:49.418Z",
+      "duration": 186834
+    },
+    "esm": {
+      "suites": 12563,
+      "tests": 37314,
+      "passes": 37313,
+      "pending": 1,
+      "failures": 0,
+      "start": "2026-10-23T18:41:36.810Z",
+      "end": "2026-10-23T18:44:45.575Z",
+      "duration": 188765
+    }
+  },
+  "richText": {
+    "groups": 32,
+    "failed": 0,
+    "includesBaselinePositiveControls": true
+  },
+  "frameworks": {
+    "browserExecutions": 9,
+    "failed": 0
+  },
+  "reproducibility": {
+    "runs": 2,
+    "outputs": 12,
+    "byteIdentical": true
+  },
+  "remaining": [
+    "Native Windows/Linux x64/macOS Intel CI prepared, not executed",
+    "npm authentication returned 401; scope ownership unverified",
+    "Repository and security/publisher settings not created",
+    "40/50 default local-wall-time cases fail; explicit UTC 175/175 pass",
+    "Application resource limits required; independent security review/disclosure decision pending"
+  ],
+  "historicalEvidence": [
+    "node-matrix.json and bundler reports predate the final rich-text/CRLF patch; patch-specific Node22/26 regressions passed"
+  ],
+  "linuxFinal": {
+    "runtimeHashes": {
+      "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
+      "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492"
+    },
+    "image": "node:24.22.1-bookworm-slim",
+    "imageDigests": [
+      "node@sha256:55fb5f5a527ea2c5c4a95f963e48ef90aa38c7b346054fdc8ee9957a2b55d205"
+    ],
+    "runs": [
+      {
+        "requestedPlatform": "linux/arm64",
+        "execution": "native ARM64 Linux VM",
+        "checks": [
+          {
+            "name": "scoped CJS consumer",
+            "exitCode": 0,
+            "output": "{\"platform\":\"linux\",\"arch\":\"arm64\",\"node\":\"v24.22.1\",\"passed\":true,\"version\":\"0.20.3\",\"checks\":[\"xlsx\",\"xlsb\",\"biff8\",\"ods\",\"csv\",\"html\",\"xlml\",\"array codepage 620\",\"array codepage 895\",\"array codepage 10008\",\"CP895 correction\",\"CP895 representability validation\",\"HTML link javascript\",\"HTML link https\",\"HTML link data\",\"UTC date\",\"formula\"]}\n",
+            "error": ""
+          },
+          {
+            "name": "full upstream cjs",
+            "exitCode": 0,
+            "stats": {
+              "suites": 12563,
+              "tests": 37314,
+              "passes": 37313,
+              "pending": 1,
+              "failures": 0,
+              "start": "2026-10-23T18:45:39.709Z",
+              "end": "2026-10-23T18:49:22.541Z",
+              "duration": 222832
+            },
+            "failures": []
+          },
+          {
+            "name": "full upstream esm",
+            "exitCode": 0,
+            "stats": {
+              "suites": 12563,
+              "tests": 37314,
+              "passes": 37313,
+              "pending": 1,
+              "failures": 0,
+              "start": "2026-10-23T18:49:24.615Z",
+              "end": "2026-10-23T18:52:54.915Z",
+              "duration": 210300
+            },
+            "failures": []
+          }
+        ]
+      },
+      {
+        "requestedPlatform": "linux/amd64",
+        "execution": "x64 emulation on ARM64 host",
+        "checks": [
+          {
+            "name": "scoped CJS consumer",
+            "exitCode": 0,
+            "output": "{\"platform\":\"linux\",\"arch\":\"x64\",\"node\":\"v24.22.1\",\"passed\":true,\"version\":\"0.20.3\",\"checks\":[\"xlsx\",\"xlsb\",\"biff8\",\"ods\",\"csv\",\"html\",\"xlml\",\"array codepage 620\",\"array codepage 895\",\"array codepage 10008\",\"CP895 correction\",\"CP895 representability validation\",\"HTML link javascript\",\"HTML link https\",\"HTML link data\",\"UTC date\",\"formula\"]}\n",
+            "error": ""
+          }
+        ]
+      }
+    ],
+    "limitations": [
+      "No native Windows execution",
+      "x64 consumer checks use emulation, not native x64 hardware",
+      "Full Linux suite currently ARM64; native x64 jobs prepared for CI"
+    ]
+  },
+  "securityCompatibilityHarness": "passed",
+  "portableCiCleanInstall": "passed"
+}

@@ -1,183 +1,206 @@
 {
-	"name": "xlsx",
-	"version": "0.20.3",
-	"author": "sheetjs",
-	"description": "SheetJS Spreadsheet data parser and writer",
-	"keywords": [
-		"excel",
-		"xls",
-		"xlsx",
-		"xlsb",
-		"xlsm",
-		"ods",
-		"csv",
-		"dbf",
-		"dif",
-		"sylk",
-		"office",
-		"spreadsheet"
-	],
-	"bin": {
-		"xlsx": "./bin/xlsx.njs"
-	},
-	"main": "xlsx.js",
-	"module": "xlsx.mjs",
-	"unpkg": "dist/xlsx.full.min.js",
-	"jsdelivr": "dist/xlsx.full.min.js",
-	"types": "types/index.d.ts",
-	"exports": {
-		".": {
-			"import": "./xlsx.mjs",
-			"require": "./xlsx.js",
-			"types": "./types/index.d.ts"
-		},
-		"./xlsx.mjs": {
-			"import": "./xlsx.mjs",
-			"types": "./types/index.d.ts"
-		},
-		"./xlsx.js": {
-			"require": "./xlsx.js",
-			"types": "./types/index.d.ts"
-		},
-		"./dist/xlsx.core.min": {
-			"import": "./dist/xlsx.core.min.js",
-			"require": "./dist/xlsx.core.min.js",
-			"types": "./types/index.d.ts"
-		},
-		"./dist/xlsx.core.min.js": {
-			"import": "./dist/xlsx.core.min.js",
-			"require": "./dist/xlsx.core.min.js",
-			"types": "./types/index.d.ts"
-		},
-		"./dist/xlsx.full.min": {
-			"import": "./dist/xlsx.full.min.js",
-			"require": "./dist/xlsx.full.min.js",
-			"types": "./types/index.d.ts"
-		},
-		"./dist/xlsx.full.min.js": {
-			"import": "./dist/xlsx.full.min.js",
-			"require": "./dist/xlsx.full.min.js",
-			"types": "./types/index.d.ts"
-		},
-		"./dist/xlsx.mini.min": {
-			"import": "./dist/xlsx.mini.min.js",
-			"require": "./dist/xlsx.mini.min.js",
-			"types": "./types/index.d.ts"
-		},
-		"./dist/xlsx.mini.min.js": {
-			"import": "./dist/xlsx.mini.min.js",
-			"require": "./dist/xlsx.mini.min.js",
-			"types": "./types/index.d.ts"
-		},
-		"./dist/xlsx.zahl": {
-			"import": "./dist/xlsx.zahl.mjs",
-			"require": "./dist/xlsx.zahl.js",
-			"types": "./dist/zahl.d.ts"
-		},
-		"./dist/xlsx.zahl.mjs": {
-			"import": "./dist/xlsx.zahl.mjs",
-			"types": "./dist/zahl.d.ts"
-		},
-		"./dist/xlsx.zahl.js": {
-			"require": "./dist/xlsx.zahl.js",
-			"types": "./dist/zahl.d.ts"
-		},
-		"./dist/cpexcel": {
-			"import": "./dist/cpexcel.full.mjs",
-			"require": "./dist/cpexcel.js",
-			"types": "./dist/cpexcel.d.ts"
-		},
-		"./dist/cpexcel.js": {
-			"require": "./dist/cpexcel.js",
-			"types": "./dist/cpexcel.d.ts"
-		},
-		"./dist/cpexcel.full": {
-			"import": "./dist/cpexcel.full.mjs",
-			"require": "./dist/cpexcel.js",
-			"types": "./dist/cpexcel.d.ts"
-		},
-		"./dist/cpexcel.full.mjs": {
-			"import": "./dist/cpexcel.full.mjs",
-			"types": "./dist/cpexcel.d.ts"
-		}
-	},
-	"browser": {
-		"buffer": false,
-		"crypto": false,
-		"stream": false,
-		"process": false,
-		"fs": false
-	},
-	"sideEffects": false,
-	"dependencies": {
-	},
-	"devDependencies": {
-		"@sheetjs/uglify-js": "~2.7.3",
-		"@types/node": "^8.5.9",
-		"acorn": "7.4.1",
-		"adler-32": "~1.3.1",
-		"alex": "8.1.1",
-		"blanket": "~1.2.3",
-		"cfb": "~1.2.2",
-		"codepage": "~1.15.0",
-		"commander": "~2.17.1",
-		"crc-32": "~1.2.2",
-		"dtslint": "^0.1.2",
-		"eslint": "7.23.0",
-		"eslint-plugin-html": "^6.1.2",
-		"eslint-plugin-json": "^2.1.2",
-		"exit-on-epipe": "~1.0.1",
-		"fflate": "^0.7.1",
-		"jsdom": "~11.1.0",
-		"markdown-spellcheck": "^1.3.1",
-		"mocha": "~2.5.3",
-		"sinon": "^1.17.7",
-		"ssf": "~0.11.2",
-		"typescript": "2.2.0",
-		"wmf": "~1.0.1",
-		"word": "~0.3.0"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://git.sheetjs.com/SheetJS/sheetjs"
-	},
-	"scripts": {
-		"pretest": "npm run lint",
-		"test": "npm run tests-only",
-		"pretest-only": "git submodule init && git submodule update",
-		"tests-only": "make travis",
-		"build": "make",
-		"lint": "make fullint",
-		"dtslint": "dtslint types"
-	},
-	"config": {
-		"blanket": {
-			"pattern": "xlsx.js"
-		}
-	},
-	"alex": {
-		"allow": [
-			"chinese",
-			"special",
-			"simple",
-			"just",
-			"crash",
-			"wtf",
-			"holes"
-		]
-	},
-	"homepage": "https://sheetjs.com/",
-	"files": [
-		"CHANGELOG.md", "LICENSE", "README.md", "bower.json", "package.json", "xlsx.js", "xlsx.mjs", "xlsxworker.js",
-		"bin/xlsx.njs",
-		"dist/LICENSE", "dist/*.mjs", "dist/*.js", "dist/*.map", "dist/*.d.ts",
-		"types/index.d.ts", "types/tsconfig.json"
-	],
-	"bugs": {
-		"url": "https://git.sheetjs.com/SheetJS/sheetjs/issues"
-	},
-	"license": "Apache-2.0",
-	"engines": {
-		"node": ">=0.8"
-	}
+  "name": "@angular-bootstrap/xlsx",
+  "version": "0.1.0-rc.1",
+  "author": "sheetjs",
+  "description": "Independent local SheetJS CE review candidate; not an official SheetJS release",
+  "keywords": [
+    "excel",
+    "xls",
+    "xlsx",
+    "xlsb",
+    "xlsm",
+    "ods",
+    "csv",
+    "dbf",
+    "dif",
+    "sylk",
+    "office",
+    "spreadsheet"
+  ],
+  "main": "xlsx.js",
+  "module": "xlsx.mjs",
+  "unpkg": "dist/xlsx.full.min.js",
+  "jsdelivr": "dist/xlsx.full.min.js",
+  "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./xlsx.mjs",
+      "require": "./xlsx.js"
+    },
+    "./xlsx.mjs": {
+      "types": "./types/index.d.ts",
+      "import": "./xlsx.mjs"
+    },
+    "./xlsx.js": {
+      "types": "./types/index.d.ts",
+      "require": "./xlsx.js"
+    },
+    "./dist/xlsx.core.min": {
+      "types": "./types/index.d.ts",
+      "import": "./dist/xlsx.core.min.js",
+      "require": "./dist/xlsx.core.min.js"
+    },
+    "./dist/xlsx.core.min.js": {
+      "types": "./types/index.d.ts",
+      "import": "./dist/xlsx.core.min.js",
+      "require": "./dist/xlsx.core.min.js"
+    },
+    "./dist/xlsx.full.min": {
+      "types": "./types/index.d.ts",
+      "import": "./dist/xlsx.full.min.js",
+      "require": "./dist/xlsx.full.min.js"
+    },
+    "./dist/xlsx.full.min.js": {
+      "types": "./types/index.d.ts",
+      "import": "./dist/xlsx.full.min.js",
+      "require": "./dist/xlsx.full.min.js"
+    },
+    "./dist/xlsx.mini.min": {
+      "types": "./types/index.d.ts",
+      "import": "./dist/xlsx.mini.min.js",
+      "require": "./dist/xlsx.mini.min.js"
+    },
+    "./dist/xlsx.mini.min.js": {
+      "types": "./types/index.d.ts",
+      "import": "./dist/xlsx.mini.min.js",
+      "require": "./dist/xlsx.mini.min.js"
+    },
+    "./dist/xlsx.zahl": {
+      "types": "./dist/zahl.d.ts",
+      "import": "./dist/xlsx.zahl.mjs",
+      "require": "./dist/xlsx.zahl.js"
+    },
+    "./dist/xlsx.zahl.mjs": {
+      "types": "./dist/zahl.d.ts",
+      "import": "./dist/xlsx.zahl.mjs"
+    },
+    "./dist/xlsx.zahl.js": {
+      "types": "./dist/zahl.d.ts",
+      "require": "./dist/xlsx.zahl.js"
+    },
+    "./dist/cpexcel": {
+      "types": "./dist/cpexcel.d.ts",
+      "import": "./dist/cpexcel.full.mjs",
+      "require": "./dist/cpexcel.js"
+    },
+    "./dist/cpexcel.js": {
+      "types": "./dist/cpexcel.d.ts",
+      "require": "./dist/cpexcel.js"
+    },
+    "./dist/cpexcel.full": {
+      "types": "./dist/cpexcel.d.ts",
+      "import": "./dist/cpexcel.full.mjs",
+      "require": "./dist/cpexcel.js"
+    },
+    "./dist/cpexcel.full.mjs": {
+      "types": "./dist/cpexcel.d.ts",
+      "import": "./dist/cpexcel.full.mjs"
+    }
+  },
+  "browser": {
+    "buffer": false,
+    "crypto": false,
+    "stream": false,
+    "process": false,
+    "fs": false
+  },
+  "sideEffects": false,
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "pretest": "npm run lint",
+    "test": "npm run tests-only",
+    "pretest-only": "git submodule init && git submodule update",
+    "tests-only": "make travis",
+    "build": "make",
+    "lint": "make fullint",
+    "dtslint": "dtslint types",
+    "test:community": "node community/verify.cjs",
+    "prepublishOnly": "node community/block-publish.cjs"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "xlsx.js"
+    }
+  },
+  "alex": {
+    "allow": [
+      "chinese",
+      "special",
+      "simple",
+      "just",
+      "crash",
+      "wtf",
+      "holes"
+    ]
+  },
+  "homepage": "https://github.com/angular-bootstrap/xlsx-community#readme",
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "bower.json",
+    "package.json",
+    "xlsx.js",
+    "xlsx.mjs",
+    "xlsxworker.js",
+    "dist/LICENSE",
+    "dist/*.mjs",
+    "dist/*.js",
+    "dist/*.map",
+    "dist/*.d.ts",
+    "types/index.d.ts",
+    "types/tsconfig.json",
+    "README.upstream.md",
+    "COMMUNITY_PROVENANCE.json",
+    "community/block-publish.cjs",
+    "community/REVIEW_RESULTS.md",
+    "community/results/verification.json",
+    "community/RELEASE_CHECKS.md",
+    "community/results/release-gates.json",
+    "THIRD_PARTY_NOTICES.md",
+    "LICENSES/*.txt",
+    "community/MINIFIED_LICENSE_SECURITY_REVIEW.md",
+    "community/results/reproducibility.json",
+    "community/results/component-inventory.json",
+    "community/results/html-link-review.json",
+    "community/results/bundled-osv.json",
+    "community/results/advisory-range-details.json",
+    "community/results/build-tool-audit.json",
+    "community/HTML_FIX_RESULTS.md",
+    "community/results/reproducibility-patched.json",
+    "community/results/codepage-provenance/index.json",
+    "community/results/html-paths.json",
+    "MAPPING_DATA_NOTICES.md",
+    "community/PROVENANCE_REPLACEMENT_RESULTS.md",
+    "community/mapping-inputs/lock.json",
+    "community/results/provenance-replacements.json",
+    "community/results/mapping-compatibility-diff.json",
+    "community/RESTORED_CODEPAGE_RESULTS.md",
+    "community/results/restored-codepages.json",
+    "community/CP895_COMPATIBILITY.md",
+    "community/NODE_BUNDLER_RESULTS.md",
+    "community/results/node-matrix.json",
+    "community/results/compat-runtime-final.json",
+    "community/results/node-file-stream.json",
+    "community/results/bundlers.json",
+    "SECURITY.md",
+    "community/UPSTREAM_DIFFERENCES.md",
+    "community/ANGULAR_BOOTSTRAP_RELEASE_RESULTS.md",
+    "community/RELEASE_PLAN.md",
+    "community/public-evidence/*.json"
+  ],
+  "license": "(Apache-2.0 AND Unicode-3.0 AND MIT)",
+  "engines": {
+    "node": "^22.23.4 || ^24.22.1 || ^26.12.1"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular-bootstrap/xlsx-community.git"
+  },
+  "bugs": {
+    "url": "https://github.com/angular-bootstrap/xlsx-community/issues"
+  }
 }

@@ -1,0 +1,12 @@
+{
+  "name": "@angular-bootstrap/xlsx",
+  "version": "0.1.0-rc.1",
+  "sha256": "96ffa4549a8cd6f54f0103b73245a2bad8caaabbca8015e72dff892ae46c8728",
+  "integrity": "sha512-6nVJya1FMoHPaVpzzElBZw0j2BqKgD6x58WTAKfLwQh/Fue7KClfY2DX90xYN05Mfah6bwVZKR7m0eMKUMKDiA==",
+  "bytes": 2480669,
+  "runtimeHashesMatchExecutedTests": true,
+  "licenseNoticesPresent": true,
+  "personalMachinePathsAbsentInPackagedJsonAndMarkdown": true,
+  "private": true,
+  "publishingEnabled": false
+}

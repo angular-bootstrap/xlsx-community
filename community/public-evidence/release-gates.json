@@ -1,0 +1,281 @@
+{
+  "checkedAt": "2026-10-23T17:38:02.078922+00:00",
+  "node": "v24.16.0",
+  "upstreamSuites": {
+    "cjs": {
+      "stats": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T18:07:49.290Z",
+        "end": "2026-10-23T18:10:08.550Z",
+        "duration": 139260
+      },
+      "pending": [
+        "corner cases should parse CSV date values with preceding space"
+      ],
+      "failures": [],
+      "runner": "Full unmodified upstream test entry against final restored tables and CSV array-path fix"
+    },
+    "esm": {
+      "stats": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T18:07:36.324Z",
+        "end": "2026-10-23T18:09:59.901Z",
+        "duration": 143577
+      },
+      "pending": [
+        "corner cases should parse CSV date values with preceding space"
+      ],
+      "failures": [],
+      "runner": "Full unmodified upstream test entry against final restored tables and CSV array-path fix"
+    }
+  },
+  "typescript": [
+    {
+      "name": "upstream fixtures",
+      "compiler": "5.6.3",
+      "config": "types/tsconfig.json",
+      "exitCode": 0,
+      "status": "pass",
+      "diagnostics": ""
+    },
+    {
+      "name": "strict CJS and ESM consumers",
+      "compiler": "5.9.3",
+      "config": "community/types/tsconfig.json",
+      "exitCode": 0,
+      "status": "pass",
+      "diagnostics": ""
+    }
+  ],
+  "realBrowsers": [
+    {
+      "name": "Chrome",
+      "version": "155.0.8059.85",
+      "passed": 27,
+      "failed": [],
+      "notApplicable": 1,
+      "restoredEncodingImports": 12,
+      "blocker": null
+    },
+    {
+      "name": "Firefox",
+      "version": "142.0.1",
+      "passed": 27,
+      "failed": [],
+      "notApplicable": 1,
+      "restoredEncodingImports": 12,
+      "blocker": null
+    },
+    {
+      "name": "WebKit",
+      "version": "26.0",
+      "passed": 27,
+      "failed": [],
+      "notApplicable": 1,
+      "restoredEncodingImports": 12,
+      "blocker": null
+    }
+  ],
+  "publishingEnabled": false,
+  "fixtureCorpus": {
+    "url": "https://test-files.sheetjs.com/test_files.zip",
+    "sha256": "a786d4f1a80adf9447997b6f3b30b2593c776c27e0b075e3971627c17205f220",
+    "archiveBytes": 341452051,
+    "entries": 12415,
+    "uncompressedBytes": 1935192049
+  },
+  "testToolVersions": {
+    "mocha": "10.8.2",
+    "jsdom": "26.1.0",
+    "playwright": "1.56.1",
+    "typescript": "5.6.3",
+    "commander": "2.20.3",
+    "@types/node": "8.10.66"
+  },
+  "browserArchives": [
+    {
+      "engine": "firefox",
+      "sha256": "45a546ae453d465f388b4f35c29442a3cc4ae5e6514fc7f01eb1647b81626332",
+      "extraction": "Validated archive entries then macOS ditto; official Playwright extraction stalled"
+    },
+    {
+      "engine": "webkit",
+      "sha256": "0153c535d081e095a464172b298bb15470a30c5f72481735ab30a3253f7458fa",
+      "extraction": "Validated archive entries then macOS ditto; official Playwright extraction stalled"
+    }
+  ],
+  "additionalReview": {
+    "report": "community/NODE_BUNDLER_RESULTS.md",
+    "reproducibleOutputs": 12,
+    "cleanBuildRuns": 2,
+    "htmlSafeOutputFailures": 0,
+    "licenseProvenanceCleared": false,
+    "publicationReady": false,
+    "htmlRegressionAssertions": 630,
+    "htmlPathAndControlChecks": 9,
+    "patchedReproducibility": "reproducibility-patched.json",
+    "focusedShimMappingGapAddressed": true,
+    "fullSuitesGreen": true,
+    "omittedCodepages": [],
+    "restoredCodepages": [
+      620,
+      895,
+      10008
+    ],
+    "restoredCodepageGroups": 79,
+    "mappingDecodeChecks": 150098,
+    "mappingEncodeChecks": 149282,
+    "cp895MigrationDocument": "community/CP895_COMPATIBILITY.md",
+    "nodeSupportRange": "^22.23.4 || ^24.22.1 || ^26.12.1"
+  },
+  "nodeMatrix": [
+    {
+      "version": "v22.23.4",
+      "checks": [
+        {
+          "name": "full upstream cjs",
+          "exitCode": 0,
+          "stats": {
+            "suites": 12563,
+            "tests": 37314,
+            "passes": 37313,
+            "pending": 1,
+            "failures": 0,
+            "start": "2026-10-23T18:14:35.636Z",
+            "end": "2026-10-23T18:18:32.915Z",
+            "duration": 237279
+          },
+          "pending": [
+            "corner cases should parse CSV date values with preceding space"
+          ],
+          "failures": []
+        },
+        {
+          "name": "full upstream esm",
+          "exitCode": 0,
+          "stats": {
+            "suites": 12563,
+            "tests": 37314,
+            "passes": 37313,
+            "pending": 1,
+            "failures": 0,
+            "start": "2026-10-23T18:18:35.351Z",
+            "end": "2026-10-23T18:21:53.314Z",
+            "duration": 197963
+          },
+          "pending": [
+            "corner cases should parse CSV date values with preceding space"
+          ],
+          "failures": []
+        }
+      ]
+    },
+    {
+      "version": "v24.22.1",
+      "checks": [
+        {
+          "name": "full upstream cjs",
+          "exitCode": 0,
+          "stats": {
+            "suites": 12563,
+            "tests": 37314,
+            "passes": 37313,
+            "pending": 1,
+            "failures": 0,
+            "start": "2026-10-23T18:14:37.635Z",
+            "end": "2026-10-23T18:18:27.214Z",
+            "duration": 229579
+          },
+          "pending": [
+            "corner cases should parse CSV date values with preceding space"
+          ],
+          "failures": []
+        },
+        {
+          "name": "full upstream esm",
+          "exitCode": 0,
+          "stats": {
+            "suites": 12563,
+            "tests": 37314,
+            "passes": 37313,
+            "pending": 1,
+            "failures": 0,
+            "start": "2026-10-23T18:18:28.313Z",
+            "end": "2026-10-23T18:21:45.031Z",
+            "duration": 196718
+          },
+          "pending": [
+            "corner cases should parse CSV date values with preceding space"
+          ],
+          "failures": []
+        }
+      ]
+    },
+    {
+      "version": "v26.12.1",
+      "checks": [
+        {
+          "name": "full upstream cjs",
+          "exitCode": 0,
+          "stats": {
+            "suites": 12563,
+            "tests": 37314,
+            "passes": 37313,
+            "pending": 1,
+            "failures": 0,
+            "start": "2026-10-23T18:14:39.080Z",
+            "end": "2026-10-23T18:18:15.524Z",
+            "duration": 216444
+          },
+          "pending": [
+            "corner cases should parse CSV date values with preceding space"
+          ],
+          "failures": []
+        },
+        {
+          "name": "full upstream esm",
+          "exitCode": 0,
+          "stats": {
+            "suites": 12563,
+            "tests": 37314,
+            "passes": 37313,
+            "pending": 1,
+            "failures": 0,
+            "start": "2026-10-23T18:18:16.576Z",
+            "end": "2026-10-23T18:21:25.702Z",
+            "duration": 189126
+          },
+          "pending": [
+            "corner cases should parse CSV date values with preceding space"
+          ],
+          "failures": []
+        }
+      ]
+    }
+  ],
+  "bundlers": {
+    "tools": {
+      "esbuild": "0.28.2",
+      "webpack": "5.112.2",
+      "webpack-cli": "7.2.3",
+      "rollup": "4.65.0",
+      "vite": "8.3.5",
+      "@rollup/plugin-node-resolve": "16.0.3",
+      "@rollup/plugin-commonjs": "29.0.3"
+    },
+    "buildsPassed": 16,
+    "warnings": 0,
+    "nodeExecutionsPassed": 30,
+    "browserExecutionsPassed": 24,
+    "securityRuntimesPassed": 3
+  },
+  "evidenceScope": "Historical pre-rich-text matrix. Current final-byte results: community/public-evidence/current-candidate.json"
+}

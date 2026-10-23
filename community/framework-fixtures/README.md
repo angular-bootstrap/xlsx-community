@@ -1,0 +1,7 @@
+# Framework release fixtures
+
+These private fixtures test the proposed scoped tarball. They are not published applications. Angular, React/Vite and Next.js production builds were exercised with Node 24.22.1. Browser results are recorded in `community/public-evidence/framework-integration.json`.
+
+To reproduce, place the reviewed `angular-bootstrap-xlsx-0.1.0-rc.1.tgz` in the repository `.release-artifacts/` directory. In each fixture directory, run `npm ci --ignore-scripts`, then build Angular with `node node_modules/@angular/cli/bin/ng.js build`, React with `node node_modules/vite/bin/vite.js build`, and Next.js with `node node_modules/next/dist/bin/next build`. Lockfiles pin the exact tarball integrity; refresh those integrity entries only when intentionally testing a newly reviewed archive. Next.js provides server and client checks plus `/api/workbook`; React provides upload/download controls. Serve the production output on loopback and verify Chrome, Firefox and WebKit. Set `SHEETJS_FRAMEWORK_ROOT`, `SHEETJS_PLAYWRIGHT_PATH` and `PLAYWRIGHT_BROWSERS_PATH` to run `community/run-framework-browsers.cjs` against your installed production fixtures and browser engines; it is not yet a hosted framework CI job.
+
+Vite reports a large bundle warning for the full workbook parser. This does not fail correctness checks, but consumers should evaluate download size and loading strategy. Test-tool dependency deprecations remain development-only maintenance work; they do not become runtime dependencies of the scoped archive.

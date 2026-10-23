@@ -1,0 +1,13 @@
+{
+  "name": "xlsx-react-release-check",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "vite": "8.3.5",
+    "@vitejs/plugin-react": "6.1.2",
+    "@angular-bootstrap/xlsx": "file:../../../.release-artifacts/angular-bootstrap-xlsx-0.1.0-rc.1.tgz"
+  }
+}

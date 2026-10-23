@@ -1,0 +1,7 @@
+const fs=require('fs'),path=require('path'),cp=require('child_process');const root=path.resolve(__dirname,'../..'),tools=path.join(root,'.ci/test-tools/node_modules'),result=path.join(root,'community/results');fs.mkdirSync(result,{recursive:true});fs.mkdirSync(path.join(root,'tmp'),{recursive:true});
+// test.mjs resolves jsdom from the checkout. A generated junction/symlink never ships.
+const modules=path.join(root,'node_modules');if(!fs.existsSync(modules))fs.symlinkSync(tools,modules,process.platform==='win32'?'junction':'dir');
+for(const entry of ['test.js','test.mjs']){const output=path.join(result,'ci-'+process.platform+'-'+process.arch+'-'+process.version+'-'+entry+'.json');const p=cp.spawnSync(process.execPath,['--max-old-space-size=4096',path.join(tools,'mocha/bin/mocha.js'),entry,'--reporter','json','--reporter-option','output='+output,'--timeout','30000'],{cwd:root,stdio:'inherit',timeout:900000});if(p.status!==0)process.exit(p.status||1)}
+process.env.SHEETJS_JSDOM_PATH=path.join(tools,'jsdom');
+for(const script of ['prepare-controls.cjs','verify.cjs','check-rich-text.cjs','run-timezones.cjs']){const p=cp.spawnSync(process.execPath,[path.join(root,'community',script)],{cwd:root,stdio:'inherit',timeout:120000});if(p.status!==0)process.exit(p.status||1)}
+console.log('CI platform '+process.platform+'/'+process.arch+' '+process.version+' passed; review timezone observations separately');

@@ -1,0 +1,2 @@
+import {Component} from '@angular/core';import {bootstrapApplication} from '@angular/platform-browser';import*as X from'@angular-bootstrap/xlsx';import*as cp from'@angular-bootstrap/xlsx/dist/cpexcel.full.mjs';import check from'../checks.cjs';
+const result=check(X,cp);(globalThis as any).frameworkResult=result;@Component({selector:'app-root',standalone:true,template:'<h1>Angular scoped integration</h1><pre id="result">{{value}}</pre>'})class App{value=JSON.stringify(result)}bootstrapApplication(App).catch(console.error);

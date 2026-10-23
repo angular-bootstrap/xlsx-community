@@ -1,0 +1,42 @@
+<!doctype html><meta charset="utf-8"><title>Independent SheetJS browser checks</title>
+<h1>Local candidate browser verification</h1><pre id="results">Running…</pre>
+<script src="/community/html-link-cases.js"></script>
+<script type="module">
+const variant=new URL(location).searchParams.get('variant')||'full';
+const paths={full:'/dist/xlsx.full.min.js',core:'/dist/xlsx.core.min.js',mini:'/dist/xlsx.mini.min.js',esm:'/xlsx.mjs'};
+const results=[];const assert=(v,m)=>{if(!v)throw Error(m)};
+async function check(name,fn){try{results.push({name,status:'pass',evidence:await fn()})}catch(e){results.push({name,status:'fail',error:String(e)})}}
+try{
+let X;
+if(variant==='esm')X=await import(paths.esm);
+else {await new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=paths[variant];s.onload=resolve;s.onerror=reject;document.head.append(s)});X=window.XLSX;}
+if(variant==='core'||variant==='esm')X.set_cptable(await import('/dist/cpexcel.full.mjs'));
+await check('format roundtrips',()=>{
+ const values=[['name','count'],['भारत',42],['café',3.5]],w=X.utils.book_new();X.utils.book_append_sheet(w,X.utils.aoa_to_sheet(values),'Data');
+ const formats=variant==='mini'?['xlsx','csv']:['xlsx','xlsb','biff8','ods','csv','html','xlml'];
+ for(const bookType of formats){const b=X.write(w,{type:'array',bookType}),q=X.read(b,{type:'array'});assert(JSON.stringify(X.utils.sheet_to_json(q.Sheets[q.SheetNames[0]],{header:1}))===JSON.stringify(values),bookType+' values differ')}
+ return {formats};
+});
+await check('formulas comments hyperlinks merges UTC date',()=>{
+ const w=X.utils.book_new(),s=X.utils.aoa_to_sheet([[new Date('2024-01-02T12:30:00Z'),42]],{UTC:true});s.C1={t:'n',v:43,f:'B1+1'};s['!ref']='A1:C2';s['!merges']=[{s:{r:1,c:0},e:{r:1,c:1}}];s.B1.c=[{a:'test',t:'hello'}];s.C1.l={Target:'https://example.org/'};X.utils.book_append_sheet(w,s,'Data');
+ const q=X.read(X.write(w,{type:'array',bookType:'xlsx'}),{type:'array',cellDates:true}).Sheets.Data;
+ assert(q.A1.v.toISOString()==='2024-01-02T12:30:00.000Z','UTC date');assert(q.C1.f==='B1+1','formula');assert(q.B1.c[0].t==='hello','comment');assert(q.C1.l.Target==='https://example.org/','hyperlink');assert(q['!merges'].length===1,'merge');return true;
+});
+await check('restored codepage imports',async()=>{const cp=await import('/dist/cpexcel.full.mjs');X.set_cptable(cp);for(const [codepage,text] of [[620,'Ś╫êëτ⌡ś'],[895,'Š╫ěéτ⌡š ĺ'],[10008,'中文汉字']]){const bytes=new Uint8Array([118,97,108,117,101,10,...cp.utils.encode(codepage,text,'arr')]);const w=X.read(bytes,{type:'array',codepage});assert(w.Sheets[w.SheetNames[0]].A2.v===text,'codepage '+codepage+' got '+JSON.stringify(w.Sheets[w.SheetNames[0]].A2)+' bytes '+JSON.stringify(Array.from(bytes)))}return {codepages:[620,895,10008]};});
+await check('safe HTML hyperlinks',()=>htmlLinkRegression.check(X,html=>new DOMParser().parseFromString(html,'text/html')));
+await check('DOM table import',()=>{
+ const table=document.createElement('table');table.innerHTML='<tr><td>hello</td><td>42</td></tr>';document.body.append(table);
+ const s=X.utils.table_to_sheet(table);table.remove();assert(s.A1.v==='hello'&&s.B1.v===42,'DOM values');return true;
+});
+async function workerTest(test){
+ const workerCode=`(async()=>{const variant=${JSON.stringify(variant)},url=${JSON.stringify(location.origin+paths[variant])};let X;if(variant==='esm')X=await import(url);else{importScripts(url);X=self.XLSX};if(${JSON.stringify(test)}==='prototype'){const b=await(await fetch(${JSON.stringify(location.origin+'/community/controls/comment-address.xlsx')})).arrayBuffer();X.read(b,{type:'array'});postMessage({polluted:Object.prototype.hasOwnProperty.call(Object.prototype,'c')})}else{const s='<table><tr><td>x'+' '.repeat(60000)+'y</td></tr></table>';const t=performance.now();X.read(s,{type:'string'});postMessage({ms:performance.now()-t})}})().catch(e=>postMessage({error:String(e)}));`;
+ const url=URL.createObjectURL(new Blob([workerCode],{type:'text/javascript'}));
+ const worker=new Worker(url,variant==='esm'?{type:'module'}:undefined);
+ return await new Promise((resolve,reject)=>{const timer=setTimeout(()=>{worker.terminate();URL.revokeObjectURL(url);reject(Error('worker deadline exceeded'))},5000);const done=()=>{clearTimeout(timer);worker.terminate();URL.revokeObjectURL(url)};worker.onmessage=e=>{done();e.data.error?reject(Error(e.data.error)):resolve(e.data)};worker.onerror=e=>{done();reject(Error(e.message))}});
+}
+await check('CVE-2023-30533 worker regression',async()=>{const r=await workerTest('prototype');assert(r.polluted===false,'prototype mutated');return r});
+if(variant!=='mini')await check('CVE-2024-22363 worker regression',async()=>await workerTest('redos'));
+else results.push({name:'CVE-2024-22363 HTML path',status:'not-applicable',reason:'Mini omits HTML parser'});
+}catch(e){results.push({name:'initialization',status:'fail',error:String(e)})}
+window.releaseCheck={variant,userAgent:navigator.userAgent,results};document.querySelector('#results').textContent=JSON.stringify(window.releaseCheck,null,2);window.releaseCheckDone=true;
+</script>

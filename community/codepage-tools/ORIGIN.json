@@ -1,0 +1,19 @@
+{
+  "source": "https://github.com/SheetJS/js-codepage",
+  "commit": "d5f23335d5335ee7d241b6c9e7f2ea124a07f616",
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "file": "make.njs",
+      "sha256": "3c7abe44f3c85b2693d25fe1d13722d7398d5fe8ff030454c245a21cf9afe939"
+    },
+    {
+      "file": "cputils.js",
+      "sha256": "c1afedabdd37de6fa65ecb1f5a27bbfb09bbd382ded38889a3de11501494a1e9"
+    },
+    {
+      "file": "cputils.mjs",
+      "sha256": "d0705b3b1c5b54fb1d2c038bd08a665e3f355e04f4b1a4ab3da5c81add9553c3"
+    }
+  ]
+}

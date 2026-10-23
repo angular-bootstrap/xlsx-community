@@ -1,0 +1,1587 @@
+{
+  "checkedAt": "2026-10-23T18:22:18.270Z",
+  "node": [
+    {
+      "version": "v22.23.4",
+      "entry": "entry.cjs",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v22.23.4",
+      "entry": "entry.mjs",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v22.23.4",
+      "entry": "webpack-esm-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v22.23.4",
+      "entry": "webpack-cjs-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v22.23.4",
+      "entry": "rollup-esm-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v22.23.4",
+      "entry": "rollup-cjs-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v22.23.4",
+      "entry": "esbuild-esm-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v22.23.4",
+      "entry": "esbuild-cjs-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v22.23.4",
+      "entry": "vite-esm-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v22.23.4",
+      "entry": "vite-cjs-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v24.22.1",
+      "entry": "entry.cjs",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v24.22.1",
+      "entry": "entry.mjs",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v24.22.1",
+      "entry": "webpack-esm-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v24.22.1",
+      "entry": "webpack-cjs-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v24.22.1",
+      "entry": "rollup-esm-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v24.22.1",
+      "entry": "rollup-cjs-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v24.22.1",
+      "entry": "esbuild-esm-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v24.22.1",
+      "entry": "esbuild-cjs-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v24.22.1",
+      "entry": "vite-esm-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v24.22.1",
+      "entry": "vite-cjs-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v26.12.1",
+      "entry": "entry.cjs",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v26.12.1",
+      "entry": "entry.mjs",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v26.12.1",
+      "entry": "webpack-esm-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v26.12.1",
+      "entry": "webpack-cjs-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v26.12.1",
+      "entry": "rollup-esm-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v26.12.1",
+      "entry": "rollup-cjs-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v26.12.1",
+      "entry": "esbuild-esm-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v26.12.1",
+      "entry": "esbuild-cjs-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v26.12.1",
+      "entry": "vite-esm-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    },
+    {
+      "version": "v26.12.1",
+      "entry": "vite-cjs-node.js",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      }
+    }
+  ],
+  "browser": [
+    {
+      "browser": "Chrome",
+      "version": "155.0.8059.85",
+      "build": "webpack-esm-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "Chrome",
+      "version": "155.0.8059.85",
+      "build": "webpack-cjs-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "Chrome",
+      "version": "155.0.8059.85",
+      "build": "rollup-esm-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "Chrome",
+      "version": "155.0.8059.85",
+      "build": "rollup-cjs-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "Chrome",
+      "version": "155.0.8059.85",
+      "build": "esbuild-esm-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "Chrome",
+      "version": "155.0.8059.85",
+      "build": "esbuild-cjs-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "Chrome",
+      "version": "155.0.8059.85",
+      "build": "vite-esm-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "Chrome",
+      "version": "155.0.8059.85",
+      "build": "vite-cjs-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "Firefox",
+      "version": "142.0.1",
+      "build": "webpack-esm-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "Firefox",
+      "version": "142.0.1",
+      "build": "webpack-cjs-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "Firefox",
+      "version": "142.0.1",
+      "build": "rollup-esm-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "Firefox",
+      "version": "142.0.1",
+      "build": "rollup-cjs-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "Firefox",
+      "version": "142.0.1",
+      "build": "esbuild-esm-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "Firefox",
+      "version": "142.0.1",
+      "build": "esbuild-cjs-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "Firefox",
+      "version": "142.0.1",
+      "build": "vite-esm-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "Firefox",
+      "version": "142.0.1",
+      "build": "vite-cjs-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "WebKit",
+      "version": "26.0",
+      "build": "webpack-esm-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "WebKit",
+      "version": "26.0",
+      "build": "webpack-cjs-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "WebKit",
+      "version": "26.0",
+      "build": "rollup-esm-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "WebKit",
+      "version": "26.0",
+      "build": "rollup-cjs-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "WebKit",
+      "version": "26.0",
+      "build": "esbuild-esm-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "WebKit",
+      "version": "26.0",
+      "build": "esbuild-cjs-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "WebKit",
+      "version": "26.0",
+      "build": "vite-esm-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "WebKit",
+      "version": "26.0",
+      "build": "vite-cjs-browser",
+      "status": "pass",
+      "result": {
+        "passed": true,
+        "version": "0.20.3",
+        "checks": [
+          "xlsx",
+          "xlsb",
+          "biff8",
+          "ods",
+          "csv",
+          "html",
+          "xlml",
+          "array codepage 620",
+          "array codepage 895",
+          "array codepage 10008",
+          "CP895 correction",
+          "CP895 representability validation",
+          "HTML link javascript",
+          "HTML link https",
+          "HTML link data",
+          "UTC date",
+          "formula"
+        ]
+      },
+      "errors": []
+    }
+  ],
+  "security": [
+    {
+      "version": "v22.23.4",
+      "status": "pass",
+      "summary": "{\n  \"passed\": 24,\n  \"failed\": [],\n  \"report\": \"community/results/verification.json\"\n}\n",
+      "error": ""
+    },
+    {
+      "version": "v24.22.1",
+      "status": "pass",
+      "summary": "{\n  \"passed\": 24,\n  \"failed\": [],\n  \"report\": \"community/results/verification.json\"\n}\n",
+      "error": ""
+    },
+    {
+      "version": "v26.12.1",
+      "status": "pass",
+      "summary": "{\n  \"passed\": 24,\n  \"failed\": [],\n  \"report\": \"community/results/verification.json\"\n}\n",
+      "error": ""
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@angular-bootstrap/xlsx",
+  "version": "0.1.0-rc.1",
+  "stage": "release-review/angular-bootstrap-xlsx",
+  "repositoryPlanned": "git+https://github.com/angular-bootstrap/xlsx-community.git",
+  "private": true,
+  "publishingEnabled": false,
+  "cli": "Deprecated upstream bin entry omitted from this independent prerelease",
+  "runtimeHashes": {
+    "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
+    "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
+    "dist/cpexcel.js": "23e965222287d23baaeb676d890849c4428384e76e324d308466f350148b5ceb",
+    "dist/cpexcel.full.mjs": "fe0a9afa04636debcc7063eeca8d84618d5130b547adf8ab1593e6ee738df040"
+  }
+}

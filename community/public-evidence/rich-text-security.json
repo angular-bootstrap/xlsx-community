@@ -1,0 +1,229 @@
+{
+  "results": [
+    {
+      "entry": "community/controls/upstream-0.20.3/xlsx.js",
+      "name": "text",
+      "status": "pass",
+      "unsafeMarkupRetained": true,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "community/controls/upstream-0.20.3/xlsx.js",
+      "name": "alignment",
+      "status": "pass",
+      "unsafeMarkupRetained": true,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "community/controls/upstream-0.20.3/xlsx.js",
+      "name": "size",
+      "status": "pass",
+      "unsafeMarkupRetained": true,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "community/controls/upstream-0.20.3/xlsx.js",
+      "name": "valid formatting",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "xlsx.js",
+      "name": "text",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "xlsx.js",
+      "name": "alignment",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "xlsx.js",
+      "name": "size",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "xlsx.js",
+      "name": "valid formatting",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "xlsx.mini.js",
+      "name": "text",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "xlsx.mini.js",
+      "name": "alignment",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "xlsx.mini.js",
+      "name": "size",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "xlsx.mini.js",
+      "name": "valid formatting",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "xlsx.mjs",
+      "name": "text",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "xlsx.mjs",
+      "name": "alignment",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "xlsx.mjs",
+      "name": "size",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "xlsx.mjs",
+      "name": "valid formatting",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "dist/xlsx.full.min.js",
+      "name": "text",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "dist/xlsx.full.min.js",
+      "name": "alignment",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "dist/xlsx.full.min.js",
+      "name": "size",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "dist/xlsx.full.min.js",
+      "name": "valid formatting",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "dist/xlsx.core.min.js",
+      "name": "text",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "dist/xlsx.core.min.js",
+      "name": "alignment",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "dist/xlsx.core.min.js",
+      "name": "size",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "dist/xlsx.core.min.js",
+      "name": "valid formatting",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "dist/xlsx.mini.min.js",
+      "name": "text",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "dist/xlsx.mini.min.js",
+      "name": "alignment",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "dist/xlsx.mini.min.js",
+      "name": "size",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "dist/xlsx.mini.min.js",
+      "name": "valid formatting",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "dist/xlsx.extendscript.js",
+      "name": "text",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "dist/xlsx.extendscript.js",
+      "name": "alignment",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "dist/xlsx.extendscript.js",
+      "name": "size",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    },
+    {
+      "entry": "dist/xlsx.extendscript.js",
+      "name": "valid formatting",
+      "status": "pass",
+      "unsafeMarkupRetained": false,
+      "formattingPreserved": true
+    }
+  ],
+  "failed": 0
+}

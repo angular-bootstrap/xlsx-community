@@ -1,0 +1,58 @@
+[
+  {
+    "file": "mazovia-MazoviaCharset.java",
+    "sourceFile": "src/main/java/eu/vitaliy/pl/charset/MazoviaCharset.java",
+    "commit": "0603a6fad2abc568bd49fd9cce3636838a6a032a",
+    "repository": "https://github.com/VitaliyOliynyk/mazovia-charset",
+    "sha256": "290b78c13f8b04258080b6da03cf3eb18c8eb36f753ef8649c26326890283ee4"
+  },
+  {
+    "file": "mazovia-pom.xml",
+    "sourceFile": "pom.xml",
+    "commit": "0603a6fad2abc568bd49fd9cce3636838a6a032a",
+    "repository": "https://github.com/VitaliyOliynyk/mazovia-charset",
+    "sha256": "27f5f6ff9b1bd7eef2cadd2bb2dc176298d4cd7aa859a02917b1a3fb25074dff"
+  },
+  {
+    "file": "mazovia-README.md",
+    "sourceFile": "README.md",
+    "commit": "0603a6fad2abc568bd49fd9cce3636838a6a032a",
+    "repository": "https://github.com/VitaliyOliynyk/mazovia-charset",
+    "sha256": "4c452ddccd81c5587b4bcfce549a6028840bafb283475e0df2b1f2a3ccc7805b"
+  },
+  {
+    "file": "kamenicky-CharMapping.cs",
+    "sourceFile": "src/KamenickyEncoding/CharMapping.cs",
+    "commit": "854abe0cd8bdc3f04dfdffe96fca7e752e56a964",
+    "repository": "https://github.com/jceska/KamenickyEncoding",
+    "sha256": "75d10caba60e1c2d09d177fac35602a3aa76fcc8c51bf23873eed2dde3211e9d"
+  },
+  {
+    "file": "kamenicky-LICENSE",
+    "sourceFile": "LICENSE",
+    "commit": "854abe0cd8bdc3f04dfdffe96fca7e752e56a964",
+    "repository": "https://github.com/jceska/KamenickyEncoding",
+    "sha256": "75a2f8b993ce1327ccba5a68a388b96e3f3774fc951dd980f47dbca1018bd58b"
+  },
+  {
+    "file": "kamenicky-README.md",
+    "sourceFile": "README.md",
+    "commit": "854abe0cd8bdc3f04dfdffe96fca7e752e56a964",
+    "repository": "https://github.com/jceska/KamenickyEncoding",
+    "sha256": "e9b5a3d382e20f491e82682a4e6f75ea8d7aac3073db6caa3dddb288202921db"
+  },
+  {
+    "file": "icu-windows-10008-2000.ucm",
+    "sourceFile": "charset/data/ucm/windows-10008-2000.ucm",
+    "commit": "bae5ca647fa41703393dbf00240ec1b807a9c353",
+    "repository": "https://github.com/unicode-org/icu-data",
+    "sha256": "9461f9bbc0791d278e3f8eb07dc62db10f28f4f6fb6059d9e22796a87ce2b3f6"
+  },
+  {
+    "file": "icu-LICENSE",
+    "sourceFile": "LICENSE",
+    "commit": "bae5ca647fa41703393dbf00240ec1b807a9c353",
+    "repository": "https://github.com/unicode-org/icu-data",
+    "sha256": "f72db45707e93c90c4bf400edfa5d38ce44fe692789e385548e627459c1bf6c9"
+  }
+]
