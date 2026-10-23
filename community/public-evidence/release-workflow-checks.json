@@ -1,0 +1,24 @@
+{
+  "reference": "https://github.com/angular-bootstrap/ngbootstrap/blob/main/.github/workflows/release.yml",
+  "referenceBlob": "70c85adae5c1bab3abd3a8bb7dade5ee986272dd",
+  "node": "24.22.1",
+  "npm": "12.2.1",
+  "environment": "npm-production",
+  "reviewer": "angular-bootstrap",
+  "publishJobHardDisabled": true,
+  "privateManifest": true,
+  "rejectingPrepublishHook": true,
+  "checksPassed": [
+    "release metadata and native-tested runtime/type bytes",
+    "wrong tag rejected",
+    "legacy npm token rejected",
+    "publication rejected by private:true",
+    "archive runtime/license bytes match source",
+    "wrong archive SHA-256 rejected",
+    "correct archive SHA-256 accepted",
+    "workflow YAML, immutable action SHAs and permission separation",
+    "fresh build-tool lock clean install",
+    "two clean reproductions of all 12 outputs"
+  ],
+  "githubValidationRun": "pending"
+}

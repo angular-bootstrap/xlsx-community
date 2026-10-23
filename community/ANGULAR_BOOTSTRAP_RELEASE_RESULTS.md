@@ -1,6 +1,6 @@
 # angular-bootstrap local release review
 
-Planned identity: `@angular-bootstrap/xlsx@0.1.0-rc.1`, repository `angular-bootstrap/xlsx-community`, prerelease tag `next`. The package and repository remain uncreated. Publishing is disabled in both local manifests and by rejecting prepublish hooks. The publication workflow is an inert template outside active workflows.
+Planned identity: `@angular-bootstrap/xlsx@0.1.0-rc.1`, repository `angular-bootstrap/xlsx-community`, prerelease tag `next`. The public repository is created; the npm package remains unpublished. Publishing is disabled in both local manifests and by rejecting prepublish hooks. The publication workflow is an inert template outside active workflows.
 
 ## Executed checks against the final rich-text/CRLF build
 
@@ -23,10 +23,12 @@ See `public-evidence/current-candidate.json` for current runtime hashes and comp
 
 ## Remaining gates
 
-1. Native Windows x64, Linux x64 and macOS Intel execution. A pinned, read-only nine-job workflow is prepared, but has not run on GitHub. Linux x64 local consumer checks use emulation and do not establish native hardware coverage.
-2. Restore npm authentication and verify angular-bootstrap scope access. Existing authentication returned 401; GitHub identity does not establish npm ownership. Create the agreed repository, enable vulnerability reporting/protections and configure the reviewed release owner and trusted publisher.
+1. Native Windows x64, Linux x64 and macOS Intel execution is complete. All nine jobs passed. Each full CJS and ESM suite passed 37,313 tests, with one inherited pending test and zero failures. Each job passed 29 security/compatibility groups and 32 rich-text groups. Native-tested runtime hashes match the candidate. Linux x64 local consumer checks use emulation and do not establish native hardware coverage.
+2. Restore npm authentication and verify angular-bootstrap scope access. Existing authentication returned 401; GitHub identity does not establish npm ownership. The repository and private reporting channel are created. Configure reviewed protections and the trusted publisher before any npm release.
 3. Review the rich-text patch independently and decide upstream disclosure before public security claims. Existing CVE regression controls and this focused review do not establish an exhaustive security audit or guarantee absence of vulnerabilities.
-4. Explicitly adopt the tested UTC/serial/string date scope for the prerelease or address local-time behavior in a separately reviewed compatibility change. Retain resource-limit guidance for untrusted files.
+4. Inherited date/resource behavior matches the official CDN and is excluded from this fixing scope. Preserve the tested UTC/serial/string guidance and disclosure. Retain resource-limit guidance for untrusted files.
 5. Review the final scoped archive and its notices, then make a separate publication decision. No release credential or publish command is enabled.
 
 The local candidate is prepared for technical review. It is not approved for publication. Full setup and sequencing are in `RELEASE_PLAN.md`.
+
+Native evidence: [successful matrix](https://github.com/angular-bootstrap/xlsx-community/actions/runs/40009099484), tested runtime commit `10c3254b9c3bea7f42ca49ed50f13e8adba4651e`, compact records in `public-evidence/native-ci-results.json`. First-run failures and their CI-only corrections are retained in `public-evidence/native-ci-initial-findings.json`.

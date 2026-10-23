@@ -1,0 +1,10 @@
+{
+  "name": "xlsx-release-build-tools",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@sheetjs/uglify-js": "2.7.3",
+    "codepage": "1.15.0",
+    "source-map": "0.5.7"
+  }
+}

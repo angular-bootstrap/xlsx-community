@@ -1,0 +1,557 @@
+{
+  "checkedAt": "2026-10-23T19:24:10.435280+00:00",
+  "run": "https://github.com/angular-bootstrap/xlsx-community/actions/runs/40009099484",
+  "testedCommit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+  "expectedJobs": 9,
+  "completedVerifiedJobs": 9,
+  "allNineArtifactsVerified": true,
+  "runtimeHashes": {
+    "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
+    "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
+    "dist/xlsx.full.min.js": "2cb7d6a1fcd5dc569a9690c689fafbad09815848633f3819ed6937995141cfc3"
+  },
+  "rows": [
+    {
+      "job": "results-macos-15-intel-22.23.4",
+      "runtime": {
+        "platform": "darwin",
+        "arch": "x64",
+        "node": "v22.23.4",
+        "commit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+        "runtimeHashes": {
+          "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
+          "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
+          "dist/xlsx.full.min.js": "2cb7d6a1fcd5dc569a9690c689fafbad09815848633f3819ed6937995141cfc3"
+        }
+      },
+      "cjs": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T19:10:28.976Z",
+        "end": "2026-10-23T19:16:12.522Z",
+        "duration": 343546
+      },
+      "esm": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T19:16:16.308Z",
+        "end": "2026-10-23T19:21:00.354Z",
+        "duration": 284046
+      },
+      "securityCompatibilityGroups": 29,
+      "securityCompatibilityFailures": 0,
+      "affectedRedosBudgetControl": [
+        {
+          "name": "CVE-2024-22363 affected positive control exceeds processing budget",
+          "status": "pass",
+          "evidence": {
+            "budgetMs": 2500,
+            "maxInputSpaces": 120000,
+            "observedBudgetExceeded": true
+          }
+        }
+      ],
+      "richTextGroups": 32,
+      "richTextFailures": 0,
+      "explicitUtcFailures": 0,
+      "inheritedDefaultWallTimeObservations": 40,
+      "corpusVerified": true,
+      "corpusAttempts": [
+        {
+          "attempt": 1,
+          "bytes": 341452051,
+          "sha256": "a786d4f1a80adf9447997b6f3b30b2593c776c27e0b075e3971627c17205f220",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "job": "results-macos-15-intel-24.22.1",
+      "runtime": {
+        "platform": "darwin",
+        "arch": "x64",
+        "node": "v24.22.1",
+        "commit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+        "runtimeHashes": {
+          "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
+          "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
+          "dist/xlsx.full.min.js": "2cb7d6a1fcd5dc569a9690c689fafbad09815848633f3819ed6937995141cfc3"
+        }
+      },
+      "cjs": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T19:10:26.168Z",
+        "end": "2026-10-23T19:14:21.457Z",
+        "duration": 235289
+      },
+      "esm": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T19:14:23.145Z",
+        "end": "2026-10-23T19:17:48.615Z",
+        "duration": 205470
+      },
+      "securityCompatibilityGroups": 29,
+      "securityCompatibilityFailures": 0,
+      "affectedRedosBudgetControl": [
+        {
+          "name": "CVE-2024-22363 affected positive control exceeds processing budget",
+          "status": "pass",
+          "evidence": {
+            "budgetMs": 2500,
+            "maxInputSpaces": 120000,
+            "observedBudgetExceeded": true
+          }
+        }
+      ],
+      "richTextGroups": 32,
+      "richTextFailures": 0,
+      "explicitUtcFailures": 0,
+      "inheritedDefaultWallTimeObservations": 40,
+      "corpusVerified": true,
+      "corpusAttempts": [
+        {
+          "attempt": 1,
+          "bytes": 341452051,
+          "sha256": "a786d4f1a80adf9447997b6f3b30b2593c776c27e0b075e3971627c17205f220",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "job": "results-macos-15-intel-26.12.1",
+      "runtime": {
+        "platform": "darwin",
+        "arch": "x64",
+        "node": "v26.12.1",
+        "commit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+        "runtimeHashes": {
+          "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
+          "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
+          "dist/xlsx.full.min.js": "2cb7d6a1fcd5dc569a9690c689fafbad09815848633f3819ed6937995141cfc3"
+        }
+      },
+      "cjs": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T19:12:23.269Z",
+        "end": "2026-10-23T19:17:56.690Z",
+        "duration": 333421
+      },
+      "esm": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T19:17:59.456Z",
+        "end": "2026-10-23T19:21:48.603Z",
+        "duration": 229147
+      },
+      "securityCompatibilityGroups": 29,
+      "securityCompatibilityFailures": 0,
+      "affectedRedosBudgetControl": [
+        {
+          "name": "CVE-2024-22363 affected positive control exceeds processing budget",
+          "status": "pass",
+          "evidence": {
+            "budgetMs": 2500,
+            "maxInputSpaces": 120000,
+            "observedBudgetExceeded": true
+          }
+        }
+      ],
+      "richTextGroups": 32,
+      "richTextFailures": 0,
+      "explicitUtcFailures": 0,
+      "inheritedDefaultWallTimeObservations": 40,
+      "corpusVerified": true,
+      "corpusAttempts": [
+        {
+          "attempt": 1,
+          "bytes": 341452051,
+          "sha256": "a786d4f1a80adf9447997b6f3b30b2593c776c27e0b075e3971627c17205f220",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "job": "results-ubuntu-24.04-22.23.4",
+      "runtime": {
+        "platform": "linux",
+        "arch": "x64",
+        "node": "v22.23.4",
+        "commit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+        "runtimeHashes": {
+          "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
+          "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
+          "dist/xlsx.full.min.js": "2cb7d6a1fcd5dc569a9690c689fafbad09815848633f3819ed6937995141cfc3"
+        }
+      },
+      "cjs": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T19:09:28.653Z",
+        "end": "2026-10-23T19:11:41.794Z",
+        "duration": 133141
+      },
+      "esm": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T19:11:42.674Z",
+        "end": "2026-10-23T19:13:52.988Z",
+        "duration": 130314
+      },
+      "securityCompatibilityGroups": 29,
+      "securityCompatibilityFailures": 0,
+      "affectedRedosBudgetControl": [
+        {
+          "name": "CVE-2024-22363 affected positive control exceeds processing budget",
+          "status": "pass",
+          "evidence": {
+            "budgetMs": 2500,
+            "maxInputSpaces": 120000,
+            "observedBudgetExceeded": true
+          }
+        }
+      ],
+      "richTextGroups": 32,
+      "richTextFailures": 0,
+      "explicitUtcFailures": 0,
+      "inheritedDefaultWallTimeObservations": 40,
+      "corpusVerified": true,
+      "corpusAttempts": [
+        {
+          "attempt": 1,
+          "bytes": 341452051,
+          "sha256": "a786d4f1a80adf9447997b6f3b30b2593c776c27e0b075e3971627c17205f220",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "job": "results-ubuntu-24.04-24.22.1",
+      "runtime": {
+        "platform": "linux",
+        "arch": "x64",
+        "node": "v24.22.1",
+        "commit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+        "runtimeHashes": {
+          "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
+          "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
+          "dist/xlsx.full.min.js": "2cb7d6a1fcd5dc569a9690c689fafbad09815848633f3819ed6937995141cfc3"
+        }
+      },
+      "cjs": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T19:09:41.618Z",
+        "end": "2026-10-23T19:11:53.236Z",
+        "duration": 131618
+      },
+      "esm": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T19:11:54.254Z",
+        "end": "2026-10-23T19:14:07.232Z",
+        "duration": 132978
+      },
+      "securityCompatibilityGroups": 29,
+      "securityCompatibilityFailures": 0,
+      "affectedRedosBudgetControl": [
+        {
+          "name": "CVE-2024-22363 affected positive control exceeds processing budget",
+          "status": "pass",
+          "evidence": {
+            "budgetMs": 2500,
+            "maxInputSpaces": 120000,
+            "observedBudgetExceeded": true
+          }
+        }
+      ],
+      "richTextGroups": 32,
+      "richTextFailures": 0,
+      "explicitUtcFailures": 0,
+      "inheritedDefaultWallTimeObservations": 40,
+      "corpusVerified": true,
+      "corpusAttempts": [
+        {
+          "attempt": 1,
+          "bytes": 341452051,
+          "sha256": "a786d4f1a80adf9447997b6f3b30b2593c776c27e0b075e3971627c17205f220",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "job": "results-ubuntu-24.04-26.12.1",
+      "runtime": {
+        "platform": "linux",
+        "arch": "x64",
+        "node": "v26.12.1",
+        "commit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+        "runtimeHashes": {
+          "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
+          "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
+          "dist/xlsx.full.min.js": "2cb7d6a1fcd5dc569a9690c689fafbad09815848633f3819ed6937995141cfc3"
+        }
+      },
+      "cjs": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T19:09:34.324Z",
+        "end": "2026-10-23T19:11:34.279Z",
+        "duration": 119955
+      },
+      "esm": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T19:11:35.235Z",
+        "end": "2026-10-23T19:13:32.285Z",
+        "duration": 117050
+      },
+      "securityCompatibilityGroups": 29,
+      "securityCompatibilityFailures": 0,
+      "affectedRedosBudgetControl": [
+        {
+          "name": "CVE-2024-22363 affected positive control exceeds processing budget",
+          "status": "pass",
+          "evidence": {
+            "budgetMs": 2500,
+            "maxInputSpaces": 120000,
+            "observedBudgetExceeded": true
+          }
+        }
+      ],
+      "richTextGroups": 32,
+      "richTextFailures": 0,
+      "explicitUtcFailures": 0,
+      "inheritedDefaultWallTimeObservations": 40,
+      "corpusVerified": true,
+      "corpusAttempts": [
+        {
+          "attempt": 1,
+          "bytes": 341452051,
+          "sha256": "a786d4f1a80adf9447997b6f3b30b2593c776c27e0b075e3971627c17205f220",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "job": "results-windows-2025-22.23.4",
+      "runtime": {
+        "platform": "win32",
+        "arch": "x64",
+        "node": "v22.23.4",
+        "commit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+        "runtimeHashes": {
+          "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
+          "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
+          "dist/xlsx.full.min.js": "2cb7d6a1fcd5dc569a9690c689fafbad09815848633f3819ed6937995141cfc3"
+        }
+      },
+      "cjs": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T19:09:55.186Z",
+        "end": "2026-10-23T19:12:47.703Z",
+        "duration": 172517
+      },
+      "esm": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T19:12:49.135Z",
+        "end": "2026-10-23T19:15:41.687Z",
+        "duration": 172552
+      },
+      "securityCompatibilityGroups": 29,
+      "securityCompatibilityFailures": 0,
+      "affectedRedosBudgetControl": [
+        {
+          "name": "CVE-2024-22363 affected positive control exceeds processing budget",
+          "status": "pass",
+          "evidence": {
+            "budgetMs": 2500,
+            "maxInputSpaces": 120000,
+            "observedBudgetExceeded": true
+          }
+        }
+      ],
+      "richTextGroups": 32,
+      "richTextFailures": 0,
+      "explicitUtcFailures": 0,
+      "inheritedDefaultWallTimeObservations": 40,
+      "corpusVerified": true,
+      "corpusAttempts": [
+        {
+          "attempt": 1,
+          "bytes": 341452051,
+          "sha256": "a786d4f1a80adf9447997b6f3b30b2593c776c27e0b075e3971627c17205f220",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "job": "results-windows-2025-24.22.1",
+      "runtime": {
+        "platform": "win32",
+        "arch": "x64",
+        "node": "v24.22.1",
+        "commit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+        "runtimeHashes": {
+          "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
+          "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
+          "dist/xlsx.full.min.js": "2cb7d6a1fcd5dc569a9690c689fafbad09815848633f3819ed6937995141cfc3"
+        }
+      },
+      "cjs": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T19:10:09.771Z",
+        "end": "2026-10-23T19:12:28.496Z",
+        "duration": 138725
+      },
+      "esm": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T19:12:29.470Z",
+        "end": "2026-10-23T19:14:43.679Z",
+        "duration": 134209
+      },
+      "securityCompatibilityGroups": 29,
+      "securityCompatibilityFailures": 0,
+      "affectedRedosBudgetControl": [
+        {
+          "name": "CVE-2024-22363 affected positive control exceeds processing budget",
+          "status": "pass",
+          "evidence": {
+            "budgetMs": 2500,
+            "maxInputSpaces": 120000,
+            "observedBudgetExceeded": true
+          }
+        }
+      ],
+      "richTextGroups": 32,
+      "richTextFailures": 0,
+      "explicitUtcFailures": 0,
+      "inheritedDefaultWallTimeObservations": 40,
+      "corpusVerified": true,
+      "corpusAttempts": [
+        {
+          "attempt": 1,
+          "bytes": 341452051,
+          "sha256": "a786d4f1a80adf9447997b6f3b30b2593c776c27e0b075e3971627c17205f220",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "job": "results-windows-2025-26.12.1",
+      "runtime": {
+        "platform": "win32",
+        "arch": "x64",
+        "node": "v26.12.1",
+        "commit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+        "runtimeHashes": {
+          "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
+          "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
+          "dist/xlsx.full.min.js": "2cb7d6a1fcd5dc569a9690c689fafbad09815848633f3819ed6937995141cfc3"
+        }
+      },
+      "cjs": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T19:09:54.504Z",
+        "end": "2026-10-23T19:11:47.484Z",
+        "duration": 112980
+      },
+      "esm": {
+        "suites": 12563,
+        "tests": 37314,
+        "passes": 37313,
+        "pending": 1,
+        "failures": 0,
+        "start": "2026-10-23T19:11:48.366Z",
+        "end": "2026-10-23T19:13:46.330Z",
+        "duration": 117964
+      },
+      "securityCompatibilityGroups": 29,
+      "securityCompatibilityFailures": 0,
+      "affectedRedosBudgetControl": [
+        {
+          "name": "CVE-2024-22363 affected positive control exceeds processing budget",
+          "status": "pass",
+          "evidence": {
+            "budgetMs": 2500,
+            "maxInputSpaces": 120000,
+            "observedBudgetExceeded": true
+          }
+        }
+      ],
+      "richTextGroups": 32,
+      "richTextFailures": 0,
+      "explicitUtcFailures": 0,
+      "inheritedDefaultWallTimeObservations": 40,
+      "corpusVerified": true,
+      "corpusAttempts": [
+        {
+          "attempt": 1,
+          "bytes": 341452051,
+          "sha256": "a786d4f1a80adf9447997b6f3b30b2593c776c27e0b075e3971627c17205f220",
+          "verified": true
+        }
+      ]
+    }
+  ],
+  "publishingEnabled": false,
+  "scope": "Native Node full CJS/ESM suites and security/compatibility harness. Inherited local-time observations are recorded, not claimed fixed. No native framework/browser certification."
+}

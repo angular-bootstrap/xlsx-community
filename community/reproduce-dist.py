@@ -16,7 +16,7 @@ import tempfile
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 OUT=ROOT/'community/results'
-TOOLS=pathlib.Path('/tmp/sheetjs-repro-tools')
+TOOLS=pathlib.Path(os.environ.get('SHEETJS_BUILD_TOOLS','/tmp/sheetjs-repro-tools'))
 NODE=pathlib.Path(os.environ.get('SHEETJS_NODE') or shutil.which('node') or 'node')
 COMMIT='8a7cfd47bde8258c0d91df6a737bf0136699cdf8'
 OUTPUTS=['dist/xlsx.core.min.js','dist/xlsx.full.min.js','dist/xlsx.mini.min.js',

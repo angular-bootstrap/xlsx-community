@@ -60,3 +60,5 @@ community/results/
 .release-artifacts/
 
 !community/framework-fixtures/**/index.html
+
+!.ci/build-tools/package-lock.json

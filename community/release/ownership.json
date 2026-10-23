@@ -11,5 +11,10 @@
   "npmPackageLookup": "404; not a reservation or proof of scope access",
   "securityChannel": "GitHub private vulnerability reporting enabled",
   "backupMaintainer": null,
-  "publishingEnabled": false
+  "publishingEnabled": false,
+  "environment": "npm-production",
+  "environmentReviewer": "angular-bootstrap",
+  "trustedPublisherConfigured": false,
+  "workflow": "publish.yml",
+  "publishJobHardDisabled": true
 }

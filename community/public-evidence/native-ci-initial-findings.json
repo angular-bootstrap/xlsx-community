@@ -1,0 +1,39 @@
+{
+  "initialRun": "https://github.com/angular-bootstrap/xlsx-community/actions/runs/40007972527",
+  "initialCommit": "bc5dd6d02fdf4a0c80b1d36b28ebae2fb833975a",
+  "supersededBy": "https://github.com/angular-bootstrap/xlsx-community/actions/runs/40009099484",
+  "correctedCommit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+  "failures": [
+    {
+      "kind": "verification input integrity",
+      "job": "Windows x64 Node 22.23.4",
+      "finding": "Fixture SHA-256 did not match; stopped before extraction or tests.",
+      "correction": "One bounded retry; exact pinned bytes and SHA-256 remain mandatory. Attempts are reported."
+    },
+    {
+      "kind": "verification timing assumption",
+      "jobs": [
+        "Windows x64 Node 26.12.1",
+        "Linux x64 Node 22.23.4",
+        "Linux x64 Node 24.22.1",
+        "Linux x64 Node 26.12.1"
+      ],
+      "finding": "Affected old 0.20.1 completed 30,000-space case within budget. Candidate cases passed.",
+      "correction": "Adaptive bounded affected inputs, mandatory observed overrun, candidate must complete every selected size."
+    }
+  ],
+  "verifiedWindows26FullSuites": {
+    "cjs": {
+      "passes": 37313,
+      "pending": 1,
+      "failures": 0
+    },
+    "esm": {
+      "passes": 37313,
+      "pending": 1,
+      "failures": 0
+    }
+  },
+  "runtimeChangedByCorrections": false,
+  "publishingEnabled": false
+}

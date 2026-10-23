@@ -45,11 +45,8 @@
     "byteIdentical": true
   },
   "remaining": [
-    "Native Windows/Linux x64/macOS Intel CI prepared, not executed",
-    "npm authentication returned 401; scope ownership unverified",
-    "Repository and security/publisher settings not created",
-    "40/50 default local-wall-time cases fail; explicit UTC 175/175 pass",
-    "Application resource limits required; independent security review/disclosure decision pending"
+    "npm scope authentication/first-package setup and trusted publisher configuration",
+    "Independent security review/upstream coordination and final release approval"
   ],
   "historicalEvidence": [
     "node-matrix.json and bundler reports predate the final rich-text/CRLF patch; patch-specific Node22/26 regressions passed"
@@ -126,5 +123,11 @@
     ]
   },
   "securityCompatibilityHarness": "passed",
-  "portableCiCleanInstall": "passed"
+  "portableCiCleanInstall": "passed",
+  "nativeCiEvidence": "community/public-evidence/native-ci-results.json",
+  "nativePlatformsVerified": true,
+  "inheritedExclusions": [
+    "Default local-wall-time dates match CDN 0.20.3",
+    "Unbounded worksheet conversion resource behavior matches CDN 0.20.3"
+  ]
 }

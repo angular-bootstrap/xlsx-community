@@ -1,0 +1,120 @@
+name: Release @angular-bootstrap/xlsx
+
+on:
+  push:
+    tags: ['v*.*.*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: npm-release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    name: Validate release candidate (no publication)
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      actions: read
+    timeout-minutes: 25
+    outputs:
+      filename: ${{ steps.archive.outputs.filename }}
+      sha256: ${{ steps.archive.outputs.sha256 }}
+    steps:
+      - name: Checkout exact source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: '24.22.1'
+      - name: Setup Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - name: Pin npm for trusted publishing compatibility
+        run: npm install --global npm@12.2.1 --ignore-scripts --no-audit --no-fund
+      - name: Install locked verification and build tools
+        run: |
+          npm ci --prefix .ci/test-tools --ignore-scripts --no-audit --no-fund
+          npm ci --prefix .ci/build-tools --ignore-scripts --no-audit --no-fund
+      - name: Validate metadata, tag, token absence and native-tested bytes
+        id: metadata
+        run: node community/release/verify-release.cjs
+      - name: Confirm recorded native matrix succeeded on GitHub
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ steps.metadata.outputs.native_run_id }}
+          EXPECTED_COMMIT: ${{ steps.metadata.outputs.native_commit }}
+        run: |
+          mkdir -p .release-artifacts
+          gh api "repos/angular-bootstrap/xlsx-community/actions/runs/$RUN_ID" > .release-artifacts/native-run.json
+          node -e 'const r=require("./.release-artifacts/native-run.json");if(r.status!=="completed"||r.conclusion!=="success"||r.head_sha!==process.env.EXPECTED_COMMIT)throw Error("Native matrix does not match a successful run")'
+      - name: Verify pinned fixture corpus
+        run: python community/ci/fetch-corpus.py
+      - name: Run full suites and security regressions
+        run: node community/ci/run.cjs
+      - name: Reproduce all distribution outputs twice
+        env:
+          SHEETJS_BUILD_TOOLS: ${{ github.workspace }}/.ci/build-tools
+        run: python community/reproduce-dist.py --patched
+      - name: Inspect packed archive without lifecycle scripts
+        id: archive
+        run: |
+          npm pack --ignore-scripts --json --pack-destination .release-artifacts > .release-artifacts/pack.json
+          python community/release/verify-archive.py
+      - name: Upload exact reviewed archive and checksums
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: xlsx-release-candidate-${{ github.sha }}
+          path: |
+            .release-artifacts/*.tgz
+            .release-artifacts/pack.json
+            .release-artifacts/archive-verification.json
+          retention-days: 7
+          if-no-files-found: error
+
+  publish:
+    name: Publish to npm (DISABLED pending release approval)
+    if: ${{ false }} # Explicit hard stop. Do not enable as part of workflow preparation.
+    needs: validate
+    runs-on: ubuntu-24.04
+    environment: npm-production
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout exact source for release guards
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: '24.22.1'
+      - name: Pin npm for OIDC
+        run: npm install --global npm@12.2.1 --ignore-scripts --no-audit --no-fund
+      - name: Require tag, publication-ready manifest and tokenless configuration
+        run: node community/release/verify-release.cjs --publish
+      - name: Download the exact validated archive
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+        with:
+          name: xlsx-release-candidate-${{ github.sha }}
+          path: .release-artifacts
+      - name: Verify immutable archive SHA-256
+        env:
+          EXPECTED_ARCHIVE_SHA256: ${{ needs.validate.outputs.sha256 }}
+        run: python3 community/release/verify-archive.py --require-sha
+      - name: Verify version is unpublished (fail closed on registry errors)
+        run: |
+          node -e '(async()=>{const p=require("./package.json"),r=await fetch("https://registry.npmjs.org/"+encodeURIComponent(p.name)+"/"+encodeURIComponent(p.version));if(r.status!==404)throw Error(r.ok?"Version already published":"Registry check failed: "+r.status)})().catch(e=>{console.error(e.message);process.exitCode=1})'
+      - name: Publish prerelease through npm OIDC with provenance
+        env:
+          ARCHIVE: ${{ needs.validate.outputs.filename }}
+        run: npm publish "./.release-artifacts/$ARCHIVE" --access public --tag next --provenance
