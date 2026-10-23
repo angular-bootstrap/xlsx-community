@@ -14,9 +14,15 @@
   "publishingEnabled": true,
   "environment": "npm-production",
   "environmentReviewer": "angular-bootstrap",
-  "trustedPublisherConfigured": false,
+  "trustedPublisherConfigured": true,
   "workflow": "publish.yml",
   "publishJobHardDisabled": false,
   "publicationApproved": true,
-  "releasePublished": false
+  "releasePublished": true,
+  "trustedPublisherId": "29ff53e4-b659-4704-b295-6de89ae2a3de",
+  "firstOidcPublishVerified": false,
+  "observedDistTags": {
+    "latest": "0.1.0-rc.1",
+    "next": "0.1.0-rc.1"
+  }
 }

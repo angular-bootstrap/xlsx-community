@@ -1,6 +1,8 @@
 # angular-bootstrap local release review
 
-Planned identity: `@angular-bootstrap/xlsx@0.1.0-rc.1`, repository `angular-bootstrap/xlsx-community`, prerelease tag `next`. The public repository is created; the npm package remains unpublished. Publication is approved subject to passing checks. The manifest is prepared for public prerelease publication; the workflow publishes only on matching version tags after validation and protected-environment review. No release tag has been pushed.
+Published identity: `@angular-bootstrap/xlsx@0.1.0-rc.1`, repository `angular-bootstrap/xlsx-community`. Publication was approved conditional on passing checks. All nine final native jobs and the complete release-validation job passed before the exact reviewed archive was published. Registry bytes, fresh public installation, CommonJS/ESM roundtrips and the documented npm alias were verified afterward. npm assigned both `next` and `latest`; removing automatic `latest` was rejected with E400. This remains a prerelease.
+
+Source commit: `2c7f08a670174f81a9a67b0d83e0bfd9039436c7`. Archive SHA-256: `81ae0350faf7423fec571e474818464ba47550f43d5649b3d57f8fb3fde1916f`. See `public-evidence/published-release.json`.
 
 ## Executed checks against the final rich-text/CRLF build
 
@@ -21,14 +23,12 @@ Planned identity: `@angular-bootstrap/xlsx@0.1.0-rc.1`, repository `angular-boot
 
 See `public-evidence/current-candidate.json` for current runtime hashes and compact results. The earlier full Node 22/24/26 matrix and four-bundler matrix predate the rich-text change; they are historical compatibility evidence, not proof that those entire matrices were rerun on final bytes. Initial rich-text CRLF failure and an incomplete browser-installation failure were corrected and rerun; do not count those historical attempts as final successes.
 
-## Remaining gates
+## Results and follow-up
 
-1. Native Windows x64, Linux x64 and macOS Intel execution is complete. All nine jobs passed. Each full CJS and ESM suite passed 37,313 tests, with one inherited pending test and zero failures. Each job passed 29 security/compatibility groups and 32 rich-text groups. Native-tested runtime hashes match the candidate. Linux x64 local consumer checks use emulation and do not establish native hardware coverage.
-2. Restore npm authentication and verify angular-bootstrap scope access. Authentication is restored: npm identity angular-bootstrap and organization owner access were verified. The repository and private reporting channel are created. Configure reviewed protections and the trusted publisher before any npm release.
-3. The focused security regressions pass. Independent review remains useful follow-up work; this is not an exhaustive security audit or a guarantee of absence of vulnerabilities. Public documentation credits upstream CVE fixes and describes additional HTML changes without an assigned CVE.
-4. Inherited date/resource behavior matches the official CDN and is excluded from this fixing scope. Preserve the tested UTC/serial/string guidance and disclosure. Retain resource-limit guidance for untrusted files.
-5. Complete final workflow and archive validation. Publication was approved on October 23, 2026, conditional on passing checks. No release tag or npm publication has occurred.
+1. Final native matrix: all nine Linux x64, Windows x64 and macOS Intel jobs passed on Node 22.23.4, 24.22.1 and 26.12.1. CJS and ESM each passed 37,313 tests per job, with one inherited pending test and zero failures. Security/compatibility groups passed: 28–29 per job because the adaptive affected-version ReDoS control stops after observing a timeout. The mandatory positive control passed in every job, and every candidate input size completed. All 32 rich-text groups and explicit-UTC checks passed in every job.
+2. Complete release validation passed: metadata/native-evidence guards, pinned fixtures, full suites/security regressions, two reproducible builds of 12 outputs, archive inspection and artifact upload.
+3. npm identity and organization owner access were verified. The exact validated archive was published through authenticated bootstrap, without a GitHub OIDC provenance attestation. The trusted publisher is now configured; its first OIDC publish remains unverified and subject to npm's two-day activation limit.
+4. Inherited date/resource behavior matches the official CDN and remains outside the approved fixing scope. Preserve UTC/serial/string guidance and application-side resource limits. An independent security audit remains useful follow-up; regression tests do not prove absence of all vulnerabilities.
+5. Registry checksum, fresh public install, CJS/ESM roundtrips and npm alias passed. The automatic `latest` tag could not be removed (E400); both tags and prerelease status are disclosed.
 
-The local candidate is prepared for technical review. Publication is approved subject to passing checks and restored npm access. Full setup and sequencing are in `RELEASE_PLAN.md`.
-
-Native evidence: [successful matrix](https://github.com/angular-bootstrap/xlsx-community/actions/runs/40009099484), tested runtime commit `10c3254b9c3bea7f42ca49ed50f13e8adba4651e`, compact records in `public-evidence/native-ci-results.json`. First-run failures and their CI-only corrections are retained in `public-evidence/native-ci-initial-findings.json`.
+Native evidence: [final successful matrix](https://github.com/angular-bootstrap/xlsx-community/actions/runs/40015756667). [Successful release validation](https://github.com/angular-bootstrap/xlsx-community/actions/runs/40015756744). Compact records are in `public-evidence/native-ci-results.json` and `public-evidence/published-release.json`. Historical initial failures and their corrections remain in Git history and `public-evidence/native-ci-initial-findings.json` / `release-workflow-checks.json`.

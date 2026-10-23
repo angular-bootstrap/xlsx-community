@@ -15,3 +15,13 @@ npm requires an existing package before configuring its trusted publisher. For t
 After bootstrap, configure the trusted publisher for GitHub owner `angular-bootstrap`, repository `xlsx-community`, workflow `publish.yml`, environment `npm-production`, allowing publish. Configure future releases to use that relationship. See https://docs.npmjs.com/cli/v12/commands/npm-trust/ and https://docs.npmjs.com/trusted-publishers/.
 
 Update README publication status and public release evidence only after registry confirmation. Credit inherited upstream CVE fixes separately from additional fork changes. Preserve CP895 migration guidance and inherited date/resource limitations. A passing regression suite is not an exhaustive security audit.
+
+## Published bootstrap result
+
+`0.1.0-rc.1` is publicly available. Its registry tarball exactly matches the CI-reviewed archive; fresh public installation, CJS/ESM roundtrips and the documented alias passed. All nine final native jobs and the complete release validation passed. Detailed source commit, run links and hashes are in `community/public-evidence/published-release.json`.
+
+npm assigned both `next` and `latest` to this initial release despite `--tag next`. An authenticated attempt to remove `latest` returned E400. The README identifies the default install as a prerelease. No version was republished or replaced.
+
+The GitHub trusted publisher is configured for the exact repository/workflow/environment above. Its first actual OIDC publish remains unverified. npm requires the first successful OIDC publish within two days of creating a configuration; otherwise recreate the expired relationship before the next release. This manual bootstrap does not validate that OIDC relationship. See https://docs.npmjs.com/trusted-publishers/.
+
+The bootstrap version is immutable. Do not trigger a tag publish for `v0.1.0-rc.1`; the existing-version guard will reject it. The next approved version will use the GitHub workflow. No new version is published just to exercise OIDC.

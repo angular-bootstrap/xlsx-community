@@ -1,4 +1,6 @@
-# Release plan: @angular-bootstrap/xlsx
+# Historical release plan: @angular-bootstrap/xlsx
+
+**Current status:** `0.1.0-rc.1` is published and verified. This document preserves the initial prepublication plan; statements below about disabled publishing or missing authentication describe that earlier stage. See [current release results](ANGULAR_BOOTSTRAP_RELEASE_RESULTS.md), [publication evidence](public-evidence/published-release.json) and [the current release workflow guide](release/PUBLISHING.md).
 
 Agreed target: npm `@angular-bootstrap/xlsx`, repository `angular-bootstrap/xlsx-community`, first proposed version `0.1.0-rc.1`, npm tag `next`. This is an independent SheetJS CE fork, not an official SheetJS release. The public repository has been created at https://github.com/angular-bootstrap/xlsx-community; no npm package was published. Both the source candidate and scoped review artifact remain private/non-publishable, with rejecting prepublishOnly hooks.
 

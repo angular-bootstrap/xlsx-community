@@ -2,7 +2,7 @@
 
 Independent npm distribution based on official SheetJS CE **0.20.3**, retaining upstream history and license notices. Repository: [angular-bootstrap/xlsx-community](https://github.com/angular-bootstrap/xlsx-community). This is not an official SheetJS release and has no upstream endorsement.
 
-Release candidate: **0.1.0-rc.1**. Prereleases use the npm `next` channel. `XLSX.version` retains the upstream runtime version `0.20.3`.
+Published prerelease: [**0.1.0-rc.1**](https://www.npmjs.com/package/@angular-bootstrap/xlsx/v/0.1.0-rc.1). Install the explicit version or use `@next`. This is a release candidate; no stable release has been published. npm also assigns this initial candidate to `latest`. `XLSX.version` retains the upstream runtime version `0.20.3`.
 
 ## Why this package exists
 
@@ -58,7 +58,7 @@ See [the full upstream comparison and credit](community/UPSTREAM_DIFFERENCES.md)
 
 ## Compatibility and verification
 
-The native CI matrix covers Node 22.23.4, 24.22.1 and 26.12.1 on Linux x64, Windows x64 and macOS Intel. See [current release results](community/ANGULAR_BOOTSTRAP_RELEASE_RESULTS.md) for actual outcomes and remaining gaps; configuration alone is not proof of passing tests.
+The native CI matrix covers Node 22.23.4, 24.22.1 and 26.12.1 on Linux x64, Windows x64 and macOS Intel. All nine final native jobs passed, with CJS and ESM each passing 37,313 tests per job and zero failures. See [release results](community/ANGULAR_BOOTSTRAP_RELEASE_RESULTS.md) and [publication verification](community/public-evidence/published-release.json).
 
 Additional local evidence includes macOS/Linux ARM64 suites, Angular/React/Next.js production fixtures, Chrome/Firefox/WebKit checks, TypeScript checks, bundlers, restored encoding tests and byte-for-byte build reproduction. Historical matrices are labeled where they predate the latest patch. The full upstream suites retain one inherited pending CSV-date test.
 
@@ -76,7 +76,7 @@ The corpus download requires the pinned byte size and SHA-256 before extraction.
 
 Default local-time date roundtrips and large declared worksheet ranges show the same observations as official CDN 0.20.3. They are documented limitations, excluded from the current fixing scope. Use tested explicit-UTC/serial/string date workflows and enforce application-side resource limits for untrusted files. See [SECURITY.md](SECURITY.md).
 
-Our maintenance scope is to fix regressions introduced by this fork and retain the explicitly approved additional changes above. We do not claim absence of all vulnerabilities or an exhaustive security audit. See [the release plan](community/RELEASE_PLAN.md) before any publication decision.
+Our maintenance scope is to fix regressions introduced by this fork and retain the explicitly approved additional changes above. We do not claim absence of all vulnerabilities or an exhaustive security audit. See [SECURITY.md](SECURITY.md) for reporting and application-side guidance.
 
 ## Source and licenses
 

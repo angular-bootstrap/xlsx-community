@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-23T19:24:10.435280+00:00",
-  "run": "https://github.com/angular-bootstrap/xlsx-community/actions/runs/40009099484",
-  "testedCommit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+  "checkedAt": "2026-10-23T20:14:35.195144+00:00",
+  "run": "https://github.com/angular-bootstrap/xlsx-community/actions/runs/40015756667",
+  "testedCommit": "2c7f08a670174f81a9a67b0d83e0bfd9039436c7",
   "expectedJobs": 9,
   "completedVerifiedJobs": 9,
   "allNineArtifactsVerified": true,
@@ -17,7 +17,7 @@
         "platform": "darwin",
         "arch": "x64",
         "node": "v22.23.4",
-        "commit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+        "commit": "2c7f08a670174f81a9a67b0d83e0bfd9039436c7",
         "runtimeHashes": {
           "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
           "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
@@ -30,9 +30,9 @@
         "passes": 37313,
         "pending": 1,
         "failures": 0,
-        "start": "2026-10-23T19:10:28.976Z",
-        "end": "2026-10-23T19:16:12.522Z",
-        "duration": 343546
+        "start": "2026-10-23T20:02:37.952Z",
+        "end": "2026-10-23T20:07:29.445Z",
+        "duration": 291493
       },
       "esm": {
         "suites": 12563,
@@ -40,9 +40,9 @@
         "passes": 37313,
         "pending": 1,
         "failures": 0,
-        "start": "2026-10-23T19:16:16.308Z",
-        "end": "2026-10-23T19:21:00.354Z",
-        "duration": 284046
+        "start": "2026-10-23T20:07:34.434Z",
+        "end": "2026-10-23T20:11:13.190Z",
+        "duration": 218756
       },
       "securityCompatibilityGroups": 29,
       "securityCompatibilityFailures": 0,
@@ -77,7 +77,7 @@
         "platform": "darwin",
         "arch": "x64",
         "node": "v24.22.1",
-        "commit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+        "commit": "2c7f08a670174f81a9a67b0d83e0bfd9039436c7",
         "runtimeHashes": {
           "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
           "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
@@ -90,9 +90,9 @@
         "passes": 37313,
         "pending": 1,
         "failures": 0,
-        "start": "2026-10-23T19:10:26.168Z",
-        "end": "2026-10-23T19:14:21.457Z",
-        "duration": 235289
+        "start": "2026-10-23T20:02:34.922Z",
+        "end": "2026-10-23T20:08:07.841Z",
+        "duration": 332919
       },
       "esm": {
         "suites": 12563,
@@ -100,11 +100,11 @@
         "passes": 37313,
         "pending": 1,
         "failures": 0,
-        "start": "2026-10-23T19:14:23.145Z",
-        "end": "2026-10-23T19:17:48.615Z",
-        "duration": 205470
+        "start": "2026-10-23T20:08:11.706Z",
+        "end": "2026-10-23T20:13:33.815Z",
+        "duration": 322109
       },
-      "securityCompatibilityGroups": 29,
+      "securityCompatibilityGroups": 28,
       "securityCompatibilityFailures": 0,
       "affectedRedosBudgetControl": [
         {
@@ -137,7 +137,7 @@
         "platform": "darwin",
         "arch": "x64",
         "node": "v26.12.1",
-        "commit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+        "commit": "2c7f08a670174f81a9a67b0d83e0bfd9039436c7",
         "runtimeHashes": {
           "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
           "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
@@ -150,9 +150,9 @@
         "passes": 37313,
         "pending": 1,
         "failures": 0,
-        "start": "2026-10-23T19:12:23.269Z",
-        "end": "2026-10-23T19:17:56.690Z",
-        "duration": 333421
+        "start": "2026-10-23T20:02:14.967Z",
+        "end": "2026-10-23T20:05:23.483Z",
+        "duration": 188516
       },
       "esm": {
         "suites": 12563,
@@ -160,9 +160,9 @@
         "passes": 37313,
         "pending": 1,
         "failures": 0,
-        "start": "2026-10-23T19:17:59.456Z",
-        "end": "2026-10-23T19:21:48.603Z",
-        "duration": 229147
+        "start": "2026-10-23T20:05:24.764Z",
+        "end": "2026-10-23T20:08:02.562Z",
+        "duration": 157798
       },
       "securityCompatibilityGroups": 29,
       "securityCompatibilityFailures": 0,
@@ -197,7 +197,7 @@
         "platform": "linux",
         "arch": "x64",
         "node": "v22.23.4",
-        "commit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+        "commit": "2c7f08a670174f81a9a67b0d83e0bfd9039436c7",
         "runtimeHashes": {
           "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
           "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
@@ -210,9 +210,9 @@
         "passes": 37313,
         "pending": 1,
         "failures": 0,
-        "start": "2026-10-23T19:09:28.653Z",
-        "end": "2026-10-23T19:11:41.794Z",
-        "duration": 133141
+        "start": "2026-10-23T20:01:49.260Z",
+        "end": "2026-10-23T20:03:40.382Z",
+        "duration": 111122
       },
       "esm": {
         "suites": 12563,
@@ -220,9 +220,9 @@
         "passes": 37313,
         "pending": 1,
         "failures": 0,
-        "start": "2026-10-23T19:11:42.674Z",
-        "end": "2026-10-23T19:13:52.988Z",
-        "duration": 130314
+        "start": "2026-10-23T20:03:41.296Z",
+        "end": "2026-10-23T20:05:34.455Z",
+        "duration": 113159
       },
       "securityCompatibilityGroups": 29,
       "securityCompatibilityFailures": 0,
@@ -257,7 +257,7 @@
         "platform": "linux",
         "arch": "x64",
         "node": "v24.22.1",
-        "commit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+        "commit": "2c7f08a670174f81a9a67b0d83e0bfd9039436c7",
         "runtimeHashes": {
           "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
           "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
@@ -270,9 +270,9 @@
         "passes": 37313,
         "pending": 1,
         "failures": 0,
-        "start": "2026-10-23T19:09:41.618Z",
-        "end": "2026-10-23T19:11:53.236Z",
-        "duration": 131618
+        "start": "2026-10-23T20:01:50.313Z",
+        "end": "2026-10-23T20:04:04.181Z",
+        "duration": 133868
       },
       "esm": {
         "suites": 12563,
@@ -280,9 +280,9 @@
         "passes": 37313,
         "pending": 1,
         "failures": 0,
-        "start": "2026-10-23T19:11:54.254Z",
-        "end": "2026-10-23T19:14:07.232Z",
-        "duration": 132978
+        "start": "2026-10-23T20:04:05.196Z",
+        "end": "2026-10-23T20:06:19.716Z",
+        "duration": 134520
       },
       "securityCompatibilityGroups": 29,
       "securityCompatibilityFailures": 0,
@@ -317,7 +317,7 @@
         "platform": "linux",
         "arch": "x64",
         "node": "v26.12.1",
-        "commit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+        "commit": "2c7f08a670174f81a9a67b0d83e0bfd9039436c7",
         "runtimeHashes": {
           "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
           "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
@@ -330,9 +330,9 @@
         "passes": 37313,
         "pending": 1,
         "failures": 0,
-        "start": "2026-10-23T19:09:34.324Z",
-        "end": "2026-10-23T19:11:34.279Z",
-        "duration": 119955
+        "start": "2026-10-23T20:01:52.641Z",
+        "end": "2026-10-23T20:03:56.220Z",
+        "duration": 123579
       },
       "esm": {
         "suites": 12563,
@@ -340,9 +340,9 @@
         "passes": 37313,
         "pending": 1,
         "failures": 0,
-        "start": "2026-10-23T19:11:35.235Z",
-        "end": "2026-10-23T19:13:32.285Z",
-        "duration": 117050
+        "start": "2026-10-23T20:03:57.187Z",
+        "end": "2026-10-23T20:06:02.139Z",
+        "duration": 124952
       },
       "securityCompatibilityGroups": 29,
       "securityCompatibilityFailures": 0,
@@ -377,7 +377,7 @@
         "platform": "win32",
         "arch": "x64",
         "node": "v22.23.4",
-        "commit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+        "commit": "2c7f08a670174f81a9a67b0d83e0bfd9039436c7",
         "runtimeHashes": {
           "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
           "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
@@ -390,9 +390,9 @@
         "passes": 37313,
         "pending": 1,
         "failures": 0,
-        "start": "2026-10-23T19:09:55.186Z",
-        "end": "2026-10-23T19:12:47.703Z",
-        "duration": 172517
+        "start": "2026-10-23T20:02:06.303Z",
+        "end": "2026-10-23T20:04:58.065Z",
+        "duration": 171762
       },
       "esm": {
         "suites": 12563,
@@ -400,9 +400,9 @@
         "passes": 37313,
         "pending": 1,
         "failures": 0,
-        "start": "2026-10-23T19:12:49.135Z",
-        "end": "2026-10-23T19:15:41.687Z",
-        "duration": 172552
+        "start": "2026-10-23T20:04:59.512Z",
+        "end": "2026-10-23T20:07:51.618Z",
+        "duration": 172106
       },
       "securityCompatibilityGroups": 29,
       "securityCompatibilityFailures": 0,
@@ -437,7 +437,7 @@
         "platform": "win32",
         "arch": "x64",
         "node": "v24.22.1",
-        "commit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+        "commit": "2c7f08a670174f81a9a67b0d83e0bfd9039436c7",
         "runtimeHashes": {
           "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
           "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
@@ -450,9 +450,9 @@
         "passes": 37313,
         "pending": 1,
         "failures": 0,
-        "start": "2026-10-23T19:10:09.771Z",
-        "end": "2026-10-23T19:12:28.496Z",
-        "duration": 138725
+        "start": "2026-10-23T20:02:06.275Z",
+        "end": "2026-10-23T20:04:42.889Z",
+        "duration": 156614
       },
       "esm": {
         "suites": 12563,
@@ -460,9 +460,9 @@
         "passes": 37313,
         "pending": 1,
         "failures": 0,
-        "start": "2026-10-23T19:12:29.470Z",
-        "end": "2026-10-23T19:14:43.679Z",
-        "duration": 134209
+        "start": "2026-10-23T20:04:44.011Z",
+        "end": "2026-10-23T20:07:23.504Z",
+        "duration": 159493
       },
       "securityCompatibilityGroups": 29,
       "securityCompatibilityFailures": 0,
@@ -497,7 +497,7 @@
         "platform": "win32",
         "arch": "x64",
         "node": "v26.12.1",
-        "commit": "10c3254b9c3bea7f42ca49ed50f13e8adba4651e",
+        "commit": "2c7f08a670174f81a9a67b0d83e0bfd9039436c7",
         "runtimeHashes": {
           "xlsx.js": "424c2b94c6781ab45bdbf0eaea2cbaf775958e50b5a25229cf797c26790ecadf",
           "xlsx.mjs": "294bb3dae5091d7cc702d0b9a1b50afbe490a646904f2f3b68b84fab6cbf8492",
@@ -510,9 +510,9 @@
         "passes": 37313,
         "pending": 1,
         "failures": 0,
-        "start": "2026-10-23T19:09:54.504Z",
-        "end": "2026-10-23T19:11:47.484Z",
-        "duration": 112980
+        "start": "2026-10-23T20:02:20.547Z",
+        "end": "2026-10-23T20:04:35.154Z",
+        "duration": 134607
       },
       "esm": {
         "suites": 12563,
@@ -520,9 +520,9 @@
         "passes": 37313,
         "pending": 1,
         "failures": 0,
-        "start": "2026-10-23T19:11:48.366Z",
-        "end": "2026-10-23T19:13:46.330Z",
-        "duration": 117964
+        "start": "2026-10-23T20:04:36.202Z",
+        "end": "2026-10-23T20:06:51.489Z",
+        "duration": 135287
       },
       "securityCompatibilityGroups": 29,
       "securityCompatibilityFailures": 0,
@@ -552,6 +552,6 @@
       ]
     }
   ],
-  "publishingEnabled": false,
+  "publishingEnabled": true,
   "scope": "Native Node full CJS/ESM suites and security/compatibility harness. Inherited local-time observations are recorded, not claimed fixed. No native framework/browser certification."
 }

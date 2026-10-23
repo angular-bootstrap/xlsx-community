@@ -17,10 +17,14 @@
     "workflow YAML, immutable action SHAs and permission separation",
     "fresh build-tool lock clean install",
     "two clean reproductions of all 12 outputs",
-    "npm 11 array and npm 12 keyed-object pack formats; malformed outputs rejected"
+    "npm 11 array and npm 12 keyed-object pack formats; malformed outputs rejected",
+    "publication-ready GitHub release validation completed successfully",
+    "all nine final native artifacts verified with zero suite/security failures",
+    "public registry tarball exactly matches reviewed archive SHA-256",
+    "fresh public npm install, CJS/ESM roundtrips and npm alias passed"
   ],
-  "githubValidationRun": "https://github.com/angular-bootstrap/xlsx-community/actions/runs/40013188879",
-  "githubValidationStatus": "failure",
+  "githubValidationRun": "https://github.com/angular-bootstrap/xlsx-community/actions/runs/40015756744",
+  "githubValidationStatus": "success",
   "firstGithubValidation": {
     "url": "https://github.com/angular-bootstrap/xlsx-community/actions/runs/40012190333",
     "status": "failure",
@@ -55,6 +59,20 @@
     "archiveInspectionPassed": true,
     "runtimeChanged": false
   },
-  "releasePublished": false,
-  "bootstrapRequiresAuthenticatedIdentity": true
+  "releasePublished": true,
+  "bootstrapRequiresAuthenticatedIdentity": true,
+  "archiveSha256": "81ae0350faf7423fec571e474818464ba47550f43d5649b3d57f8fb3fde1916f",
+  "registryBytesMatchReviewedArchive": true,
+  "publishJobSkippedOnManualDispatch": true,
+  "finalNativeRun": "https://github.com/angular-bootstrap/xlsx-community/actions/runs/40015756667",
+  "finalNativePassedJobs": 9,
+  "finalNativeFailedJobs": 0,
+  "bootstrapOidcProvenance": false,
+  "trustedPublisherConfigured": true,
+  "firstOidcPublishVerified": false,
+  "observedDistTags": {
+    "latest": "0.1.0-rc.1",
+    "next": "0.1.0-rc.1"
+  },
+  "latestRemovalAttempt": "npm returned E400 to authenticated DELETE; retained and disclosed rather than republishing or changing versions"
 }

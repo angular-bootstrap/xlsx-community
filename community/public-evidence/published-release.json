@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-23T20:21:16.641423+00:00",
+  "package": "@angular-bootstrap/xlsx",
+  "version": "0.1.0-rc.1",
+  "distTags": {
+    "latest": "0.1.0-rc.1",
+    "next": "0.1.0-rc.1"
+  },
+  "sourceCommit": "2c7f08a670174f81a9a67b0d83e0bfd9039436c7",
+  "sha256": "81ae0350faf7423fec571e474818464ba47550f43d5649b3d57f8fb3fde1916f",
+  "integrity": "sha512-5yBYJCrdZ2v9BsOarA3XH7a/RLckKtukz+Rw6hC9H1EAbarC4BfuEHjuiHExjcv61HiZiLidML5PuSrmRC5X8A==",
+  "bytes": 2470103,
+  "registryBytesMatchReviewedArchive": true,
+  "nativeRun": "https://github.com/angular-bootstrap/xlsx-community/actions/runs/40015756667",
+  "releaseValidationRun": "https://github.com/angular-bootstrap/xlsx-community/actions/runs/40015756744",
+  "automaticLatestTag": true,
+  "latestRemovalAttempt": "npm returned E400 to authenticated DELETE; retained and disclosed rather than republishing or changing versions",
+  "bootstrapMethod": "Authenticated npm CLI; no GitHub OIDC provenance attestation for this first release",
+  "provenanceAttestationPresent": false,
+  "publicInstallPassed": true,
+  "commonJsRoundtripPassed": true,
+  "esmRoundtripPassed": true,
+  "npmAliasPassed": true,
+  "trustedPublisher": {
+    "id": "29ff53e4-b659-4704-b295-6de89ae2a3de",
+    "repository": "angular-bootstrap/xlsx-community",
+    "workflow": "publish.yml",
+    "environment": "npm-production",
+    "permissions": [
+      "publish",
+      "stage publish"
+    ],
+    "configured": true,
+    "firstOidcPublishVerified": false,
+    "unvalidatedConfigurationExpiresAfterDays": 2
+  }
+}
