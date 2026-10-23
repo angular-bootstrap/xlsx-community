@@ -10,6 +10,37 @@ Many projects still depend on SheetJS through npm. With maintained upstream Comm
 
 Our goal is to help developers upgrade safely and support the wider spreadsheet ecosystem. SheetJS remains the upstream project; this package builds on its work and documents every additional change.
 
+## Getting started after publication
+
+The candidate is not yet available on npm. Once publication is confirmed, install the prerelease explicitly:
+
+```sh
+npm install @angular-bootstrap/xlsx@0.1.0-rc.1
+```
+
+```js
+import * as XLSX from '@angular-bootstrap/xlsx';
+
+const sheet = XLSX.utils.aoa_to_sheet([
+  ['Name', 'Quantity'],
+  ['Example', 3]
+]);
+const workbook = XLSX.utils.book_new();
+XLSX.utils.book_append_sheet(workbook, sheet, 'Inventory');
+
+const bytes = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+const restored = XLSX.read(bytes, { type: 'array' });
+console.log(XLSX.utils.sheet_to_json(restored.Sheets.Inventory));
+```
+
+CommonJS applications can use `const XLSX = require('@angular-bootstrap/xlsx')`. For existing direct `xlsx` imports, an npm alias can ease migration after compatibility testing:
+
+```sh
+npm install xlsx@npm:@angular-bootstrap/xlsx@0.1.0-rc.1
+```
+
+Aliases do not automatically upgrade nested dependencies. Review the encoding change and supported Node versions below before upgrading.
+
 ## What this candidate changes
 
 | Change beyond CDN 0.20.3 | What users gain |

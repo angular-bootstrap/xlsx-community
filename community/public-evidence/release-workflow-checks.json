@@ -16,7 +16,8 @@
     "correct archive SHA-256 accepted",
     "workflow YAML, immutable action SHAs and permission separation",
     "fresh build-tool lock clean install",
-    "two clean reproductions of all 12 outputs"
+    "two clean reproductions of all 12 outputs",
+    "npm 11 array and npm 12 keyed-object pack formats; malformed outputs rejected"
   ],
   "githubValidationRun": "https://github.com/angular-bootstrap/xlsx-community/actions/runs/40013188879",
   "githubValidationStatus": "failure",
@@ -41,5 +42,17 @@
     "cause": "npm 12 pack JSON is an object rather than the older array; archive parser required array index 0",
     "runtimeChanged": false
   },
-  "publicationApproved": true
+  "publicationApproved": true,
+  "thirdGithubValidation": {
+    "url": "https://github.com/angular-bootstrap/xlsx-community/actions/runs/40014383028",
+    "status": "failure",
+    "stage": "upload validated archive",
+    "cause": "Artifact uploader excluded hidden .release-artifacts directory by default",
+    "fix": "Explicitly allow hidden files for the three selected release artifact paths",
+    "fullSuitesPassed": true,
+    "securityPassed": true,
+    "reproducibilityPassed": true,
+    "archiveInspectionPassed": true,
+    "runtimeChanged": false
+  }
 }
