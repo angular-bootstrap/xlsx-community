@@ -25,3 +25,7 @@ npm assigned both `next` and `latest` to this initial release despite `--tag nex
 The GitHub trusted publisher is configured for the exact repository/workflow/environment above. Its first actual OIDC publish remains unverified. npm requires the first successful OIDC publish within two days of creating a configuration; otherwise recreate the expired relationship before the next release. This manual bootstrap does not validate that OIDC relationship. See https://docs.npmjs.com/trusted-publishers/.
 
 The bootstrap version is immutable. Do not trigger a tag publish for `v0.1.0-rc.1`; the existing-version guard will reject it. The next approved version will use the GitHub workflow. No new version is published just to exercise OIDC.
+
+## Next-release requirement
+
+Follow [NEXT_RELEASE.md](NEXT_RELEASE.md): the next approved release must use GitHub OIDC and verify the actual **OIDC provenance attestation**, not just the workflow flag. Contributor security controls and the single-maintainer exception are documented in [CONTRIBUTING.md](../../CONTRIBUTING.md).

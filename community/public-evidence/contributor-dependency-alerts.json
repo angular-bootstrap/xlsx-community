@@ -1,0 +1,132 @@
+{
+  "reviewedAt": "2026-10-23",
+  "status": "open; not fixed or dismissed",
+  "scope": "Repository development/test/fixture tooling; affected manifests and dependencies excluded from the verified published archive",
+  "publishedArchiveSha256": "81ae0350faf7423fec571e474818464ba47550f43d5649b3d57f8fb3fde1916f",
+  "total": 10,
+  "high": 2,
+  "medium": 7,
+  "low": 1,
+  "alerts": [
+    {
+      "ghsa": "GHSA-67mh-4wv8-2f99",
+      "githubScope": "development",
+      "manifest": "packages/otorp/package.json",
+      "number": 10,
+      "package": "esbuild",
+      "patched": "0.25.0",
+      "range": "<= 0.24.2",
+      "severity": "medium",
+      "summary": "esbuild enables any website to send any requests to the development server and read the response",
+      "url": "https://github.com/angular-bootstrap/xlsx-community/security/dependabot/10"
+    },
+    {
+      "ghsa": "GHSA-67mh-4wv8-2f99",
+      "githubScope": "development",
+      "manifest": "modules/package.json",
+      "number": 9,
+      "package": "esbuild",
+      "patched": "0.25.0",
+      "range": "<= 0.24.2",
+      "severity": "medium",
+      "summary": "esbuild enables any website to send any requests to the development server and read the response",
+      "url": "https://github.com/angular-bootstrap/xlsx-community/security/dependabot/9"
+    },
+    {
+      "ghsa": "GHSA-9jrq-w75r-8gcw",
+      "githubScope": "runtime",
+      "manifest": "community/framework-fixtures/angular/package-lock.json",
+      "number": 8,
+      "package": "vite",
+      "patched": "8.3.3",
+      "range": ">= 8.3.0, <= 8.3.2",
+      "severity": "low",
+      "summary": "Vite: Cross origin script execution through Vite custom middleware",
+      "url": "https://github.com/angular-bootstrap/xlsx-community/security/dependabot/8"
+    },
+    {
+      "ghsa": "GHSA-rq7h-c2jc-7f22",
+      "githubScope": "runtime",
+      "manifest": "community/framework-fixtures/angular/package-lock.json",
+      "number": 7,
+      "package": "vite",
+      "patched": "8.3.3",
+      "range": ">= 8.3.0, <= 8.3.2",
+      "severity": "medium",
+      "summary": "Vite: Files outside `server.fs.allow` could be served when project paths match system paths on non-Windows machine",
+      "url": "https://github.com/angular-bootstrap/xlsx-community/security/dependabot/7"
+    },
+    {
+      "ghsa": "GHSA-vfpm-58rq-9qcg",
+      "githubScope": "runtime",
+      "manifest": "community/framework-fixtures/angular/package-lock.json",
+      "number": 6,
+      "package": "vite",
+      "patched": "8.3.3",
+      "range": ">= 8.3.0, <= 8.3.2",
+      "severity": "medium",
+      "summary": "Vite: First 4 bytes of files outside of `server.fs` setting is exposed by `?vite-wasm-instance`",
+      "url": "https://github.com/angular-bootstrap/xlsx-community/security/dependabot/6"
+    },
+    {
+      "ghsa": "GHSA-r825-w8mm-5pxw",
+      "githubScope": "runtime",
+      "manifest": "community/framework-fixtures/angular/package-lock.json",
+      "number": 5,
+      "package": "vite",
+      "patched": "8.3.3",
+      "range": ">= 8.3.0, <= 8.3.2",
+      "severity": "medium",
+      "summary": "launch-editor: Editor CLI flag misinterpretation causing arbitrary command execution for some editors",
+      "url": "https://github.com/angular-bootstrap/xlsx-community/security/dependabot/5"
+    },
+    {
+      "ghsa": "GHSA-587h-7wmj-h5pm",
+      "githubScope": "runtime",
+      "manifest": "community/framework-fixtures/angular/package-lock.json",
+      "number": 4,
+      "package": "vite",
+      "patched": "8.3.3",
+      "range": ">= 8.3.0, <= 8.3.2",
+      "severity": "high",
+      "summary": "launch-editor: `fs.existsSync()` existence check can be bypassed on Windows",
+      "url": "https://github.com/angular-bootstrap/xlsx-community/security/dependabot/4"
+    },
+    {
+      "ghsa": "GHSA-698v-4r3x-3vcv",
+      "githubScope": "runtime",
+      "manifest": "community/framework-fixtures/angular/package-lock.json",
+      "number": 3,
+      "package": "vite",
+      "patched": "8.3.3",
+      "range": ">= 8.3.0, <= 8.3.2",
+      "severity": "medium",
+      "summary": "launch-editor: escapeCmdArgs() omits % escaping on Windows",
+      "url": "https://github.com/angular-bootstrap/xlsx-community/security/dependabot/3"
+    },
+    {
+      "ghsa": "GHSA-qj8w-gfj5-8c6v",
+      "githubScope": "runtime",
+      "manifest": ".ci/test-tools/package-lock.json",
+      "number": 2,
+      "package": "serialize-javascript",
+      "patched": "7.0.5",
+      "range": ">= 5.0.0, < 7.0.5",
+      "severity": "medium",
+      "summary": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
+      "url": "https://github.com/angular-bootstrap/xlsx-community/security/dependabot/2"
+    },
+    {
+      "ghsa": "GHSA-5c6j-r48x-rmvq",
+      "githubScope": "runtime",
+      "manifest": ".ci/test-tools/package-lock.json",
+      "number": 1,
+      "package": "serialize-javascript",
+      "patched": "7.0.3",
+      "range": "<= 7.0.2",
+      "severity": "high",
+      "summary": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
+      "url": "https://github.com/angular-bootstrap/xlsx-community/security/dependabot/1"
+    }
+  ]
+}

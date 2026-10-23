@@ -1,69 +1,35 @@
-# Contributing
+# Contributing to @angular-bootstrap/xlsx
 
-The SheetJS Libraries should be free and clear to use in your projects.  In
-order to maintain that, every contributor must be vigilant.
+Thank you for helping maintain a practical npm upgrade path for SheetJS users. This guide applies to the independent community fork. Upstream SheetJS has its own contribution policies; its original guide is preserved in [community/upstream-CONTRIBUTING.md](community/upstream-CONTRIBUTING.md) for historical reference.
 
-There have been many projects in the past that have been very lax regarding
-licensing. We are of the opinion that those are ticking timebombs and that no
-commercial product should depend on them.
+## Report safely
 
+Report suspected vulnerabilities through [GitHub private vulnerability reporting](https://github.com/angular-bootstrap/xlsx-community/security/advisories/new). Follow [SECURITY.md](SECURITY.md); keep working exploit files and sensitive details out of public issues and pull requests. For ordinary bugs, include the package version, runtime, expected behavior and a minimal synthetic workbook. Remove personal data, credentials, confidential documents and external resource references from fixtures.
 
-# Required Reading
+## Submit a pull request
 
-These are pretty short reads and emphasize the importance of proper licensing:
+Fork this repository and open a focused pull request against `main`. Explain the problem, compatibility impact, tests and source of any imported code or data. Changes to parser/runtime/type files require the full native CI matrix. Security or HTML-output changes need regression coverage across affected builds. Do not skip required CI or edit evidence to turn a failing result into a pass.
 
-- https://github.com/jazzband/tablib/issues/114 (discussion of other tools)
+Use code and fixtures you have the right to contribute under the applicable project licenses. Preserve copyright and license notices. For third-party mappings, shims or generated data, include the original source, exact version/commit, license and hashes; unverified provenance is not accepted. Explain generated or tool-assisted changes and review them as carefully as handwritten code. Do not attest that work is independently reviewed when it is not.
 
-- https://web.archive.org/web/20120615223756/http://www.codinghorror.com/blog/2007/04/pick-a-license-any-license.html
+With a supported Node version and Python 3.12:
 
+```sh
+npm ci --prefix .ci/test-tools --ignore-scripts --no-audit --no-fund
+python community/ci/fetch-corpus.py
+node community/ci/run.cjs
+```
 
-# Raising Issues
+The pinned fixture corpus is a substantial download. Run unfamiliar workbooks and contributor branches in a disposable environment without credentials. The corpus fetch verifies size and SHA-256 before extraction. Build reproduction and mapping provenance commands are documented in [the release workflow guide](community/release/PUBLISHING.md).
 
-Issues should generally be accompanied by test files.  Since github does not
-support attachments, the best method is to send files to <sheetjs@gmail.com>
-(subject line should contain issue number or message) or to share using some
-storage service.  Unless expressly permitted, any attachments will not be
-shared or included in a test suite (although I will ask :)
+## Review and permissions
 
-If sending email to a gmail account is problematic, the <dev@sheetjs.com> email
-inbox is self-hosted.
+Contributor changes require a code-owner review, the nine native CI checks and resolved review conversations before merging. New commits dismiss stale approvals. External fork workflows require maintainer approval before running. CI uses read-only tokens, pinned GitHub-owned Actions and no npm credentials. Maintainers must inspect workflow and test changes before approving a fork run; workflow approval alone is not a code review.
 
-# Opening Pull Requests
+The release owner is `@angular-bootstrap`. Contributors do not need npm publishing access. Release tags are restricted to repository administrators, and npm publishing requires the protected `npm-production` environment and owner approval. Repository administrators retain a branch-protection bypass for the current single-maintainer setup; this is a documented trust boundary. Independent review and preventing release self-review should be enabled when another trusted release maintainer is appointed.
 
-[Squash commits](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
-before opening a pull request, If the pull request addresses documentation or
-demos, add `[ci skip]` in the body or title of the commit message to skip tests.
+Never add credentials to source, fixtures, artifacts or logs. Do not use `pull_request_target` to execute untrusted contributor code with elevated access. Changes to workflows, release guards, dependency locks, generated bundles and license inputs receive the same code-owner review as parser changes.
 
-# Pre-Contribution Checklist
+## Releases
 
-Before thinking about contributing, make sure that:
-
-- You are not, nor have ever been, an employee of Microsoft Corporation.
-
-- You have not signed any NDAs or Shared Source Agreements with Microsoft
-  Corporation or a subsidiary
-
-- You have not consulted any existing relevant codebase (if you have, please
-  take note of which codebases were consulted).
-
-If you cannot attest to each of these items, the best approach is to raise an
-issue.  If it is a particularly high-priority issue, please drop an email to
-<sheetjs@gmail.com> and it will be prioritized.
-
-
-# Intra-Contribution
-
-Keep these in mind as you work:
-
-- Your contributions are your original work.  Take note of any resources you
-  consult in the process. Be extra careful not to use unlicensed code on the
-  Internet or code generated by a large language model or other AI tool.
-
-- You are working on your own time.  Unless they explicitly grant permission,
-  your employer may be the ultimate owner of your IP
-
-# Post-Contribution
-
-Before contributions are merged, you will receive an email (at the address
-associated with the git commit) and will be asked to confirm the aforementioned
-items.  Ensure that the email addresses associated with the commits are valid.
+Future releases must follow [NEXT_RELEASE.md](community/release/NEXT_RELEASE.md), including the **OIDC provenance attestation** verification. A pull request or checklist does not authorize a new npm release. The bootstrap candidate `0.1.0-rc.1` was published interactively and has no GitHub OIDC provenance attestation.
