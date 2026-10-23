@@ -66,3 +66,7 @@ community/results/
 # Pinned mapping provenance inputs required by clean-checkout builds.
 !community/mapping-inputs/manifest.csv
 !community/mapping-inputs/restoration-sources/*.xml
+
+# Locked private developer tools
+!modules/package-lock.json
+!packages/otorp/package-lock.json

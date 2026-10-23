@@ -25,7 +25,7 @@ OUTPUTS=['dist/xlsx.core.min.js','dist/xlsx.full.min.js','dist/xlsx.mini.min.js'
 sha=lambda b:hashlib.sha256(b).hexdigest()
 versions={name:json.loads((TOOLS/'node_modules'/name/'package.json').read_text())['version']
           for name in ['@sheetjs/uglify-js','codepage','source-map']}
-assert versions['@sheetjs/uglify-js']=='2.7.3' and versions['codepage']=='1.15.0'
+assert versions['@sheetjs/uglify-js']=='2.7.4' and versions['codepage']=='1.15.0'
 env=os.environ.copy()
 env['PATH']=str(NODE.parent)+':'+str(TOOLS/'node_modules/.bin')+':/usr/bin:/bin:/usr/sbin:/sbin'
 env['NODE_OPTIONS']='--require='+str(ROOT/'community/legacy-sourcemap-fs.cjs')

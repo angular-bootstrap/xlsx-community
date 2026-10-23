@@ -1,0 +1,379 @@
+{
+  "reviewedAt": "2026-10-23",
+  "scope": "Development tooling and private framework fixtures; no runtime parser or published archive changes",
+  "versions": {
+    "serialize-javascript": "7.1.4",
+    "esbuild": "0.28.2",
+    "vite": "8.3.5",
+    "mocha": "12.0.3",
+    "jsdom": "26.1.0",
+    "commander": "2.20.3",
+    "angularTypeScript": "6.0.3",
+    "@sheetjs/uglify-js": "2.7.4",
+    "source-map": "0.8.0"
+  },
+  "lockfileAudits": [
+    {
+      "project": ".ci/test-tools",
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      }
+    },
+    {
+      "project": ".ci/build-tools",
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      }
+    },
+    {
+      "project": "community/framework-fixtures/angular",
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      }
+    },
+    {
+      "project": "community/framework-fixtures/react",
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      }
+    },
+    {
+      "project": "community/framework-fixtures/next",
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      }
+    },
+    {
+      "project": "modules",
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      }
+    },
+    {
+      "project": "packages/otorp",
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      }
+    }
+  ],
+  "lockfileSha256": {
+    ".ci/test-tools/package-lock.json": "e4d90f86797e07409c6108eac0d9cb0c68b3e1ddceb2f974e5d8159af94cd812",
+    ".ci/build-tools/package-lock.json": "0a788d053ccbdacda89209fd9f2a75df6c9a0a9814ef34e0a531d1ecec0b8549",
+    "community/framework-fixtures/angular/package-lock.json": "daa7a9e26e3a42e87b9cb3ac766e44ce617cff830440eb560cd3dd96cdcff441",
+    "community/framework-fixtures/react/package-lock.json": "0634e072e7023e3a4155db20144a185fb6a56258a0e09cee2a9913f2bc4c05ba",
+    "community/framework-fixtures/next/package-lock.json": "ac2b6c2b39c93ce3c1e647012e1cfc8612b66d601349c69be2f83e05db94b6fe",
+    "modules/package-lock.json": "916b730b7cacc9b7dedabd7c18188cf4c0c6a7583ae5b3c8b48fe21450ca8192",
+    "packages/otorp/package-lock.json": "c8d79ed08c001889ce1ff4910cd543ae6adfa196330b35bc103f05d85e02f1b3"
+  },
+  "securityRegression": {
+    "node22": {
+      "runtime": {
+        "node": "v22.23.4"
+      },
+      "toolVersions": {
+        "serializeJavascript": "7.1.4",
+        "esbuild": "0.28.2"
+      },
+      "patched": {
+        "serialization": [
+          {
+            "kind": "RegExp",
+            "markerExecuted": false,
+            "rejected": true
+          },
+          {
+            "kind": "Date",
+            "markerExecuted": false,
+            "rejected": true
+          }
+        ],
+        "cpu": {
+          "finished": true,
+          "timedOut": false,
+          "status": 0,
+          "signal": null
+        },
+        "cors": {
+          "status": 200,
+          "allowOrigin": null,
+          "exposesToUntrustedOrigin": false
+        }
+      }
+    },
+    "node24": {
+      "runtime": {
+        "node": "v24.22.1"
+      },
+      "toolVersions": {
+        "serializeJavascript": "7.1.4",
+        "esbuild": "0.28.2"
+      },
+      "patched": {
+        "serialization": [
+          {
+            "kind": "RegExp",
+            "markerExecuted": false,
+            "rejected": true
+          },
+          {
+            "kind": "Date",
+            "markerExecuted": false,
+            "rejected": true
+          }
+        ],
+        "cpu": {
+          "finished": true,
+          "timedOut": false,
+          "status": 0,
+          "signal": null
+        },
+        "cors": {
+          "status": 200,
+          "allowOrigin": null,
+          "exposesToUntrustedOrigin": false
+        }
+      },
+      "affected": {
+        "serialization": [
+          {
+            "kind": "RegExp",
+            "markerExecuted": true,
+            "rejected": true
+          },
+          {
+            "kind": "Date",
+            "markerExecuted": true,
+            "rejected": false
+          }
+        ],
+        "cpu": {
+          "finished": false,
+          "timedOut": true,
+          "status": null,
+          "signal": "SIGTERM"
+        },
+        "cors": {
+          "status": 200,
+          "allowOrigin": "*",
+          "exposesToUntrustedOrigin": true
+        }
+      }
+    },
+    "node26": {
+      "runtime": {
+        "node": "v26.12.1"
+      },
+      "toolVersions": {
+        "serializeJavascript": "7.1.4",
+        "esbuild": "0.28.2"
+      },
+      "patched": {
+        "serialization": [
+          {
+            "kind": "RegExp",
+            "markerExecuted": false,
+            "rejected": true
+          },
+          {
+            "kind": "Date",
+            "markerExecuted": false,
+            "rejected": true
+          }
+        ],
+        "cpu": {
+          "finished": true,
+          "timedOut": false,
+          "status": 0,
+          "signal": null
+        },
+        "cors": {
+          "status": 200,
+          "allowOrigin": null,
+          "exposesToUntrustedOrigin": false
+        }
+      }
+    }
+  },
+  "frameworks": {
+    "frameworks": [
+      {
+        "name": "angular",
+        "url": "http://127.0.0.1:56597"
+      },
+      {
+        "name": "react",
+        "url": "http://127.0.0.1:56598"
+      },
+      {
+        "name": "next",
+        "url": "http://127.0.0.1:56599"
+      }
+    ],
+    "browsers": [
+      {
+        "browser": "Chrome",
+        "version": "155.0.8059.85",
+        "framework": "angular",
+        "status": "pass",
+        "checks": 17,
+        "errors": []
+      },
+      {
+        "browser": "Chrome",
+        "version": "155.0.8059.85",
+        "framework": "react",
+        "status": "pass",
+        "checks": 17,
+        "errors": []
+      },
+      {
+        "browser": "Chrome",
+        "version": "155.0.8059.85",
+        "framework": "next",
+        "status": "pass",
+        "checks": 17,
+        "ssrChecks": 17,
+        "errors": []
+      },
+      {
+        "browser": "Firefox",
+        "version": "142.0.1",
+        "framework": "angular",
+        "status": "pass",
+        "checks": 17,
+        "errors": []
+      },
+      {
+        "browser": "Firefox",
+        "version": "142.0.1",
+        "framework": "react",
+        "status": "pass",
+        "checks": 17,
+        "errors": []
+      },
+      {
+        "browser": "Firefox",
+        "version": "142.0.1",
+        "framework": "next",
+        "status": "pass",
+        "checks": 17,
+        "ssrChecks": 17,
+        "errors": []
+      },
+      {
+        "browser": "WebKit",
+        "version": "26.0",
+        "framework": "angular",
+        "status": "pass",
+        "checks": 17,
+        "errors": []
+      },
+      {
+        "browser": "WebKit",
+        "version": "26.0",
+        "framework": "react",
+        "status": "pass",
+        "checks": 17,
+        "errors": []
+      },
+      {
+        "browser": "WebKit",
+        "version": "26.0",
+        "framework": "next",
+        "status": "pass",
+        "checks": 17,
+        "ssrChecks": 17,
+        "errors": []
+      }
+    ],
+    "fileDownload": [
+      {
+        "browser": "Chrome",
+        "status": "pass",
+        "filename": "scoped-workbook.xlsx",
+        "uploadPassed": true,
+        "downloadPassed": true
+      },
+      {
+        "browser": "Firefox",
+        "status": "pass",
+        "filename": "scoped-workbook.xlsx",
+        "uploadPassed": true,
+        "downloadPassed": true
+      },
+      {
+        "browser": "WebKit",
+        "status": "pass",
+        "filename": "scoped-workbook.xlsx",
+        "uploadPassed": true,
+        "downloadPassed": true
+      }
+    ],
+    "nextApi": {
+      "status": "pass",
+      "rows": [
+        [
+          "server",
+          "\u092d\u093e\u0930\u0924",
+          42
+        ]
+      ],
+      "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "disposition": "attachment; filename=\"server-workbook.xlsx\""
+    }
+  },
+  "angularDevServer": {
+    "passed": true,
+    "checks": 17,
+    "loopbackOnly": true
+  },
+  "reproducibility": {
+    "twoCleanRuns": true,
+    "outputsPerRun": 12,
+    "allEqual": true,
+    "toolLockSha256": "0a788d053ccbdacda89209fd9f2a75df6c9a0a9814ef34e0a531d1ecec0b8549"
+  },
+  "upstreamSuite": "final compatible-tool rerun in progress",
+  "githubAlerts": "six Angular alerts awaiting push and dependency-graph refresh",
+  "publishing": "disabled; no release or tag created",
+  "remainingGaps": [
+    "Optional inherited Numbers CLI and otorp ES5/Deno whole-build targets still fail with both old and patched esbuild; selected eight module outputs and two Node otorp outputs pass",
+    "No independent comprehensive parser audit or unlimited-resource safety guarantee",
+    "First GitHub OIDC npm provenance publish remains unverified"
+  ]
+}

@@ -15,7 +15,7 @@ The review covered GitHub contributor/release permissions and contribution guida
 
 ## Open dependency findings
 
-**CS-07 — High/Medium/Low, unresolved:** enabling alerts surfaced ten findings: two high, seven medium and one low. Two `serialize-javascript` alerts affect `.ci/test-tools/package-lock.json`; six Vite/launch-editor alerts affect the Angular fixture lock; two esbuild alerts affect retained upstream tool manifests. Patched versions are identified in the [alert snapshot](public-evidence/contributor-dependency-alerts.json). Locks were not modified and alerts were not dismissed. Updates require compatibility verification before merging.
+**CS-07 — remediation prepared:** the original ten alerts are addressed by serialize-javascript 7.1.4, Vite 8.3.5 and esbuild 0.28.2. All seven final lockfile audits report zero known vulnerabilities. Inert security regressions and compatibility checks are recorded in the [cleanup report](DEPENDENCY_CLEANUP_RESULTS.md). GitHub alert closure and final hosted native checks must be read back after pushing; no alerts are dismissed. The [original alert snapshot](public-evidence/contributor-dependency-alerts.json) is retained as history.
 
 The exact published archive was checked: these manifests/directories and their dependencies are excluded, and its runtime/dev dependency maps are empty. GitHub may label some fixture dependencies “runtime” within those separate projects; they are development fixtures relative to this npm library. This does not establish that every vendored parser component is vulnerability-free.
 

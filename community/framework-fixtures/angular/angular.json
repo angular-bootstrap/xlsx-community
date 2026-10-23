@@ -1,1 +1,33 @@
-{"version":1,"projects":{"check":{"projectType":"application","root":"","sourceRoot":"src","architect":{"build":{"builder":"@angular/build:application","options":{"browser":"src/main.ts","index":"src/index.html","tsConfig":"tsconfig.json","outputPath":"dist","optimization":true,"sourceMap":false,"allowedCommonJsDependencies":["./checks.cjs"]}}}}}}
+{
+  "version": 1,
+  "projects": {
+    "check": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "src/main.ts",
+            "index": "src/index.html",
+            "tsConfig": "tsconfig.json",
+            "outputPath": "dist",
+            "optimization": true,
+            "sourceMap": false,
+            "allowedCommonJsDependencies": [
+              "./checks.cjs"
+            ]
+          }
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "options": {
+            "buildTarget": "check:build",
+            "host": "127.0.0.1"
+          }
+        }
+      }
+    }
+  }
+}
