@@ -66,6 +66,8 @@ with tempfile.TemporaryDirectory(prefix='sheetjs-repro-') as directory:
             log.append(result.stdout+result.stderr)
             if result.returncode:
                 (OUT/('reproduce-run-'+str(run)+'.log')).write_text('\n'.join(log))
+                print('Failed build command: '+repr(command),file=sys.stderr)
+                print(result.stdout+result.stderr,file=sys.stderr)
                 raise RuntimeError('Distribution build failed: '+str(result.returncode))
         (OUT/('reproduce-run-'+str(run)+'.log')).write_text('\n'.join(log))
         files=[]

@@ -62,3 +62,7 @@ community/results/
 !community/framework-fixtures/**/index.html
 
 !.ci/build-tools/package-lock.json
+
+# Pinned mapping provenance inputs required by clean-checkout builds.
+!community/mapping-inputs/manifest.csv
+!community/mapping-inputs/restoration-sources/*.xml
