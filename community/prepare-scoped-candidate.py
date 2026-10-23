@@ -18,11 +18,11 @@ for entry in manifest['files']:
   for old,new in [(str(root),'[source]'),(str(Path.home()),'[home]'),('/tmp/','[temporary]/')]:raw=raw.replace(old,new)
   dest.write_text(raw)
 pkg=json.loads((root/'package.json').read_text());pkg.update(name='@angular-bootstrap/xlsx',version='0.1.0-rc.1',private=True,repository={'type':'git','url':'git+https://github.com/angular-bootstrap/xlsx-community.git'},bugs={'url':'https://github.com/angular-bootstrap/xlsx-community/issues'},homepage='https://github.com/angular-bootstrap/xlsx-community#readme',publishConfig={'access':'public','tag':'next','provenance':True});pkg.pop('bin',None);pkg['devDependencies']={}
-pkg['files']=[x for x in pkg['files'] if x!='bin/xlsx.njs'];pkg['files']+=['SECURITY.md','community/ANGULAR_BOOTSTRAP_RELEASE_RESULTS.md','community/RELEASE_PLAN.md','community/results/rich-text-security.json','community/results/timezones.json','community/results/framework-integration.json'];
+pkg['files']=[x for x in pkg['files'] if x!='bin/xlsx.njs'];pkg['files']+=['SECURITY.md','community/UPSTREAM_DIFFERENCES.md','community/ANGULAR_BOOTSTRAP_RELEASE_RESULTS.md','community/RELEASE_PLAN.md','community/results/rich-text-security.json','community/results/timezones.json','community/results/framework-integration.json'];
 pkg['files'].append('community/public-evidence/*.json')
 shutil.copytree(root/'community/public-evidence',stage/'community/public-evidence',dirs_exist_ok=True)
 (stage/'package.json').write_text(json.dumps(pkg,indent=2)+'\n')
-for name in ['SECURITY.md','community/ANGULAR_BOOTSTRAP_RELEASE_RESULTS.md','community/RELEASE_PLAN.md','community/results/rich-text-security.json','community/results/timezones.json','community/results/framework-integration.json']:
+for name in ['SECURITY.md','community/UPSTREAM_DIFFERENCES.md','community/ANGULAR_BOOTSTRAP_RELEASE_RESULTS.md','community/RELEASE_PLAN.md','community/results/rich-text-security.json','community/results/timezones.json','community/results/framework-integration.json']:
  if (root/name).is_file():
   target=stage/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(root/name,target)
   if target.suffix=='.json':
