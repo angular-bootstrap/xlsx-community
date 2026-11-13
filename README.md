@@ -2,7 +2,7 @@
 
 Independent npm distribution based on official SheetJS CE **0.20.3**, retaining upstream history and license notices. Repository: [angular-bootstrap/xlsx-community](https://github.com/angular-bootstrap/xlsx-community). This is not an official SheetJS release and has no upstream endorsement.
 
-Published prerelease: [**0.1.0-rc.1**](https://www.npmjs.com/package/@angular-bootstrap/xlsx/v/0.1.0-rc.1). Install the explicit version or use `@next`. This is a release candidate; no stable release has been published. npm also assigns this initial candidate to `latest`. `XLSX.version` retains the upstream runtime version `0.20.3`.
+Stable **0.1.0** is being prepared. Until its release is verified, the published version remains [**0.1.0-rc.1**](https://www.npmjs.com/package/@angular-bootstrap/xlsx/v/0.1.0-rc.1). `XLSX.version` retains the upstream runtime version `0.20.3`.
 
 ## Why this package exists
 
@@ -12,7 +12,7 @@ Our goal is to help developers upgrade safely and support the wider spreadsheet 
 
 ## Getting started
 
-Install the prerelease explicitly:
+Install the currently published candidate explicitly:
 
 ```sh
 npm install @angular-bootstrap/xlsx@0.1.0-rc.1

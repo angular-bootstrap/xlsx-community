@@ -4,7 +4,7 @@ This is an independent SheetJS CE fork. The repository is https://github.com/ang
 
 GitHub private vulnerability reporting is enabled in angular-bootstrap/xlsx-community. The reporting channel is https://github.com/angular-bootstrap/xlsx-community/security/advisories/new. Do not publish working exploit details in public issues or pull requests. Reports should include affected versions, a minimal inert fixture where possible, impact and reproduction steps.
 
-Initial support scope is prerelease 0.1.0-rc.1 only, with no stable support promise. Future supported versions and response commitments must be adopted by the maintainer. Upstream findings should be coordinated with SheetJS through its published security contact; this policy does not authorize sending reports on anyone's behalf.
+Stable 0.1.0 is being prepared and is not yet published. On verified publication, the supported release line will be 0.1.x; users of 0.1.0-rc.1 should upgrade. No response-time SLA is promised. Upstream findings should be coordinated with SheetJS through its published security contact; this policy does not authorize sending reports on anyone's behalf.
 
 ## Processing untrusted files
 

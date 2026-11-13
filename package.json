@@ -1,6 +1,6 @@
 {
   "name": "@angular-bootstrap/xlsx",
-  "version": "0.1.0-rc.1",
+  "version": "0.1.0",
   "author": "sheetjs",
   "description": "Community-maintained npm distribution of SheetJS CE with security regression tests and documented compatibility",
   "keywords": [
@@ -186,7 +186,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "tag": "next",
+    "tag": "latest",
     "registry": "https://registry.npmjs.org/"
   }
 }
