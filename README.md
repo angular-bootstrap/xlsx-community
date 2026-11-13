@@ -2,7 +2,7 @@
 
 Independent npm distribution based on official SheetJS CE **0.20.3**, retaining upstream history and license notices. Repository: [angular-bootstrap/xlsx-community](https://github.com/angular-bootstrap/xlsx-community). This is not an official SheetJS release and has no upstream endorsement.
 
-Stable **0.1.0** is being prepared. Until its release is verified, the published version remains [**0.1.0-rc.1**](https://www.npmjs.com/package/@angular-bootstrap/xlsx/v/0.1.0-rc.1). `XLSX.version` retains the upstream runtime version `0.20.3`.
+Version **0.1.0** is the first stable community release. See [npm for published versions](https://www.npmjs.com/package/@angular-bootstrap/xlsx?activeTab=versions) and [GitHub release notes](https://github.com/angular-bootstrap/xlsx-community/releases). `XLSX.version` retains the upstream runtime version `0.20.3`.
 
 ## Why this package exists
 
@@ -12,10 +12,10 @@ Our goal is to help developers upgrade safely and support the wider spreadsheet 
 
 ## Getting started
 
-Install the currently published candidate explicitly:
+Install the stable package:
 
 ```sh
-npm install @angular-bootstrap/xlsx@0.1.0-rc.1
+npm install @angular-bootstrap/xlsx@0.1.0
 ```
 
 ```js
@@ -36,12 +36,12 @@ console.log(XLSX.utils.sheet_to_json(restored.Sheets.Inventory));
 CommonJS applications can use `const XLSX = require('@angular-bootstrap/xlsx')`. For existing direct `xlsx` imports, an npm alias can ease migration after compatibility testing:
 
 ```sh
-npm install xlsx@npm:@angular-bootstrap/xlsx@0.1.0-rc.1
+npm install xlsx@npm:@angular-bootstrap/xlsx@0.1.0
 ```
 
 Aliases do not automatically upgrade nested dependencies. Review the encoding change and supported Node versions below before upgrading.
 
-## What this candidate changes
+## Security fixes and community changes
 
 | Change beyond CDN 0.20.3 | What users gain |
 |---|---|
