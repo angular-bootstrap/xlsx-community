@@ -4,6 +4,7 @@ const root=path.resolve(__dirname,'../..');
 function verify({folder=root,publish=false,env=process.env}={}){
  const pkg=JSON.parse(fs.readFileSync(path.join(folder,'package.json'))),e=JSON.parse(fs.readFileSync(path.join(folder,'community/public-evidence/native-ci-results.json')));
  assert.equal(pkg.name,'@angular-bootstrap/xlsx');assert(/^[0-9]+\.[0-9]+\.[0-9]+(?:-[0-9A-Za-z.-]+)?$/.test(pkg.version),'Invalid release version');
+ const distTag=pkg.version.includes('-')?'next':'latest';assert.equal(pkg.publishConfig?.tag,distTag,'publishConfig.tag must match release channel');
  assert.equal(pkg.repository.url,'git+https://github.com/angular-bootstrap/xlsx-community.git');assert.equal(pkg.license,'(Apache-2.0 AND Unicode-3.0 AND MIT)');assert(!pkg.bin,'CLI entry must not be reintroduced without review');
  assert(!Object.keys(pkg.dependencies||{}).length,'Runtime dependency changes require a separate review');
  assert(!env.NODE_AUTH_TOKEN&&!env.NPM_TOKEN,'Tokenless publishing requires NODE_AUTH_TOKEN and NPM_TOKEN to be absent');
@@ -20,8 +21,8 @@ function verify({folder=root,publish=false,env=process.env}={}){
  const runtime=['xlsxworker.js','xlsx.js','xlsx.mjs','xlsx.mini.js','xlsx.flow.js','xlsx.mini.flow.js','shim.js',...fs.readdirSync(path.join(folder,'dist')).filter(n=>/\.(?:js|mjs|map)$/.test(n)).map(n=>'dist/'+n),'types/index.d.ts'];
  for(const n of runtime){const tested=cp.execFileSync('git',['show',e.testedCommit+':'+n],{cwd:folder,maxBuffer:20000000});assert.equal(hash(fs.readFileSync(path.join(folder,n))),hash(tested),'Runtime/type bytes differ from native-tested commit: '+n)}
  for(const n of ['LICENSE','THIRD_PARTY_NOTICES.md','MAPPING_DATA_NOTICES.md','SECURITY.md','community/UPSTREAM_DIFFERENCES.md'])assert(fs.statSync(path.join(folder,n)).size>0,'Missing notice: '+n);
- const summary={name:pkg.name,version:pkg.version,private:pkg.private,publishMode:publish,nativeRunId:match[1],nativeCommit:e.testedCommit,verifiedRuntimeFiles:runtime.length,distTag:'next'};
- if(env.GITHUB_OUTPUT)fs.appendFileSync(env.GITHUB_OUTPUT,'native_run_id='+summary.nativeRunId+'\nnative_commit='+summary.nativeCommit+'\n');return summary;
+ const summary={name:pkg.name,version:pkg.version,private:pkg.private,publishMode:publish,nativeRunId:match[1],nativeCommit:e.testedCommit,verifiedRuntimeFiles:runtime.length,distTag};
+ if(env.GITHUB_OUTPUT)fs.appendFileSync(env.GITHUB_OUTPUT,'dist_tag='+distTag+'\n'+'native_run_id='+summary.nativeRunId+'\nnative_commit='+summary.nativeCommit+'\n');return summary;
 }
 if(require.main===module){try{console.log(JSON.stringify(verify({publish:process.argv.includes('--publish')}),null,2))}catch(e){console.error(e.message);process.exitCode=1}}
 module.exports={verify};

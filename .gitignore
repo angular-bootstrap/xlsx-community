@@ -70,3 +70,7 @@ community/results/
 # Locked private developer tools
 !modules/package-lock.json
 !packages/otorp/package-lock.json
+
+# Angular fixture build cache
+community/framework-fixtures/angular/.angular/
+community/framework-fixtures/angular/dist/

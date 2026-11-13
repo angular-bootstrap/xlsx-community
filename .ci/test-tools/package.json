@@ -8,5 +8,14 @@
   },
   "name": "xlsx-independent-ci-tools",
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "overrides": {
+    "mocha": {
+      "glob": "14.0.2",
+      "minimatch": "11.0.1"
+    },
+    "glob": {
+      "minimatch": "11.0.1"
+    }
+  }
 }

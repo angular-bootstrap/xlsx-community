@@ -4,6 +4,14 @@ This log is intended to keep track of backwards-incompatible changes, including
 but not limited to API changes and file location changes.  Minor behavioral
 changes may not be included if they are not expected to break existing code.
 
+## Community 0.1.0 (stable release preparation)
+
+* Promote the tested community runtime without changing the 0.1.0-rc.1 library or type bytes.
+* Retain upstream SheetJS CE 0.20.3 fixes for CVE-2023-30533 and CVE-2024-22363, credited to SheetJS.
+* Retain independent HTML hyperlink/rich-text hardening and licensed mapping replacements; CP895 compatibility differences remain documented.
+* Patch development-only glob/minimatch advisory dependencies and align Angular fixture peer versions.
+* Select npm `latest` for stable tags, `next` for prereleases; require the protected OIDC workflow and verify provenance after publication.
+
 ## v0.20.3
 
 * Correct parsing of NUMBERS and ODS merge cells (h/t @s-ashwin)

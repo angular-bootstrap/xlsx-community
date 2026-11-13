@@ -22,6 +22,7 @@ jobs:
       actions: read
     timeout-minutes: 25
     outputs:
+      dist_tag: ${{ steps.metadata.outputs.dist_tag }}
       filename: ${{ steps.archive.outputs.filename }}
       sha256: ${{ steps.archive.outputs.sha256 }}
     steps:
@@ -46,7 +47,9 @@ jobs:
           npm ci --prefix .ci/build-tools --ignore-scripts --no-audit --no-fund
       - name: Validate metadata, tag, token absence and native-tested bytes
         id: metadata
-        run: node community/release/verify-release.cjs
+        run: |
+          node community/release/check-release-policy.cjs
+          node community/release/verify-release.cjs
       - name: Confirm recorded native matrix succeeded on GitHub
         env:
           GH_TOKEN: ${{ github.token }}
@@ -90,7 +93,7 @@ jobs:
           if-no-files-found: error
 
   publish:
-    name: Publish validated prerelease to npm
+    name: Publish validated release to npm
     if: ${{ github.event_name == 'push' && github.ref_type == 'tag' && github.repository == 'angular-bootstrap/xlsx-community' }}
     needs: validate
     runs-on: ubuntu-24.04
@@ -125,7 +128,8 @@ jobs:
       - name: Verify version is unpublished (fail closed on registry errors)
         run: |
           node -e '(async()=>{const p=require("./package.json"),r=await fetch("https://registry.npmjs.org/"+encodeURIComponent(p.name)+"/"+encodeURIComponent(p.version));if(r.status!==404)throw Error(r.ok?"Version already published":"Registry check failed: "+r.status)})().catch(e=>{console.error(e.message);process.exitCode=1})'
-      - name: Publish prerelease through npm OIDC with provenance
+      - name: Publish through npm OIDC with provenance
         env:
           ARCHIVE: ${{ needs.validate.outputs.filename }}
-        run: npm publish "./.release-artifacts/$ARCHIVE" --access public --tag next --provenance
+          DIST_TAG: ${{ needs.validate.outputs.dist_tag }}
+        run: npm publish "./.release-artifacts/$ARCHIVE" --access public --tag "$DIST_TAG" --provenance
