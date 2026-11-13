@@ -1,10 +1,10 @@
 # Security policy — angular-bootstrap/xlsx-community
 
-This is an independent SheetJS CE fork. The repository is https://github.com/angular-bootstrap/xlsx-community. The npm package is `@angular-bootstrap/xlsx`; the currently supported prerelease is `0.1.0-rc.1`. @angular-bootstrap is the release owner. No response-time SLA or independent security audit is claimed.
+This is an independent SheetJS CE fork. The repository is https://github.com/angular-bootstrap/xlsx-community. The npm package is `@angular-bootstrap/xlsx`; the supported stable release line is `0.1.x`. @angular-bootstrap is the release owner. No response-time SLA or independent security audit is claimed.
 
 GitHub private vulnerability reporting is enabled in angular-bootstrap/xlsx-community. The reporting channel is https://github.com/angular-bootstrap/xlsx-community/security/advisories/new. Do not publish working exploit details in public issues or pull requests. Reports should include affected versions, a minimal inert fixture where possible, impact and reproduction steps.
 
-Stable 0.1.0 is being prepared and is not yet published. On verified publication, the supported release line will be 0.1.x; users of 0.1.0-rc.1 should upgrade. No response-time SLA is promised. Upstream findings should be coordinated with SheetJS through its published security contact; this policy does not authorize sending reports on anyone's behalf.
+The supported stable release line is 0.1.x; users of 0.1.0-rc.1 should upgrade to 0.1.0. No response-time SLA is promised. Upstream findings should be coordinated with SheetJS through its published security contact; this policy does not authorize sending reports on anyone's behalf.
 
 ## Processing untrusted files
 
@@ -14,7 +14,7 @@ The HTML link policy and rich-text escaping fixes address specific output paths.
 
 Explicit UTC roundtrips passed the timezone/DST matrix. Default local-time Date roundtrips failed wall-time preservation expectations outside UTC and remain a documented limitation. Use a tested UTC/serial/string date workflow; do not claim automatic timezone preservation.
 
-## Current prerelease review
+## Current release review
 
 Two inherited CVE regression controls pass. The independent rich-text fix escapes decoded text, restricts alignment tags and emits numeric font sizes; inert workbook fixtures reproduce the old behavior and verify the fix. Additional HTML-output hardening is documented in community/UPSTREAM_DIFFERENCES.md; reports of further vulnerabilities should use the private channel. No new CVE or full vulnerability-free certification is asserted.
 
